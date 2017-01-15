@@ -3,25 +3,19 @@
     <head>
         <meta charset="utf-8">
         <title>Event log prototype</title>
+        <link rel="stylesheet" type="text/css" href="main.css">
         <script type="text/javascript" src="d3/d3.js"></script>
         <style>
 
           
 
-            .tooltip {
-                  background: #eee;
-                  box-shadow: 0 0 5px #999999;
-                  color: #333;
-                  display: none;
-                  font-size: 12px;
-                  left: 130px;
-                  padding: 10px;
-                  position: absolute;
-                  text-align: center;
-                  top: 95px;
-                  width: 80px;
-                  z-index: 10;
+            svg circle {
+                opacity: 0.75;
             }
+
+            svg .level-line {
+                display: block;
+            }         
 
             h1 {
                 font-size: 14px;
@@ -38,9 +32,17 @@
         <h1>KYPO game event log prototype</h1>
         <div id="chart" width="100%"></div>
         <div id="text-log"></div>
+
+                <label class="">
+                  <input type="checkbox" onclick="toggleThings(lines)" checked>
+                  <!-- <div class="slider round"></div> -->
+                </label>
  
 
         <script type="text/javascript">
+
+        //**************************************************
+        // FUNCTIOONs TO HELP WITH TIMES PARSING AND CONVERSIONS, nasty stuff
 
         function StrDateToTime(snippet){
             var time = snippet.slice(11,19);
@@ -49,7 +51,6 @@
 
         function StrTimeToSeconds(snippet) {
             var parsedTime = snippet.match(/[0-9][0-9]/g);
-            // console.log(parsedTime);
             return (+parsedTime[0] * 3600) + (+parsedTime[1] * 60) + (+parsedTime[2]);
         }
 
@@ -69,6 +70,32 @@
             return hours+':'+minutes+':'+seconds;
         }
 
+        // ************************************************************
+        // VARIABLES AND A FUNCTIONS FOR TOGGLING/FILTERING VISUAL ELEMENTS
+
+        var lines = document.getElementsByClassName("level-line");
+        
+        var correctFlags = document.getElementsByClassName("correct-flag");
+        var wrongFlags = document.getElementsByClassName("wrong-flag");
+        var prematureExits = document.getElementsByClassName("premature-exit");
+        var levelSkips = document.getElementsByClassName("level-skip");
+        var gameFinishes = document.getElementsByClassName("game-started");
+        var gameStarts = document.getElementsByClassName("level-line");
+        var hints = document.getElementsByClassName("level-line");
+
+        function toggleThings(things){ 
+             for (var i = 0; i< things.length; i++) {
+                    if (things[i].style.display != "none") {
+                        things[i].style.display = "none";
+                    } else {
+                        things[i].style.display = "block";
+                    }
+                };
+        }
+
+        //*************************************************************
+        // VARIABLES FOR WINDOWS SIZES, BORDERS AND SUCH SVG STUFF 
+
         var width = window.innerWidth - 40;
         var height = window.innerHeight - 20;
         var padding_horizontal = 20;
@@ -85,9 +112,9 @@
                     .attr("width", width);
 
 
-       
+        //******************************************************           
+        // CODE DEPENDENT ON THE AVAILABILITY Of DATA   
 
-        // CODE DEPENDENT ON THE AVAILABILITY Of DATA        
         d3.csv("all-events.csv", function (error, dataset) {
 
                     var players = [];
@@ -98,7 +125,7 @@
                             players.push(d.ID); 
                         }
                         
-                        d.game_seconds = StrTimeToSeconds(d.logical_time);
+                        // d.game_seconds = StrTimeToSeconds(d.logical_time);
                     });
 
                     dataset.forEach(function (d){
@@ -125,7 +152,8 @@
                     var playerColorScale = d3.scaleOrdinal(d3.schemeCategory20b);
 
                     
-
+                    //***********************************************
+                    // LINES CERRESPONDING TO DURATION OF EACH LEVEL 
 
                     svg.selectAll("line")
                         .data(dataset.filter(function (d) {
@@ -159,10 +187,13 @@
                             return xScale(levelStart.game_seconds);
                         })
                         .attr("stroke-width", "3")
+                        .attr("class", "level-line")
                         .attr("stroke", function (d){
                             return color(d.level);
                         });
 
+                    //************************************************    
+                    // CIRCLES CORRESPONDING TO ALL GAME EVENTS
 
                         svg.selectAll("circle")
                         .data(dataset)
@@ -175,13 +206,47 @@
                             // return Math.random() * height;
                             return yScale(players.indexOf(d.ID));
                         })
-                        .attr("r", "5")
+                        .attr("r", function (d) {
+                            if (d.event === "Correct flag submited" || 
+                                d.event === "Game finished" ||
+                                d.event === "Game exited prematurely") {
+                                return 7; 
+                            } else {
+                                return 5;
+                            }
+                        })
                         .attr("fill", function  (d){
-                            return (d.event.indexOf("Wrong flag submited") != -1) ? "red" : color(d.level);
+                            if(d.event.indexOf("Wrong flag submited") != -1 ||
+                                d.event == "Game exited prematurely") {
+                                return "red";
+                            } else if (d.event === "Level cowardly skipped") {
+                                return "black";
+                            } else {
+                                return color(d.level);
+                            }                           
+                            // return (d.event.indexOf("Wrong flag submited") != -1) ? "red" : color(d.level);
                             // return color(d.level);    
+                        })
+                        .attr("class", function (d){
+                            if (d.event === "Game exited prematurely") {
+                                return "premature-exit";
+                            } else if (d.event === "Level cowardly skipped") {
+                                return "level-skip";
+                            } else if (d.event === "Correct flag submited") {
+                                return "correct-flag";
+                            } else if (d.event === "Game finished") {
+                                return "game-finished";
+                            } else if (d.event === "Game started") {
+                                return "game-started";
+                            } else if (d.event.indexOf("Hint") != -1 ) {
+                                return "hint";
+                            } else if (d.event.indexOf("Wrong flag submited") != -1 ) {
+                                return "wrong-flag";
+                            }  else return ""; 
                         })
                         .attr("stroke-width", "1")
                         .attr("stroke", "grey")
+                        // .attr("opacity", "0.5")
                         .append("title")
                         .text(function (d) {
                             return  "Event: " + d.event + "\n" +
@@ -194,7 +259,7 @@
 
                           
 
-                    console.log(dataset);
+                    // console.log(dataset);
 
                     // var log = d3.select("#text-log")
                     //             .selectAll("p")

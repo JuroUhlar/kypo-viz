@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Event log prototype</title>
+        <script type="text/javascript" src="d3/d3.js"></script>
+        <style>
+
+          
+
+            .tooltip {
+                  background: #eee;
+                  box-shadow: 0 0 5px #999999;
+                  color: #333;
+                  display: none;
+                  font-size: 12px;
+                  left: 130px;
+                  padding: 10px;
+                  position: absolute;
+                  text-align: center;
+                  top: 95px;
+                  width: 80px;
+                  z-index: 10;
+            }
+
+            h1 {
+                font-size: 14px;
+                text-align: center;
+            }
+           
+            
+        </style>
+
+
+    </head>
+    <body>
+
+        <h1>KYPO game event log prototype</h1>
+        <div id="chart" width="100%"></div>
+        <div id="text-log"></div>
+ 
+
+        <script type="text/javascript">
+
+        function StrDateToTime(snippet){
+            var time = snippet.slice(11,19);
+            return time;
+        }
+
+        function StrTimeToSeconds(snippet) {
+            var parsedTime = snippet.match(/[0-9][0-9]/g);
+            // console.log(parsedTime);
+            return (+parsedTime[0] * 3600) + (+parsedTime[1] * 60) + (+parsedTime[2]);
+        }
+
+        function GetSeconds(snippet) {
+            return StrTimeToSeconds(StrDateToTime(snippet));
+        }
+
+        String.prototype.toHHMMSS = function () {
+            var sec_num = parseInt(this, 10); // don't forget the second param
+            var hours   = Math.floor(sec_num / 3600);
+            var minutes = Math.floor((sec_num - (hours * 3600)) / 60);
+            var seconds = sec_num - (hours * 3600) - (minutes * 60);
+
+            if (hours   < 10) {hours   = "0"+hours;}
+            if (minutes < 10) {minutes = "0"+minutes;}
+            if (seconds < 10) {seconds = "0"+seconds;}
+            return hours+':'+minutes+':'+seconds;
+        }
+
+        var width = window.innerWidth - 40;
+        var height = window.innerHeight - 20;
+        var padding_horizontal = 20;
+        var padding_vertical = 20;
+        var color = d3.scaleOrdinal(d3.schemeCategory20);
+
+        var legendRectSize = 18;
+        var legendSpacing = 4;
+
+
+        var svg = d3.select('#chart')
+                    .append("svg")
+                    .attr("height", height)
+                    .attr("width", width);
+
+
+       
+
+        // CODE DEPENDENT ON THE AVAILABILITY Of DATA        
+        d3.csv("all-events.csv", function (error, dataset) {
+
+                    var players = [];
+                    var startTimes = [];
+
+                    dataset.forEach(function (d) {
+                        if(players.indexOf(d.ID) === -1){
+                            players.push(d.ID); 
+                        }
+                        
+                        d.game_seconds = StrTimeToSeconds(d.logical_time);
+                    });
+
+                    dataset.forEach(function (d){
+                        if(d.event === "Game started"){
+                            startTimes[players.indexOf(d.ID)] = GetSeconds(d.timestamp); 
+                        }
+                    });
+
+                    dataset.forEach(function (d) {
+                        d.game_seconds = GetSeconds(d.timestamp) - startTimes[players.indexOf(d.ID)];
+                        // console.log(d.game_seconds);
+                    });
+
+                    // console.log(startTimes);
+
+                    var xScale = d3.scaleLinear()
+                                             .domain([0, d3.max(dataset, function(d) { return d.game_seconds; })])
+                                             .range([padding_horizontal, width - padding_horizontal]);
+
+                    var yScale = d3.scaleLinear() // accept players index in array
+                                             .domain([0, players.length])
+                                             .range([padding_vertical, height - padding_vertical]);
+
+                    var playerColorScale = d3.scaleOrdinal(d3.schemeCategory20b);
+
+                    
+
+
+                    svg.selectAll("line")
+                        .data(dataset.filter(function (d) {
+                           return d.event === "Correct flag submited" || d.event === "Game finished" || 
+                                  d.event === "Level cowardly skipped" || d.event === "Game exited prematurely"; 
+                        }))
+                        .enter()
+                        .append("line")
+                        .attr("y1", function (d) {
+                            return yScale(players.indexOf(d.ID));
+                        })
+                        .attr("y2", function (d) {
+                            return yScale(players.indexOf(d.ID));
+                        })
+                        .attr("x2", function (d) {
+                            return xScale(d.game_seconds);
+                        })
+                        .attr("x1", function (d) {
+                            currentLevel = d.level;
+                            currentPlayer = d.ID;
+                            var levelStart = dataset.filter(function (d) {
+                                return (d.ID === currentPlayer) &&
+                                       (
+                                            (+d.level === +currentLevel - 1 &&
+                                                    (d.event === "Correct flag submited" ||
+                                                     d.event === "Level cowardly skipped"))
+                                            || 
+                                            (currentLevel === "1" && d.event === "Game started")
+                                        );
+                            })[0];
+                            return xScale(levelStart.game_seconds);
+                        })
+                        .attr("stroke-width", "3")
+                        .attr("stroke", function (d){
+                            return color(d.level);
+                        });
+
+
+                        svg.selectAll("circle")
+                        .data(dataset)
+                        .enter()
+                        .append("circle")
+                        .attr("cx", function (d) {
+                            return xScale(d.game_seconds);
+                        })
+                        .attr("cy", function (d) {
+                            // return Math.random() * height;
+                            return yScale(players.indexOf(d.ID));
+                        })
+                        .attr("r", "5")
+                        .attr("fill", function  (d){
+                            return (d.event.indexOf("Wrong flag submited") != -1) ? "red" : color(d.level);
+                            // return color(d.level);    
+                        })
+                        .attr("stroke-width", "1")
+                        .attr("stroke", "grey")
+                        .append("title")
+                        .text(function (d) {
+                            return  "Event: " + d.event + "\n" +
+                                    "Player " + players.indexOf(d.ID) + " (" + d.ID + ") \n" + 
+                                    "Level: " + d.level + "\n" +
+                                    "Level time: " + d.logical_time + "\n" + 
+                                    "Game time: " + (d.game_seconds+"").toHHMMSS();  
+                        });
+
+
+                          
+
+                    console.log(dataset);
+
+                    // var log = d3.select("#text-log")
+                    //             .selectAll("p")
+                    //             .data(dataset)
+                    //             .enter()
+                    //             .append("p")
+                    //             .text(function (d) {
+                    //                 return (d.ID + " | " + d.timestamp + " | " + d.logical_time + " | " + d.level + " | " + d.event);
+                    //             });
+                });  
+        
+        </script>
+<!--  -->
+        
+
+    </body>
+</html>

@@ -12,10 +12,19 @@
             svg circle {
                 opacity: 0.75;
             }
+       
 
-            svg .level-line {
-                display: block;
-            }         
+            svg circle.hint {
+                fill: grey;
+            } 
+
+            svg circle.premature-exit {
+                fill: black;
+            }
+
+            svg circle.help-level {
+                fill: purple;
+            }
 
             h1 {
                 font-size: 14px;
@@ -33,10 +42,45 @@
         <div id="chart" width="100%"></div>
         <div id="text-log"></div>
 
-                <label class="">
+               <!--  <label class="">
                   <input type="checkbox" onclick="toggleThings(lines)" checked>
-                  <!-- <div class="slider round"></div> -->
+                  <div class="slider round"></div>Toggle Lines
                 </label>
+                  <label><input type="checkbox" /> Label text</label> -->
+
+        <form>
+            <div>
+                <label><input type="checkbox" class="event-toggle" onclick="toggleThings(lines)" checked/>
+                    <span style="color: black">&#9644;</span> 
+                    Show level lines</label> 
+                <label><input type="checkbox" class="event-toggle" onclick="toggleThings(hints)" checked/>
+                   <span style="color: grey">&#9899;</span> 
+                    Show hints</label> 
+                <label><input type="checkbox" class="event-toggle" onclick="toggleThings(correctFlags)" checked/> 
+                    <span style="color: black">&#9898;</span> 
+                    Show correct flags</label> 
+                <label><input type="checkbox" class="event-toggle" onclick="toggleThings(wrongFlags)" checked/>
+                    <span style="color: red">&#9899;</span>
+                    Show incorrent flags</label> 
+                <label><input type="checkbox" class="event-toggle" onclick="toggleThings(gameStarts),
+                                                                            toggleThings(gameFinishes)" checked/>
+                    <span style="color: black">&#9898;</span> 
+                    Show game starts and finishes</label> 
+                <label><input type="checkbox" class="event-toggle" onclick="toggleThings(levelSkips)" checked/>
+                    <span style="color: black">&#9899;</span>
+                    Show level skips</label> 
+                <label><input type="checkbox" class="event-toggle" onclick="toggleThings(prematureExits)" checked/>
+                    <span style="color: black">&#9899;</span>
+                    Show premature exits</label> 
+                <label><input type="checkbox" class="event-toggle" onclick="toggleThings(helpLevelEvents)" checked/>
+                    <span style="color: purple">&#9899;</span>
+                    Show help level events</label> 
+            </div>
+            <div>
+                <button type="button" onclick="showAll()"> Show all </button>
+                <button type="button" onclick="hideAll()"> Hide all </button>
+            </div>
+        <form>
  
 
         <script type="text/javascript">
@@ -79,9 +123,13 @@
         var wrongFlags = document.getElementsByClassName("wrong-flag");
         var prematureExits = document.getElementsByClassName("premature-exit");
         var levelSkips = document.getElementsByClassName("level-skip");
-        var gameFinishes = document.getElementsByClassName("game-started");
-        var gameStarts = document.getElementsByClassName("level-line");
-        var hints = document.getElementsByClassName("level-line");
+        var gameFinishes = document.getElementsByClassName("game-finished");
+        var gameStarts = document.getElementsByClassName("game-started");
+        var hints = document.getElementsByClassName("hint");
+        var helpLevelEvents = document.getElementsByClassName("help-level");
+        var allThings = [lines, correctFlags, wrongFlags, prematureExits, levelSkips, gameFinishes, gameStarts, hints, helpLevelEvents];
+
+        var toggles = document.getElementsByClassName("event-toggle");
 
         function toggleThings(things){ 
              for (var i = 0; i< things.length; i++) {
@@ -93,11 +141,44 @@
                 };
         }
 
+        // FUNCTIONS THAT SHOW/HIDE ALL ELEMENTS AND UPDATE CHECKBOXES
+        // TO-DO: Refactor into one method
+        function hideAll() {
+            for(var i = 0; i < allThings.length; i++){
+                for(var j = 0; j < allThings[i].length; j++) {
+                    allThings[i][j].style.display = "none";
+                }
+            }
+            for (var i = 0; i < toggles.length; i++) {
+                toggles[i].checked = false;
+            }
+            return;
+        }
+
+        function showAll() {
+            for(var i = 0; i < allThings.length; i++){
+                for(var j = 0; j < allThings[i].length; j++) {
+                    allThings[i][j].style.display = "block";
+                }
+            }
+            for (var i = 0; i < toggles.length; i++) {
+                toggles[i].checked = true;
+            }
+            return;
+        }
+
+        // On page the load, all the event visual elements are drawn, so make all boxes checked to make sure they are in sync with the visuals
+        window.onload = function () { 
+            for (var i = 0; i < toggles.length; i++) {
+                toggles[i].checked = true;
+            }
+        }
+
         //*************************************************************
         // VARIABLES FOR WINDOWS SIZES, BORDERS AND SUCH SVG STUFF 
 
         var width = window.innerWidth - 40;
-        var height = window.innerHeight - 20;
+        var height = window.innerHeight - 100;
         var padding_horizontal = 20;
         var padding_vertical = 20;
         var color = d3.scaleOrdinal(d3.schemeCategory20);
@@ -242,6 +323,8 @@
                                 return "hint";
                             } else if (d.event.indexOf("Wrong flag submited") != -1 ) {
                                 return "wrong-flag";
+                            }  else if (d.event.indexOf("Help level") != -1 || d.event.indexOf("help level") != -1) {
+                                return "help-level";
                             }  else return ""; 
                         })
                         .attr("stroke-width", "1")

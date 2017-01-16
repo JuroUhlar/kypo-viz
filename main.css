@@ -57,3 +57,8 @@ input:checked + .slider:before {
 .slider.round:before {
     border-radius: 50%;
 }
+
+
+.checkboxes label {
+  white-space: nowrap;
+}

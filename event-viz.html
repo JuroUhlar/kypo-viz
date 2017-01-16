@@ -39,42 +39,58 @@
     <body>
 
         <h1>KYPO game event log prototype</h1>
+
+        <!-- All D3 visualization stuff goes to this div -->
         <div id="chart" width="100%"></div>
-        <div id="text-log"></div>
+        <!-- ********************************************-->
+        
 
-               <!--  <label class="">
-                  <input type="checkbox" onclick="toggleThings(lines)" checked>
-                  <div class="slider round"></div>Toggle Lines
-                </label>
-                  <label><input type="checkbox" /> Label text</label> -->
 
+        <!-- HTML FOR CHECKBOXES AND BUTTONS -->
         <form>
-            <div>
-                <label><input type="checkbox" class="event-toggle" onclick="toggleThings(lines)" checked/>
-                    <span style="color: black">&#9644;</span> 
-                    Show level lines</label> 
-                <label><input type="checkbox" class="event-toggle" onclick="toggleThings(hints)" checked/>
-                   <span style="color: grey">&#9899;</span> 
-                    Show hints</label> 
-                <label><input type="checkbox" class="event-toggle" onclick="toggleThings(correctFlags)" checked/> 
-                    <span style="color: black">&#9898;</span> 
-                    Show correct flags</label> 
-                <label><input type="checkbox" class="event-toggle" onclick="toggleThings(wrongFlags)" checked/>
-                    <span style="color: red">&#9899;</span>
-                    Show incorrent flags</label> 
-                <label><input type="checkbox" class="event-toggle" onclick="toggleThings(gameStarts),
+            <div class="checkboxes">
+                <label>
+                    <input type="checkbox" class="event-toggle" onclick="toggleThings(lines)" checked/>
+                    <span style="color: black;">&#9644;</span> 
+                    Show level lines
+                </label> 
+                <label>
+                    <input type="checkbox" class="event-toggle" onclick="toggleThings(gameStarts),
                                                                             toggleThings(gameFinishes)" checked/>
-                    <span style="color: black">&#9898;</span> 
-                    Show game starts and finishes</label> 
-                <label><input type="checkbox" class="event-toggle" onclick="toggleThings(levelSkips)" checked/>
-                    <span style="color: black">&#9899;</span>
-                    Show level skips</label> 
-                <label><input type="checkbox" class="event-toggle" onclick="toggleThings(prematureExits)" checked/>
-                    <span style="color: black">&#9899;</span>
-                    Show premature exits</label> 
-                <label><input type="checkbox" class="event-toggle" onclick="toggleThings(helpLevelEvents)" checked/>
-                    <span style="color: purple">&#9899;</span>
-                    Show help level events</label> 
+                    <svg height="10" width="10"><circle cx="50%" cy="50%" r="46%" fill="white" stroke="black" /></svg>
+                    Show game starts and finishes
+                </label> 
+                <label>
+                    <input type="checkbox" class="event-toggle" onclick="toggleThings(correctFlags)" checked/> 
+                    <svg height="10" width="10"><circle cx="50%" cy="50%" r="46%" fill="white" stroke="black" /></svg>
+                    Show correct flags
+                </label> 
+                <label>
+                    <input type="checkbox" class="event-toggle" onclick="toggleThings(hints)" checked/>
+                    <svg height="10" width="10"><circle cx="50%" cy="50%" r="50%" fill="grey" /></svg>
+                    Show hints
+                </label> 
+                <label>
+                    <input type="checkbox" class="event-toggle" onclick="toggleThings(wrongFlags)" checked/>
+                    <svg height="10" width="10"><circle cx="50%" cy="50%" r="50%" fill="red" /></svg>
+                    Show incorrent flags
+                </label> 
+                
+                <label>
+                    <input type="checkbox" class="event-toggle" onclick="toggleThings(levelSkips)" checked/>
+                     <svg height="10" width="10"><circle cx="50%" cy="50%" r="50%" fill="black" /></svg>
+                    Show level skips
+                </label> 
+                <label>
+                    <input type="checkbox" class="event-toggle" onclick="toggleThings(prematureExits)" checked/>
+                     <svg height="10" width="10"><circle cx="50%" cy="50%" r="50%" fill="black" /></svg>
+                    Show premature exits
+                </label> 
+                <label>
+                    <input type="checkbox" class="event-toggle" onclick="toggleThings(helpLevelEvents)" checked/>
+                    <svg height="10" width="10"><circle cx="50%" cy="50%" r="50%" fill="purple" /></svg>
+                    Show help level events
+                </label> 
             </div>
             <div>
                 <button type="button" onclick="showAll()"> Show all </button>
@@ -82,7 +98,7 @@
             </div>
         <form>
  
-
+        <!-- *************** scripting starts here ************************     -->
         <script type="text/javascript">
 
         //**************************************************
@@ -167,7 +183,7 @@
             return;
         }
 
-        // On page the load, all the event visual elements are drawn, so make all boxes checked to make sure they are in sync with the visuals
+        // On page the load, all the event visual elements are drawn, so make all boxes CHECKED to make sure they are in sync with the visuals
         window.onload = function () { 
             for (var i = 0; i < toggles.length; i++) {
                 toggles[i].checked = true;
@@ -177,16 +193,15 @@
         //*************************************************************
         // VARIABLES FOR WINDOWS SIZES, BORDERS AND SUCH SVG STUFF 
 
-        var width = window.innerWidth - 40;
-        var height = window.innerHeight - 100;
+        var width = window.innerWidth - 40; // Dynamically set width to make sure diagram always fits on page
+        var height = window.innerHeight - 100; // Dynamically set height
         var padding_horizontal = 20;
         var padding_vertical = 20;
-        var color = d3.scaleOrdinal(d3.schemeCategory20);
 
-        var legendRectSize = 18;
-        var legendSpacing = 4;
+        var color = d3.scaleOrdinal(d3.schemeCategory20); // Color palette generator, give it a number, it gives you a color 
 
 
+        // ********** create SVG ***********
         var svg = d3.select('#chart')
                     .append("svg")
                     .attr("height", height)
@@ -201,61 +216,71 @@
                     var players = [];
                     var startTimes = [];
 
+                    // Construct and array of all players, to later identify them with indexes
                     dataset.forEach(function (d) {
                         if(players.indexOf(d.ID) === -1){
                             players.push(d.ID); 
                         }
-                        
-                        // d.game_seconds = StrTimeToSeconds(d.logical_time);
                     });
 
+                    // Construct an array of start times per player, to later use to calculate game time for each event
                     dataset.forEach(function (d){
                         if(d.event === "Game started"){
                             startTimes[players.indexOf(d.ID)] = GetSeconds(d.timestamp); 
                         }
                     });
 
+                    // Give each event object a new property - timestamp relative to the start of their game 
+                    // This proporty is used to calculate their X position in the diagram
                     dataset.forEach(function (d) {
                         d.game_seconds = GetSeconds(d.timestamp) - startTimes[players.indexOf(d.ID)];
                         // console.log(d.game_seconds);
                     });
 
-                    // console.log(startTimes);
-
+    
+                    //*********** SCALES **********************
                     var xScale = d3.scaleLinear()
-                                             .domain([0, d3.max(dataset, function(d) { return d.game_seconds; })])
-                                             .range([padding_horizontal, width - padding_horizontal]);
+                                             .domain([0, d3.max(dataset, function(d) { return d.game_seconds; })]) // X domain boundury defined by the latest event
+                                             .range([padding_horizontal, width - padding_horizontal]); // set by dimensions of SVG - padding
 
                     var yScale = d3.scaleLinear() // accept players index in array
-                                             .domain([0, players.length])
-                                             .range([padding_vertical, height - padding_vertical]);
+                                             .domain([0, players.length])    // Y domain boundaty defined by number of players
+                                             .range([padding_vertical, height - padding_vertical]); // set by dimensions of SVG - padding
 
                     var playerColorScale = d3.scaleOrdinal(d3.schemeCategory20b);
+
+
+                    //************AXIS ******************************
+                    var xAxis = d3.axisBottom()
+                            .scale(xScale)
+                            .ticks(10)
+                            .tickValues(["1200", "2400", "3600", "4800", "6000", "7200", "8400","9600"]);
+
 
                     
                     //***********************************************
                     // LINES CERRESPONDING TO DURATION OF EACH LEVEL 
 
                     svg.selectAll("line")
-                        .data(dataset.filter(function (d) {
+                        .data(dataset.filter(function (d) { // get only events that mean end of level
                            return d.event === "Correct flag submited" || d.event === "Game finished" || 
                                   d.event === "Level cowardly skipped" || d.event === "Game exited prematurely"; 
                         }))
                         .enter()
                         .append("line")
-                        .attr("y1", function (d) {
+                        .attr("y1", function (d) { // Y coordinate set according to player index
                             return yScale(players.indexOf(d.ID));
                         })
-                        .attr("y2", function (d) {
+                        .attr("y2", function (d) { // Y coordinate set according to player index, again
                             return yScale(players.indexOf(d.ID));
                         })
-                        .attr("x2", function (d) {
+                        .attr("x2", function (d) { // X coordinate set by game time
                             return xScale(d.game_seconds);
                         })
-                        .attr("x1", function (d) {
+                        .attr("x1", function (d) { // X coodinate of first point set by game time of previous end-of-level event
                             currentLevel = d.level;
                             currentPlayer = d.ID;
-                            var levelStart = dataset.filter(function (d) {
+                            var levelStart = dataset.filter(function (d) { // This craziness figures out what that event is (where this level starts)
                                 return (d.ID === currentPlayer) &&
                                        (
                                             (+d.level === +currentLevel - 1 &&
@@ -270,7 +295,7 @@
                         .attr("stroke-width", "3")
                         .attr("class", "level-line")
                         .attr("stroke", function (d){
-                            return color(d.level);
+                            return color(d.level); // colour based on level
                         });
 
                     //************************************************    
@@ -338,6 +363,17 @@
                                     "Level time: " + d.logical_time + "\n" + 
                                     "Game time: " + (d.game_seconds+"").toHHMMSS();  
                         });
+
+                        svg.append("g")
+                            .attr("class", "axis")
+                            .attr("transform", "translate(0, " + (height - padding_vertical) + ")")
+                            .call(xAxis);
+
+                        var ticks = document.getElementsByClassName("tick");
+                        console.log(ticks);
+                        for(var i = 0; i<ticks.length; i++) {
+                           console.log(ticks[i].childNodes[1].textContent);
+                        }
 
 
                           

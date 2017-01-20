@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>CSV upload file</title>
+        <link rel="stylesheet" type="text/css" href="main.css">
+        <script type="text/javascript" src="d3/d3.js"></script>
+        <style>
+
+             
+           
+            
+        </style>
+
+
+    </head>
+    <body>
+
+        <h1> Upload a csv file</h1>
+
+         <input type="file" id="csvFileInput" onchange="handleFiles(this.files)"
+            accept=".csv">
+
+       <script>
+
+        function handleFiles(files) {
+              // Check for the various File API support.
+              if (window.FileReader) {
+                  // FileReader are supported.
+                   getAsText(files[0]);
+
+              } else {
+                  alert('FileReader are not supported in this browser.');
+              }
+            }
+
+
+        function getAsText(fileToRead) {
+            var reader = new FileReader();
+            // Read file into memory as UTF-8      
+            reader.readAsText(fileToRead);
+            // Handle errors load
+            reader.onload = loadHandler;
+            reader.onerror = errorHandler;      
+        }
+        
+        function errorHandler(evt) {
+             if(evt.target.error.name == "NotReadableError") {
+                alert("Canno't read file !");
+             }
+        }
+
+        function loadHandler(event) {
+            var csv = event.target.result;
+            processData(csv);
+        }
+
+        function processData(csv) {
+             var dataset = d3.csvParse(csv);
+             console.log(dataset);
+
+              var log = d3.selectAll("p")
+                                .data(dataset)
+                                .enter()
+                                .append("p")
+                                .text(function (d) {
+                                    return (d.ID + " | " + d.timestamp + " | " + d.logical_time + " | " + d.level + " | " + d.event);
+                                });
+        }
+
+        </script>
+<!--  -->
+        
+
+    </body>
+</html>

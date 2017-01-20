@@ -1,3 +1,55 @@
+
+
+
+/* ***********************************/
+/* STYLING OF SVG ELEMENTS ***********/
+
+svg circle {
+                opacity: 0.75;
+}
+       
+
+svg circle.hint {
+    fill: grey;
+} 
+
+svg circle.premature-exit {
+    fill: black;
+}
+
+svg circle.help-level {
+    fill: purple;
+}
+
+
+
+svg .level-line {
+    /*stroke-width: 10px;*/
+    /*stroke-opacity: 0.3;*/
+}
+
+svg text.player-label {
+    font-size: 10px;
+    font-family: Arial, sans-serif;
+}
+
+/*Make labels with checkboxes not wrap insede themselves*/
+
+.checkboxes label {
+  white-space: nowrap;
+}
+
+
+
+h1 {
+    font-family: "Times New Roman";
+    font-weight: 500;
+    font-size: 16px;
+    text-align: center;
+}
+
+
+/************************** RIGHT NOW OBSOLETE CSS FOR PRETTY PRETTY iOS-style SWITCHES
 /* The switch - the box around the slider */
 .switch {
     position: relative;
@@ -56,9 +108,4 @@ input:checked + .slider:before {
 
 .slider.round:before {
     border-radius: 50%;
-}
-
-
-.checkboxes label {
-  white-space: nowrap;
 }

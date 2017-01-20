@@ -1,0 +1,401 @@
+ID,timestamp,logical_time,level,event
+57287,11/25/2016 9:27,0:00:00,1,Game started
+56965,11/25/2016 9:27,0:00:00,1,Game started
+56965,11/25/2016 9:27,0:00:00,1,Game started
+56919,11/25/2016 9:27,0:00:00,1,Game started
+57057,11/25/2016 9:27,0:00:00,1,Game started
+57103,11/25/2016 9:28,0:00:00,1,Game started
+57011,11/25/2016 9:28,0:00:00,1,Game started
+56988,11/25/2016 9:28,0:00:00,1,Game started
+56942,11/25/2016 9:28,0:00:00,1,Game started
+57218,11/25/2016 9:29,0:00:00,1,Game started
+57195,11/25/2016 9:29,0:00:00,1,Game started
+57241,11/25/2016 9:29,0:00:00,1,Game started
+57172,11/25/2016 9:30,0:00:00,1,Game started
+57149,11/25/2016 9:30,0:00:00,1,Game started
+56896,11/25/2016 9:30,0:00:00,1,Game started
+57126,11/25/2016 9:31,0:00:00,1,Game started
+56385,11/25/2016 9:31,0:00:00,1,Game started
+57241,11/25/2016 9:31,0:02:13,1,Hint 1 taken
+57218,11/25/2016 9:32,0:02:41,1,Hint 2 taken
+57080,11/25/2016 9:32,0:00:00,1,Game started
+57287,11/25/2016 9:33,0:05:32,1,Wrong flag submited:d94076d1363996a077791dc96a43e9acaca76de2
+57172,11/25/2016 9:33,0:03:11,1,Hint 1 taken
+57149,11/25/2016 9:33,0:03:09,1,Hint 1 taken
+57172,11/25/2016 9:33,0:03:19,1,Hint 2 taken
+57149,11/25/2016 9:33,0:03:44,1,Hint 2 taken
+57264,11/25/2016 9:34,0:00:00,1,Game started
+56919,11/25/2016 9:34,0:06:40,1,Wrong flag submited:03e3
+57057,11/25/2016 9:34,0:06:34,1,Wrong flag submited:d94076d1363996a077791dc96a43e9acaca76de2
+57057,11/25/2016 9:34,0:06:47,1,Wrong flag submited:d94076d1363996a077791dc96a43e9acaca76de2
+56919,11/25/2016 9:34,0:07:01,1,Wrong flag submited:c2df
+56919,11/25/2016 9:35,0:07:14,1,Wrong flag submited:c2df
+56919,11/25/2016 9:35,0:07:47,1,Hint 1 taken
+56919,11/25/2016 9:35,0:07:48,1,Hint 2 taken
+57057,11/25/2016 9:36,0:08:30,1,Wrong flag submited:ab0f735fd9be1c2a3c424252b857d2e2dd18451c
+56919,11/25/2016 9:36,0:08:44,1,Correct flag submited
+57057,11/25/2016 9:36,0:08:46,1,Wrong flag submited:ab0f735fd9be1c2a3c424252b857d2e2dd18451c  -
+57287,11/25/2016 9:36,0:09:27,1,Wrong flag submited:ab0f
+57057,11/25/2016 9:36,0:08:59,1,Wrong flag submited:ab0f
+57057,11/25/2016 9:37,0:09:07,1,Wrong flag submited:d940
+57057,11/25/2016 9:38,0:10:13,1,Wrong flag submited:6dae
+57034,11/25/2016 9:38,0:00:00,1,Game started
+56965,11/25/2016 9:39,0:11:55,1,Wrong flag submited:d940
+56988,11/25/2016 9:40,0:12:06,1,Wrong flag submited:d940
+56896,11/25/2016 9:41,0:10:09,1,Wrong flag submited:ba78
+56919,11/25/2016 9:41,0:04:42,2,Hint 1 taken
+56919,11/25/2016 9:41,0:04:49,2,Hint 2 taken
+57195,11/25/2016 9:41,0:11:59,1,Wrong flag submited:c2df
+56896,11/25/2016 9:41,0:10:35,1,Wrong flag submited:ba78
+57126,11/25/2016 9:41,0:10:34,1,Wrong flag submited:74df12870026ffa278264c600c21e4ea3b242c52
+57287,11/25/2016 9:41,0:14:10,1,Wrong flag submited:6875
+57057,11/25/2016 9:41,0:13:56,1,Wrong flag submited:6875
+57080,11/25/2016 9:42,0:09:26,1,Correct flag submited
+57103,11/25/2016 9:42,0:14:19,1,Correct flag submited
+56965,11/25/2016 9:43,0:15:44,1,Correct flag submited
+56896,11/25/2016 9:43,0:12:43,1,Correct flag submited
+56919,11/25/2016 9:44,0:07:46,2,Correct flag submited
+57218,11/25/2016 9:44,0:15:17,1,Correct flag submited
+56965,11/25/2016 9:44,0:17:02,1,Correct flag submited
+57241,11/25/2016 9:44,0:15:00,1,Correct flag submited
+57287,11/25/2016 9:44,0:17:20,1,Wrong flag submited:483a
+57287,11/25/2016 9:44,0:17:25,1,Wrong flag submited:483a
+57218,11/25/2016 9:45,0:00:34,2,Hint 2 taken
+57241,11/25/2016 9:45,0:00:35,2,Hint 1 taken
+57172,11/25/2016 9:45,0:15:21,1,Wrong flag submited:e9cf
+56988,11/25/2016 9:45,0:17:01,1,Correct flag submited
+57172,11/25/2016 9:45,0:15:39,1,Wrong flag submited:e9cf
+56896,11/25/2016 9:45,0:02:09,2,Hint 1 taken
+57195,11/25/2016 9:45,0:16:19,1,Correct flag submited
+57172,11/25/2016 9:46,0:16:31,1,Wrong flag submited:ba78
+57287,11/25/2016 9:46,0:19:22,1,Wrong flag submited:89f7
+57172,11/25/2016 9:46,0:16:58,1,Wrong flag submited:f4b0
+57126,11/25/2016 9:47,0:16:03,1,Correct flag submited
+57287,11/25/2016 9:47,0:19:52,1,Wrong flag submited:4afa
+56896,11/25/2016 9:47,0:03:53,2,Wrong flag submited:3cad
+56942,11/25/2016 9:47,0:19:17,1,Wrong flag submited:74df12870026ffa278264c600c21e4ea3b242c52
+56385,11/25/2016 9:48,0:17:28,1,Wrong flag submited:8ada
+56942,11/25/2016 9:48,0:19:56,1,Correct flag submited
+56896,11/25/2016 9:48,0:05:09,2,Wrong flag submited:5c54
+57011,11/25/2016 9:48,0:20:25,1,Wrong flag submited:697b
+56385,11/25/2016 9:48,0:17:45,1,Wrong flag submited:3f03
+56896,11/25/2016 9:48,0:05:23,2,Wrong flag submited:5c54
+57172,11/25/2016 9:49,0:19:09,1,Correct flag submited
+57149,11/25/2016 9:49,0:19:09,1,Correct flag submited
+56385,11/25/2016 9:49,0:18:44,1,Correct flag submited
+57011,11/25/2016 9:49,0:21:35,1,Correct flag submited
+57287,11/25/2016 9:50,0:22:31,1,Wrong flag submited:9ea1
+56896,11/25/2016 9:50,0:07:02,2,Hint 2 taken
+57172,11/25/2016 9:50,0:01:30,2,Hint 1 taken
+57149,11/25/2016 9:50,0:01:29,2,Hint 1 taken
+57172,11/25/2016 9:50,0:01:32,2,Hint 2 taken
+57103,11/25/2016 9:50,0:08:12,2,Wrong flag submited:d664
+57149,11/25/2016 9:50,0:01:34,2,Hint 2 taken
+57103,11/25/2016 9:51,0:08:58,2,Wrong flag submited:e0f7
+57103,11/25/2016 9:51,0:09:17,2,Wrong flag submited:f7b4
+57126,11/25/2016 9:53,0:05:56,2,Correct flag submited
+57195,11/25/2016 9:53,0:07:20,2,Correct flag submited
+56873,11/25/2016 9:53,0:00:00,1,Game started
+56942,11/25/2016 9:53,0:04:39,2,Wrong flag submited:3cad
+57264,11/25/2016 9:53,0:18:57,1,Wrong flag submited:e9cfa2367e2a9b306df6517cccb53bee8494170d
+57034,11/25/2016 9:53,0:15:20,1,Wrong flag submited:d940
+57287,11/25/2016 9:53,0:26:30,1,Correct flag submited
+57218,11/25/2016 9:54,0:09:21,2,Correct flag submited
+57241,11/25/2016 9:54,0:09:31,2,Correct flag submited
+57172,11/25/2016 9:54,0:05:13,2,Correct flag submited
+57264,11/25/2016 9:54,0:20:07,1,Wrong flag submited:ba78d8319c9c43577312062c609cd14b998b0a3c
+57149,11/25/2016 9:54,0:05:17,2,Correct flag submited
+57103,11/25/2016 9:54,0:11:58,2,Wrong flag submited:afa7
+57103,11/25/2016 9:54,0:12:17,2,Wrong flag submited:1a69
+56896,11/25/2016 9:54,0:11:18,2,Wrong flag submited:3083
+57011,11/25/2016 9:54,0:04:58,2,Correct flag submited
+56896,11/25/2016 9:55,0:11:49,2,Wrong flag submited:af67
+57080,11/25/2016 9:55,0:13:20,2,Wrong flag submited:d498
+56942,11/25/2016 9:55,0:06:55,2,Wrong flag submited:7626
+56965,11/25/2016 9:55,0:12:12,2,Wrong flag submited:25f0
+57057,11/25/2016 9:55,0:27:44,1,Correct flag submited
+56965,11/25/2016 9:56,0:12:33,2,Wrong flag submited:25f0
+56896,11/25/2016 9:56,0:12:28,2,Wrong flag submited:4dfa
+56896,11/25/2016 9:56,0:12:36,2,Wrong flag submited:4df1
+57264,11/25/2016 9:56,0:21:52,1,Wrong flag submited:74df12870026ffa278264c600c21e4ea3b242c52
+57103,11/25/2016 9:56,0:13:48,2,Hint 1 taken
+57264,11/25/2016 9:56,0:22:09,1,Correct flag submited
+57080,11/25/2016 9:56,0:14:31,2,Wrong flag submited:e6ff
+57287,11/25/2016 9:56,0:02:44,2,Wrong flag submited:7626
+56873,11/25/2016 9:56,0:03:44,1,Wrong flag submited:7c16c0ad9cd56861d689ed0fecd66917936dfd9e
+56873,11/25/2016 9:57,0:04:25,1,Wrong flag submited:7c16
+56942,11/25/2016 9:57,0:09:00,2,Wrong flag submited:7c32
+56873,11/25/2016 9:58,0:04:59,1,Wrong flag submited:ba78
+56942,11/25/2016 9:58,0:10:11,2,Wrong flag submited:b9e3
+57034,11/25/2016 9:59,0:20:53,1,Wrong flag submited:da39
+56385,11/25/2016 9:59,0:09:42,2,Correct flag submited
+56873,11/25/2016 9:59,0:06:24,1,Correct flag submited
+56896,11/25/2016 10:00,0:16:45,2,Correct flag submited
+56965,11/25/2016 10:01,0:17:45,2,Correct flag submited
+56965,11/25/2016 10:01,0:16:32,2,Correct flag submited
+57218,11/25/2016 10:01,0:07:19,3,Wrong flag submited:8e29
+56942,11/25/2016 10:02,0:13:35,2,Wrong flag submited:58e8
+57218,11/25/2016 10:02,0:08:16,3,Wrong flag submited:a87c
+57241,11/25/2016 10:02,0:08:23,3,Wrong flag submited:e0a6
+56942,11/25/2016 10:02,0:14:05,2,Wrong flag submited:d90f
+57218,11/25/2016 10:02,0:08:41,3,Wrong flag submited:c384
+56988,11/25/2016 10:02,0:17:42,2,Correct flag submited
+57034,11/25/2016 10:03,0:25:01,1,Correct flag submited
+56942,11/25/2016 10:03,0:14:53,2,Wrong flag submited:3498
+57287,11/25/2016 10:04,0:10:07,2,Wrong flag submited:3cad
+56942,11/25/2016 10:04,0:15:42,2,Wrong flag submited:c39f
+57172,11/25/2016 10:04,0:10:01,3,Wrong flag submited:8e29
+56873,11/25/2016 10:04,0:05:13,2,Wrong flag submited:d664
+56942,11/25/2016 10:04,0:16:14,2,Correct flag submited
+56919,11/25/2016 10:04,0:20:36,3,Wrong flag submited:0902
+57241,11/25/2016 10:05,0:10:46,3,Hint 2 taken
+57218,11/25/2016 10:05,0:10:59,3,Hint 3 taken
+56873,11/25/2016 10:05,0:05:32,2,Wrong flag submited:e0f7
+57080,11/25/2016 10:05,0:23:15,2,Correct flag submited
+56873,11/25/2016 10:05,0:05:53,2,Wrong flag submited:f7b4
+57287,11/25/2016 10:05,0:11:32,2,Correct flag submited
+56873,11/25/2016 10:06,0:07:21,2,Wrong flag submited:b897
+57264,11/25/2016 10:06,0:10:29,2,Correct flag submited
+57011,11/25/2016 10:07,0:12:05,3,Wrong flag submited:ls
+56873,11/25/2016 10:07,0:07:46,2,Wrong flag submited:14f5
+56873,11/25/2016 10:07,0:07:59,2,Wrong flag submited:afa7
+56873,11/25/2016 10:08,0:08:29,2,Wrong flag submited:2d5f
+57241,11/25/2016 10:08,0:14:24,3,Hint 1 taken
+56873,11/25/2016 10:08,0:09:09,2,Wrong flag submited:d498
+57126,11/25/2016 10:09,0:15:59,3,Wrong flag submited:da39
+57195,11/25/2016 10:09,0:16:12,3,Correct flag submited
+56873,11/25/2016 10:09,0:09:55,2,Wrong flag submited:29b3
+56873,11/25/2016 10:10,0:10:45,2,Hint 2 taken
+57011,11/25/2016 10:10,0:15:32,3,Correct flag submited
+56919,11/25/2016 10:10,0:26:15,3,Wrong flag submited:9098
+56873,11/25/2016 10:11,0:11:40,2,Hint 1 taken
+56896,11/25/2016 10:11,0:11:16,3,Hint 1 taken
+56919,11/25/2016 10:11,0:27:16,3,Wrong flag submited:dd24
+57126,11/25/2016 10:11,0:18:37,3,Correct flag submited
+57287,11/25/2016 10:11,0:06:27,3,Correct flag submited
+56919,11/25/2016 10:12,0:27:45,3,Wrong flag submited:9098
+57034,11/25/2016 10:12,0:09:15,2,Correct flag submited
+56873,11/25/2016 10:13,0:13:44,2,Correct flag submited
+56919,11/25/2016 10:13,0:29:04,3,Correct flag submited
+57172,11/25/2016 10:13,0:19:19,3,Hint 2 taken
+57149,11/25/2016 10:13,0:19:13,3,Hint 2 taken
+56988,11/25/2016 10:15,0:12:11,3,Correct flag submited
+57172,11/25/2016 10:15,0:20:55,3,Hint 1 taken
+57172,11/25/2016 10:15,0:21:03,3,Hint 3 taken
+57149,11/25/2016 10:15,0:21:19,3,Hint 3 taken
+57011,11/25/2016 10:16,0:06:14,4,Wrong flag submited:693e
+56965,11/25/2016 10:20,0:19:22,3,Correct flag submited
+56965,11/25/2016 10:20,0:19:27,3,Correct flag submited
+56896,11/25/2016 10:21,0:21:04,3,Hint 3 taken
+56942,11/25/2016 10:24,0:19:28,3,Correct flag submited
+56896,11/25/2016 10:24,0:24:21,3,Correct flag submited
+56385,11/25/2016 10:25,0:25:40,3,Hint 1 taken
+57218,11/25/2016 10:25,0:31:40,3,Wrong flag submited:9098
+57241,11/25/2016 10:25,0:31:35,3,Wrong flag submited:9098
+57218,11/25/2016 10:27,0:33:24,3,Correct flag submited
+57264,11/25/2016 10:27,0:20:31,3,Correct flag submited
+57057,11/25/2016 10:27,0:32:04,2,Wrong flag submited:03d1
+57241,11/25/2016 10:27,0:33:44,3,Correct flag submited
+57218,11/25/2016 10:28,0:00:57,4,Hint 2 taken
+57241,11/25/2016 10:28,0:00:27,4,Hint 1 taken
+57057,11/25/2016 10:28,0:32:43,2,Correct flag submited
+56873,11/25/2016 10:28,0:15:13,3,Hint 1 taken
+57034,11/25/2016 10:28,0:16:05,3,Correct flag submited
+56873,11/25/2016 10:28,0:15:16,3,Hint 2 taken
+56385,11/25/2016 10:29,0:29:40,3,Wrong flag submited:5121
+57080,11/25/2016 10:29,0:24:05,3,Correct flag submited
+56385,11/25/2016 10:30,0:30:52,3,Wrong flag submited:0902
+56385,11/25/2016 10:30,0:31:06,3,Wrong flag submited:e8ff
+56385,11/25/2016 10:31,0:31:53,3,Wrong flag submited:0902
+56385,11/25/2016 10:31,0:32:02,3,Wrong flag submited:e8ff
+57011,11/25/2016 10:31,0:21:26,4,Wrong flag submited:63e8
+57011,11/25/2016 10:32,0:21:46,4,Wrong flag submited:23cb
+56873,11/25/2016 10:32,0:19:27,3,Hint 3 taken
+56385,11/25/2016 10:33,0:33:58,3,Correct flag submited
+56896,11/25/2016 10:34,0:09:21,4,Hint 1 taken
+56896,11/25/2016 10:34,0:09:28,4,Hint 2 taken
+57172,11/25/2016 10:36,0:42:25,3,Correct flag submited
+56896,11/25/2016 10:36,0:12:09,4,Wrong flag submited:693e
+57149,11/25/2016 10:37,0:42:45,3,Correct flag submited
+56942,11/25/2016 10:38,0:14:23,4,Hint 2 taken
+56988,11/25/2016 10:38,0:23:45,4,Wrong flag submited:693e
+56919,11/25/2016 10:39,0:26:15,4,Hint 1 taken
+57172,11/25/2016 10:41,0:04:35,4,Hint 1 taken
+57172,11/25/2016 10:41,0:04:36,4,Hint 2 taken
+57149,11/25/2016 10:41,0:04:11,4,Hint 1 taken
+57149,11/25/2016 10:41,0:04:12,4,Hint 2 taken
+56988,11/25/2016 10:41,0:26:09,4,Wrong flag submited:703f
+56988,11/25/2016 10:41,0:26:44,4,Wrong flag submited:2765
+56873,11/25/2016 10:43,0:30:31,3,Level cowardly skipped
+56873,11/25/2016 10:44,0:00:23,4,Hint 1 taken
+56873,11/25/2016 10:45,0:02:02,4,Wrong flag submited:693e
+57057,11/25/2016 10:48,0:20:29,3,Correct flag submited
+57195,11/25/2016 10:50,0:41:10,4,Wrong flag submited:8f96
+57195,11/25/2016 10:50,0:41:33,4,Wrong flag submited:63e8
+57195,11/25/2016 10:52,0:43:01,4,Wrong flag submited:ded1
+57195,11/25/2016 10:53,0:43:44,4,Wrong flag submited:7f7a
+56873,11/25/2016 10:54,0:10:50,4,Level cowardly skipped
+57195,11/25/2016 10:55,0:46:03,4,Hint 2 taken
+56873,11/25/2016 10:57,0:02:42,5,Hint 1 taken
+56873,11/25/2016 10:57,0:02:46,5,Hint 2 taken
+57149,11/25/2016 10:57,0:20:28,4,Help level accessed
+57172,11/25/2016 10:57,0:21:04,4,Help level accessed
+56919,11/25/2016 11:00,0:47:09,4,Hint 2 taken
+57011,11/25/2016 11:00,0:50:13,4,Wrong flag submited:0688
+56988,11/25/2016 11:00,0:45:54,4,Wrong flag submited:5065
+56988,11/25/2016 11:01,0:46:00,4,Wrong flag submited:5065
+57011,11/25/2016 11:02,0:51:44,4,Wrong flag submited:03be
+56385,11/25/2016 11:04,0:30:35,4,Hint 2 taken
+56873,11/25/2016 11:08,0:13:58,5,Level cowardly skipped
+56873,11/25/2016 11:10,0:01:54,6,Hint 1 taken
+56873,11/25/2016 11:10,0:01:55,6,Hint 2 taken
+56942,11/25/2016 11:12,0:48:17,4,Wrong flag submited:0303
+56942,11/25/2016 11:13,0:49:04,4,Correct flag submited
+57195,11/25/2016 11:14,1:04:49,4,Correct flag submited
+57011,11/25/2016 11:14,1:04:09,4,Wrong flag submited:26e9
+57264,11/25/2016 11:14,0:47:07,4,Wrong flag submited:0401
+57287,11/25/2016 11:14,1:02:48,4,Correct flag submited
+57264,11/25/2016 11:14,0:47:25,4,Wrong flag submited:03be
+57011,11/25/2016 11:15,1:04:46,4,Correct flag submited
+56919,11/25/2016 11:15,1:02:00,4,Correct flag submited
+57264,11/25/2016 11:15,0:48:26,4,Correct flag submited
+57034,11/25/2016 11:16,0:48:23,4,Correct flag submited
+56896,11/25/2016 11:17,0:53:00,4,Correct flag submited
+56385,11/25/2016 11:17,0:44:10,4,Correct flag submited
+57080,11/25/2016 11:18,0:48:49,4,Correct flag submited
+56965,11/25/2016 11:18,0:57:57,4,Correct flag submited
+56965,11/25/2016 11:18,0:58:06,4,Correct flag submited
+56988,11/25/2016 11:19,1:04:43,4,Correct flag submited
+57011,11/25/2016 11:21,0:06:19,5,Hint 1 taken
+56896,11/25/2016 11:22,0:05:05,5,Hint 2 taken
+57241,11/25/2016 11:23,0:55:24,4,Wrong flag submited:3d23
+57218,11/25/2016 11:23,0:56:07,4,Wrong flag submited:3d23
+57126,11/25/2016 11:23,1:12:17,4,Correct flag submited
+57241,11/25/2016 11:24,0:56:52,4,Correct flag submited
+57034,11/25/2016 11:25,0:08:16,5,Hint 2 taken
+57218,11/25/2016 11:25,0:57:55,4,Correct flag submited
+57241,11/25/2016 11:26,0:01:58,5,Hint 1 taken
+57218,11/25/2016 11:26,0:01:32,5,Hint 2 taken
+56919,11/25/2016 11:27,0:12:01,5,Hint 1 taken
+56919,11/25/2016 11:27,0:12:10,5,Hint 2 taken
+57195,11/25/2016 11:30,0:15:52,5,Hint 2 taken
+57195,11/25/2016 11:33,0:18:57,5,Correct flag submited
+57126,11/25/2016 11:34,0:10:04,5,Hint 2 taken
+57034,11/25/2016 11:34,0:17:30,5,Correct flag submited
+57011,11/25/2016 11:34,0:19:42,5,Correct flag submited
+57149,11/25/2016 11:35,0:58:01,4,Returned from help level
+56988,11/25/2016 11:35,0:15:18,5,Correct flag submited
+57172,11/25/2016 11:36,0:59:25,4,Returned from help level
+57172,11/25/2016 11:36,0:59:32,4,Correct flag submited
+57149,11/25/2016 11:36,0:59:07,4,Correct flag submited
+57011,11/25/2016 11:36,0:01:43,6,Wrong flag submited:
+56919,11/25/2016 11:37,0:21:46,5,Correct flag submited
+56385,11/25/2016 11:38,0:20:20,5,Correct flag submited
+57218,11/25/2016 11:38,0:12:43,5,Hint 1 taken
+57218,11/25/2016 11:38,0:12:46,5,Help level accessed
+56896,11/25/2016 11:38,0:20:35,5,Correct flag submited
+57172,11/25/2016 11:38,0:02:17,5,Hint 1 taken
+57149,11/25/2016 11:38,0:02:19,5,Hint 1 taken
+57172,11/25/2016 11:38,0:02:21,5,Hint 2 taken
+57149,11/25/2016 11:38,0:02:33,5,Hint 2 taken
+57126,11/25/2016 11:39,0:15:24,5,Wrong flag submited:27ab
+57126,11/25/2016 11:39,0:15:42,5,Wrong flag submited:27abcb3fd134bf4dbcbf240063da56e5fa9c2154
+57149,11/25/2016 11:39,0:03:33,5,Help level accessed
+57149,11/25/2016 11:40,0:03:37,5,Returned from help level
+56942,11/25/2016 11:40,0:26:36,5,Correct flag submited
+57126,11/25/2016 11:40,0:16:32,5,Correct flag submited
+57218,11/25/2016 11:40,0:15:19,5,Returned from help level
+57149,11/25/2016 11:40,0:04:19,5,Help level accessed
+57218,11/25/2016 11:40,0:15:27,5,Correct flag submited
+57241,11/25/2016 11:40,0:16:06,5,Correct flag submited
+57149,11/25/2016 11:41,0:04:43,5,Returned from help level
+57149,11/25/2016 11:41,0:05:04,5,Help level accessed
+57149,11/25/2016 11:41,0:05:08,5,Returned from help level
+57149,11/25/2016 11:42,0:05:50,5,Help level accessed
+56896,11/25/2016 11:43,0:05:32,6,Hint 1 taken
+56896,11/25/2016 11:43,0:05:35,6,Hint 2 taken
+57172,11/25/2016 11:45,0:08:57,5,Help level accessed
+57264,11/25/2016 11:46,0:30:12,5,Correct flag submited
+57287,11/25/2016 11:46,0:31:59,5,Hint 2 taken
+56919,11/25/2016 11:47,0:10:10,6,Hint 1 taken
+56919,11/25/2016 11:47,0:10:22,6,Hint 2 taken
+57172,11/25/2016 11:47,0:11:15,5,Returned from help level
+56873,11/25/2016 11:48,0:39:31,6,Game exited prematurely
+57241,11/25/2016 11:48,0:07:47,6,Hint 1 taken
+57149,11/25/2016 11:48,0:12:27,5,Returned from help level
+57057,11/25/2016 11:49,1:00:45,4,Wrong flag submited:king
+57057,11/25/2016 11:50,1:01:23,4,Correct flag submited
+57287,11/25/2016 11:50,0:35:54,5,Correct flag submited
+57149,11/25/2016 11:50,0:14:23,5,Game exited prematurely
+57172,11/25/2016 11:51,0:14:51,5,Game exited prematurely
+56965,11/25/2016 11:52,0:33:48,5,Correct flag submited
+56965,11/25/2016 11:52,0:34:01,5,Correct flag submited
+57011,11/25/2016 11:56,0:21:29,6,Hint 2 taken
+57011,11/25/2016 11:56,0:21:33,6,Hint 1 taken
+56965,11/25/2016 12:50,0:00:00,1,Game started
+15719,11/25/2016 12:51,16:14:55,2,Game exited prematurely
+15719,11/25/2016 12:51,0:00:00,1,Game started
+56965,11/25/2016 12:51,0:01:30,1,Game exited prematurely
+56965,11/25/2016 12:52,0:00:00,1,Game started
+56965,11/25/2016 12:52,0:00:00,1,Level cowardly skipped
+56965,11/25/2016 12:52,0:00:00,2,Level cowardly skipped
+56965,11/25/2016 12:52,0:00:00,3,Level cowardly skipped
+56965,11/25/2016 12:52,0:00:00,4,Level cowardly skipped
+56965,11/25/2016 12:52,0:00:00,5,Level cowardly skipped
+15719,11/25/2016 12:52,0:00:43,1,Hint 2 taken
+15719,11/25/2016 12:52,0:00:51,1,Hint 1 taken
+15719,11/25/2016 12:52,0:00:53,1,Help level accessed
+15719,11/25/2016 12:52,0:01:06,1,Level cowardly skipped
+56965,2016-NaN-25 12:54:02,0:00:00,1,Level cowardly skipped
+56965,2016-NaN-25 12:54:02,0:00:00,1,Game started
+56965,2016-NaN-25 12:54:02,0:00:00,3,Level cowardly skipped
+56965,2016-NaN-25 12:54:02,0:00:00,2,Level cowardly skipped
+56965,2016-NaN-25 12:54:02,0:00:00,4,Level cowardly skipped
+56965,2016-NaN-25 12:54:02,0:00:00,5,Level cowardly skipped
+56965,11/25/2016 13:00,0:00:00,1,Level cowardly skipped
+56965,11/25/2016 13:00,0:00:00,2,Level cowardly skipped
+56965,11/25/2016 13:00,0:00:00,1,Game started
+56965,11/25/2016 13:00,0:00:00,3,Level cowardly skipped
+56965,11/25/2016 13:00,0:00:00,4,Level cowardly skipped
+56965,11/25/2016 13:00,0:00:00,5,Level cowardly skipped
+56965,11/25/2016 13:30,0:29:57,6,Hint 1 taken
+56965,11/25/2016 13:31,0:39:46,6,Hint 1 taken
+56965,11/25/2016 14:13,0:00:00,1,Game started
+56965,11/25/2016 14:13,0:00:00,1,Level cowardly skipped
+56965,11/25/2016 14:13,0:00:00,2,Level cowardly skipped
+56965,11/25/2016 14:13,0:00:00,3,Level cowardly skipped
+56965,11/25/2016 14:13,0:00:00,4,Level cowardly skipped
+56965,11/25/2016 14:13,0:00:00,5,Level cowardly skipped
+57057,11/25/2016 16:13,0:00:00,1,Game started
+57057,11/25/2016 16:13,0:00:00,1,Level cowardly skipped
+57057,11/25/2016 16:13,0:00:00,2,Level cowardly skipped
+57057,11/25/2016 16:13,0:00:00,3,Level cowardly skipped
+57057,11/25/2016 16:13,0:00:00,4,Level cowardly skipped
+57080,11/25/2016 19:05,0:00:00,1,Game started
+57080,11/25/2016 19:11,0:06:02,1,Correct flag submited
+57080,11/25/2016 19:12,0:01:27,2,Correct flag submited
+57057,11/25/2016 20:52,4:38:09,5,Correct flag submited
+57080,11/25/2016 20:52,9:33:57,5,Correct flag submited
+57080,11/25/2016 21:25,0:33:44,6,Hint 1 taken
+53230,11/28/2016 10:03,0:00:00,1,Game started
+53230,11/28/2016 10:03,0:00:03,1,Hint 1 taken
+53230,11/28/2016 10:04,0:00:26,1,Level cowardly skipped
+53230,11/28/2016 10:04,0:00:03,2,Help level accessed
+53230,11/28/2016 10:04,0:00:06,2,Level cowardly skipped
+53230,11/28/2016 10:04,0:00:05,3,Game exited prematurely
+53230,11/28/2016 10:15,0:00:00,1,Game started
+53230,11/28/2016 10:15,0:00:08,1,Hint 1 taken
+53230,11/28/2016 10:16,0:00:22,1,Game exited prematurely
+53230,11/28/2016 10:37,0:00:00,1,Game started
+53230,11/28/2016 10:37,0:00:07,1,Hint 1 taken
+53230,11/28/2016 10:37,0:00:09,1,Hint 2 taken
+53230,11/28/2016 10:37,0:00:13,1,Level cowardly skipped
+53230,11/28/2016 10:38,0:00:11,2,Level cowardly skipped
+53230,11/28/2016 10:38,0:00:06,3,Level cowardly skipped
+53230,11/28/2016 10:38,0:00:06,4,Level cowardly skipped
+53230,11/28/2016 10:38,0:00:02,5,Level cowardly skipped
+53230,11/28/2016 10:38,0:00:02,6,Game exited prematurely
+53230,11/28/2016 10:38,0:00:00,1,Game started
+53230,11/28/2016 10:38,0:00:03,1,Hint 1 taken
+53230,11/28/2016 10:38,0:00:06,1,Level cowardly skipped
+53230,11/28/2016 10:38,0:00:03,2,Game exited prematurely

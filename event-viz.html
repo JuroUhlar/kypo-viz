@@ -129,7 +129,17 @@
 
         function StrTimeToSeconds(snippet) {
             var parsedTime = snippet.match(/[0-9][0-9]/g);
-            return (+parsedTime[0] * 3600) + (+parsedTime[1] * 60) + (+parsedTime[2]);
+            if (parsedTime.length === 3) {
+                return (+parsedTime[0] * 3600) + (+parsedTime[1] * 60) + (+parsedTime[2]);
+            } else if (parsedTime.length === 2) {
+                return (+parsedTime[0] * 3600) + (+parsedTime[1] * 60);
+            } else if (parsedTime.length === 1) {
+                return (+snippet[0] * 3600) + (+parsedTime[0] * 60);
+            } else {
+                console.log("unexpected date time format!");
+                return 0;
+            }
+            
         }
 
         function GetSeconds(snippet) {
@@ -252,6 +262,9 @@
                     var players = [];
                     var startTimes = [];
 
+                    // initialize start time to -1 so you can check if start time has already been recorded
+                    for(var i=0; i<50; i++) { startTimes[i] = -1;}
+
                     // Construct and array of all players, to later identify them with indexes
                     dataset.forEach(function (d) {
                         if(players.indexOf(d.ID) === -1){
@@ -262,9 +275,19 @@
                     // Construct an array of start times per player, to later use to calculate game time for each event
                     dataset.forEach(function (d){
                         if(d.event === "Game started"){
-                            startTimes[players.indexOf(d.ID)] = GetSeconds(d.timestamp); 
+                            // startTimes[players.indexOf(d.ID)] = GetSeconds(d.timestamp); 
+                            if (startTimes[players.indexOf(d.ID)] === -1) {
+                                startTimes[players.indexOf(d.ID)] = GetSeconds(d.timestamp);
+                            } else {
+                                startTimes[players.indexOf(d.ID)] =
+                                 // Math.min(GetSeconds(d.timestamp), startTimes[players.indexOf(d.ID)]);  // if there are two or more game-starts, use the earliest one
+                                 86000;  // if there are two or more game start for a player, set game start to end of day and do not visualize this player data
+                            }
+                            
                         }
                     });
+
+                    console.log(startTimes)
 
                     // Give each event object a new property - timestamp relative to the start of their game 
                     // This proporty is used to calculate their X position in the diagram

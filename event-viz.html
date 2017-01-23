@@ -5,6 +5,7 @@
         <title>Event log prototype</title>
         <link rel="stylesheet" type="text/css" href="main.css">
         <script type="text/javascript" src="d3/d3.js"></script>
+        <script type="text/javascript" src="main.js"></script>
         <style>
            
             
@@ -143,47 +144,9 @@
         var toggles = document.getElementsByClassName("event-toggle");
 
 
-        // TOGGLE FUNCTIONS
-        // TO-DO Refactor the other way around
-        function toggleThings(things){ 
-             for (var i = 0; i< things.length; i++) {
-                    if (things[i].style.display != "none") {
-                        things[i].style.display = "none";
-                    } else {
-                        things[i].style.display = "block";
-                    }
-                };
-        }
+        
 
-        function toggleThis(thing) {
-            toggleThings([thing]);
-        }
-
-        // FUNCTIONS THAT SHOW/HIDE ALL ELEMENTS AND UPDATE CHECKBOXES
-        // TO-DO: Refactor into one method
-        function hideAll() {
-            for(var i = 0; i < allThings.length; i++){
-                for(var j = 0; j < allThings[i].length; j++) {
-                    allThings[i][j].style.display = "none";
-                }
-            }
-            for (var i = 0; i < toggles.length; i++) {
-                toggles[i].checked = false;
-            }
-            return;
-        }
-
-        function showAll() {
-            for(var i = 0; i < allThings.length; i++){
-                for(var j = 0; j < allThings[i].length; j++) {
-                    allThings[i][j].style.display = "block";
-                }
-            }
-            for (var i = 0; i < toggles.length; i++) {
-                toggles[i].checked = true;
-            }
-            return;
-        }
+       
 
         // On page the load, all the event visual elements are drawn, so make all boxes CHECKED to make sure they are in sync with the visuals
         window.onload = function () { 
@@ -203,6 +166,9 @@
 
         //*************************************************************
         // VARIABLES FOR WINDOWS SIZES, BORDERS AND SUCH SVG STUFF 
+
+        var xScale;
+        var yScale;
 
         var width = window.innerWidth - 40; // Dynamically set width to make sure diagram always fits on page
         var height = window.innerHeight - 120; // Dynamically set height
@@ -253,7 +219,6 @@
                         }
                     });
 
-                    console.log(startTimes)
 
                     // Give each event object a new property - timestamp relative to the start of their game 
                     // This proporty is used to calculate their X position in the diagram
@@ -264,13 +229,13 @@
 
     
                     //*********** SCALES **********************
-                    var xScale = d3.scaleLinear()
+                    xScale = d3.scaleLinear()
                                              .domain([0, d3.max(dataset, function(d) { return d.game_seconds; })]) // X domain boundury defined by the latest event
                                              .range([padding_horizontal + extra_left_padding, width - padding_horizontal]); // set by dimensions of SVG - padding
 
              
 
-                    var yScale = d3.scaleLinear() // accept players index in array
+                    yScale = d3.scaleLinear() // accept players index in array
                                              .domain([0, players.length])    // Y domain boundaty defined by number of players
                                              .range([padding_vertical, height - padding_vertical]); // set by dimensions of SVG - padding
 

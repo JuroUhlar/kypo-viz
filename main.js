@@ -52,7 +52,7 @@ function shiftToLogicalTime(things) {
 
 }
 
-// Shift all elements in a give array back to game time
+// Shift all elements in a given array back to game time
 function shiftToGameTime(things) {
 	var length = things.length;
 	for(var i = 0; i<length; i++) {
@@ -66,6 +66,16 @@ function showAllLevels() {
     activeLevelElements = [];
 	activeLevels = "all";
 	showAll();
+}
+
+function selectLevel(value){
+	if(value === "all") {
+		showAllLevels();
+	}  else {
+		var level = +value[0];
+		var shift = (value.indexOf("shift") != -1);
+		showOnlyLevel(level, shift);
+	}
 }
 
 
@@ -123,4 +133,23 @@ function showAllLevels() {
                 toggles[i].checked = true;
             }
             return;
+        }
+
+
+// On page the load, all the event visual elements are drawn, so make all boxes CHECKED to make sure they are in sync with the visuals
+        window.onload = function () { 
+            for (var i = 0; i < toggles.length; i++) {
+                toggles[i].checked = true;
+            }
+
+            document.getElementById("selectLevelDropDown").value = "all"
+
+            var xAxis = document.getElementById("xAxis"); //Had to place this here, probably to make sure the axis is already created when i call it;
+            var yAxis = document.getElementById("yAxis"); 
+
+            var xAxisToggle = document.getElementById("xAxisToggle")  // Show x axis, hide y axis
+                            .checked = true;
+            var yAxisToggle = document.getElementById("yAxisToggle")
+                            .checked = false;
+
         }

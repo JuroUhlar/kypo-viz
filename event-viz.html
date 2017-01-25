@@ -62,7 +62,7 @@
                     Show help level events
                 </label> 
             </div>
-            <div>
+            <div id="UIrow2">
                 <button type="button" onclick="showAll()"> Show all </button>
                 <button type="button" onclick="hideAll()"> Hide all </button>
                  <label>
@@ -73,7 +73,7 @@
                     <input type="checkbox" id="yAxisToggle" onclick="toggleThis(yAxis)" checked/>
                     Show y axis (players)
                 </label> 
-                 <select id="selectLevelDropDown" onchange="selectLevel(this.value)">
+                 <!-- <select id="selectLevelDropDown" onchange="selectLevel(this.value)">
                       <option value="all" selected>Show all levels</option>
                       <option value="1">Show level 1</option>
                       <option value="1, shift">Show level 1 - logical time</option>
@@ -87,7 +87,8 @@
                       <option value="5, shift">Show level 5 - logical time</option>
                       <option value="6">Show level 6 </option>  
                       <option value="6, shift">Show level 6 - logical time</option>
-                </select>
+                </select> -->
+                <!-- This is now generated dynamically, based on actual number of levels in the data -->
             </div>
         
                
@@ -102,7 +103,9 @@
           
         // CODE DEPENDENT ON THE AVAILABILITY Of DATA   
         d3.csv("all-events.csv", function (error, dataset) {
-                    renderData(dataset);                  
+                    renderData(dataset);   
+                    generateLevelDropdownMenu(dataset);
+                                 
                 });  
         
         </script>

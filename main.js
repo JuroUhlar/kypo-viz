@@ -11,9 +11,16 @@ var gameFinishes = document.getElementsByClassName("game-finished");
 var gameStarts = document.getElementsByClassName("game-started");
 var hints = document.getElementsByClassName("hint");
 var helpLevelEvents = document.getElementsByClassName("help-level");
+
 var allThings = [lines, correctFlags, wrongFlags, prematureExits, levelSkips, gameFinishes, gameStarts, hints, helpLevelEvents];
+var allThings2 = mergeArrays(allThings);
 
 var toggles = document.getElementsByClassName("event-toggle");
+
+
+function mergeArrays() {
+      return [].concat.apply([], arguments);
+    }
 
 
 // *************************************************************
@@ -89,7 +96,7 @@ function shiftToLogicalTime(things) {
 	var length = things.length;
 	for(var i = 0; i<length; i++) {
 		var logicalShift =  xScale(things[i].__data__.game_seconds) -
-                        	xScale(StrTimeToSeconds(things[i].__data__.logical_time));
+                        	xScale(strTimeToSeconds(things[i].__data__.logical_time));
     	logicalShift = Math.round(logicalShift);
     	if (logicalShift < 0) {
     		console.log("Enexpected logical time shift, underlying data probably does not make sense (several game starts, time event inconsistensies etc...)");
@@ -186,6 +193,47 @@ function showAll() {
     return;
 }
 
+
+//**************************************************
+// FUNCTIOONs TO HELP WITH TIMES PARSING AND CONVERSIONS, nasty stuff
+
+function strDateToTime(snippet){
+    var time = snippet.slice(11,19);
+    return time;
+}
+
+function strTimeToSeconds(snippet) {
+    var parsedTime = snippet.match(/[0-9][0-9]/g);
+    if (parsedTime.length === 3) {
+        return (+parsedTime[0] * 3600) + (+parsedTime[1] * 60) + (+parsedTime[2]);
+    } else if (parsedTime.length === 2) {
+        return (+parsedTime[0] * 3600) + (+parsedTime[1] * 60);
+    } else if (parsedTime.length === 1) {
+        return (+snippet[0] * 3600) + (+parsedTime[0] * 60);
+    } else {
+        console.log("unexpected date time format!");
+        return 0;
+    }
+    
+}
+
+function getSeconds(snippet) {
+    return strTimeToSeconds(strDateToTime(snippet));
+}
+
+String.prototype.toHHMMSS = function () {
+    var sec_num = parseInt(this, 10); // don't forget the second param
+    var hours   = Math.floor(sec_num / 3600);
+    var minutes = Math.floor((sec_num - (hours * 3600)) / 60);
+    var seconds = sec_num - (hours * 3600) - (minutes * 60);
+
+    if (hours   < 10) {hours   = "0"+hours;}
+    if (minutes < 10) {minutes = "0"+minutes;}
+    if (seconds < 10) {seconds = "0"+seconds;}
+    return hours+':'+minutes+':'+seconds;
+}
+
+
 // **********************************************************************
 // PAGE LOAD RESET 
 // On page the load, all the event visual elements are drawn, so make all boxes CHECKED to make sure they are in sync with the visuals
@@ -206,45 +254,6 @@ window.onload = function () {
 
 }
 
-
-//**************************************************
-// FUNCTIOONs TO HELP WITH TIMES PARSING AND CONVERSIONS, nasty stuff
-
-function StrDateToTime(snippet){
-    var time = snippet.slice(11,19);
-    return time;
-}
-
-function StrTimeToSeconds(snippet) {
-    var parsedTime = snippet.match(/[0-9][0-9]/g);
-    if (parsedTime.length === 3) {
-        return (+parsedTime[0] * 3600) + (+parsedTime[1] * 60) + (+parsedTime[2]);
-    } else if (parsedTime.length === 2) {
-        return (+parsedTime[0] * 3600) + (+parsedTime[1] * 60);
-    } else if (parsedTime.length === 1) {
-        return (+snippet[0] * 3600) + (+parsedTime[0] * 60);
-    } else {
-        console.log("unexpected date time format!");
-        return 0;
-    }
-    
-}
-
-function GetSeconds(snippet) {
-    return StrTimeToSeconds(StrDateToTime(snippet));
-}
-
-String.prototype.toHHMMSS = function () {
-    var sec_num = parseInt(this, 10); // don't forget the second param
-    var hours   = Math.floor(sec_num / 3600);
-    var minutes = Math.floor((sec_num - (hours * 3600)) / 60);
-    var seconds = sec_num - (hours * 3600) - (minutes * 60);
-
-    if (hours   < 10) {hours   = "0"+hours;}
-    if (minutes < 10) {minutes = "0"+minutes;}
-    if (seconds < 10) {seconds = "0"+seconds;}
-    return hours+':'+minutes+':'+seconds;
-}
 
 
 
@@ -269,12 +278,12 @@ String.prototype.toHHMMSS = function () {
             // Construct an array of start times per player, to later use to calculate game time for each event
             dataset.forEach(function (d){
                 if(d.event === "Game started"){
-                    // startTimes[players.indexOf(d.ID)] = GetSeconds(d.timestamp); 
+                    // startTimes[players.indexOf(d.ID)] = getSeconds(d.timestamp); 
                     if (startTimes[players.indexOf(d.ID)] === -1) {
-                        startTimes[players.indexOf(d.ID)] = GetSeconds(d.timestamp);
+                        startTimes[players.indexOf(d.ID)] = getSeconds(d.timestamp);
                     } else {
                         startTimes[players.indexOf(d.ID)] =
-                         // Math.min(GetSeconds(d.timestamp), startTimes[players.indexOf(d.ID)]);  // if there are two or more game-starts, use the earliest one
+                         // Math.min(getSeconds(d.timestamp), startTimes[players.indexOf(d.ID)]);  // if there are two or more game-starts, use the earliest one
                          86000;  // if there are two or more game start for a player, set game start to end of day and do not visualize this player data
                     }
                     
@@ -285,7 +294,7 @@ String.prototype.toHHMMSS = function () {
             // Give each event object a new property - timestamp relative to the start of their game 
             // This proporty is used to calculate their X position in the diagram
             dataset.forEach(function (d) {
-                d.game_seconds = GetSeconds(d.timestamp) - startTimes[players.indexOf(d.ID)];
+                d.game_seconds = getSeconds(d.timestamp) - startTimes[players.indexOf(d.ID)];
                 // console.log(d.game_seconds);
             });
 
@@ -448,7 +457,9 @@ String.prototype.toHHMMSS = function () {
                     .attr("x", "0")
                     .attr("class", "player-label");
                 });
-                  
+
+
+
             // console.log(dataset);
 
             // var log = d3.select("#text-log")
@@ -460,5 +471,52 @@ String.prototype.toHHMMSS = function () {
             //                 return (d.ID + " | " + d.timestamp + " | " + d.logical_time + " | " + d.level + " | " + d.event);
             //             });
 
-
     }
+
+
+
+//**********************************************
+// Function for programmatically generate dropdown menu for selecting levels
+// (The accommodate variable number of levels for each dataset)
+function generateLevelDropdownMenu(dataset) {
+	
+	var numberOfLevels = 0;
+	dataset.forEach(function (d) { // get the number of highest level ( = n of levels)
+		if(d.level > numberOfLevels) {
+			numberOfLevels = d.level;
+		}
+	});
+
+	//remove previously generated dropdown menu
+	d3.select("#selectLevelDropDown").remove();
+
+
+	d3.select("#UIrow2") //In the apprioarate div, create a select tag
+		.append("select")
+		.attr("id", "selectLevelDropDown")
+		.on("change", onLevelSelectChange);
+
+	var selectTag = d3.select("#selectLevelDropDown");
+
+	selectTag.append("option")  // add option for all levels
+				 .text("Show all levels")
+				 .attr("value", "all");
+ 
+	for(var i = 0; i<numberOfLevels; i++) { //for each level add 2 options (in game and logical time)
+		selectTag.append("option")
+				 .text("Show level " + (i+1))
+				 .attr("value", i+1);
+
+		selectTag.append("option")
+				 .text("Show level " + (i+1) + " - logical time")
+				 .attr("value", (i+1) + ", shift");				 
+
+	}	
+	return numberOfLevels;
+}
+
+
+function onLevelSelectChange() {
+	selectValue = d3.select('#selectLevelDropDown').property('value');
+	selectLevel(selectValue);
+}

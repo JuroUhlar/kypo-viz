@@ -49,6 +49,10 @@ h1 {
 }
 
 
+:checked + label{
+  font-weight: bold;
+}
+
 /************************** RIGHT NOW OBSOLETE CSS FOR PRETTY PRETTY iOS-style SWITCHES
 /* The switch - the box around the slider */
 .switch {

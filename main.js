@@ -242,7 +242,6 @@ window.onload = function () {
         toggles[i].checked = true;
     }
 
-    document.getElementById("selectLevelDropDown").value = "all"
 
     var xAxis = document.getElementById("xAxis"); //Had to place this here, probably to make sure the axis is already created when i call it;
     var yAxis = document.getElementById("yAxis"); 
@@ -510,8 +509,9 @@ function generateLevelDropdownMenu(dataset) {
 		selectTag.append("option")
 				 .text("Show level " + (i+1) + " - logical time")
 				 .attr("value", (i+1) + ", shift");				 
-
 	}	
+
+	selectTag.value = "all";
 	return numberOfLevels;
 }
 

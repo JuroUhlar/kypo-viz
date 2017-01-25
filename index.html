@@ -141,7 +141,21 @@
 
         function loadHandler(event) {
             var csv = event.target.result;
-            processData(csv);
+
+            var firstEOL = csv.indexOf('\n');
+            var firstLine = csv.substring(0,firstEOL-1);
+
+            console.log(firstLine.length);
+            console.log("ID,timestamp,logical_time,level,event".length);
+
+            if(firstLine == "ID,timestamp,logical_time,level,event"){  
+                processData(csv);
+            } else {
+                alert("Unexpected data format. Your csv data should correspond to this header: \n\n 'ID,timestamp,logical_time,level,event' \n\n If your data is correct, just the header is missing, kindly add it (as a very first line) to your file using Notepad or something and try again. :)");
+            }
+
+          
+
         }
 
         function processData(csv) {

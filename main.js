@@ -22,6 +22,9 @@ function mergeArrays() {
       return [].concat.apply([], arguments);
     }
 
+var players = [];
+var startTimes = [];
+
 
 // *************************************************************
 // VARIABLES FOR WINDOWS SIZES, BORDERS AND SUCH SVG STUFF 
@@ -98,8 +101,9 @@ function shiftToLogicalTime(things) {
 		var logicalShift =  xScale(things[i].__data__.game_seconds) -
                         	xScale(strTimeToSeconds(things[i].__data__.logical_time));
     	logicalShift = Math.round(logicalShift);
-    	if (logicalShift < 0) {
-    		console.log("Enexpected logical time shift, underlying data probably does not make sense (several game starts, time event inconsistensies etc...)");
+    	if (logicalShift < 0) { // when times don't make sense, print error and skip event
+    		console.log("Player " + players.indexOf(things[i].__data__.ID) + ": Enexpected logical time shift, underlying data probably does not make sense (several game starts, time event inconsistensies etc...)");
+    		continue;
     	}
         logicalShift = "translate(-" + logicalShift + ")";
         things[i].setAttribute("transform", logicalShift);
@@ -261,8 +265,8 @@ window.onload = function () {
 //************************ MAIN RENDERING FUNCTION ************************
 
     function renderData(dataset) {
-    		var players = [];
-            var startTimes = [];
+    		players = [];
+            startTimes = [];
 
             // initialize start time to -1 so you can check if start time has already been recorded
             for(var i=0; i<50; i++) { startTimes[i] = -1;}
@@ -284,6 +288,7 @@ window.onload = function () {
                         startTimes[players.indexOf(d.ID)] =
                          // Math.min(getSeconds(d.timestamp), startTimes[players.indexOf(d.ID)]);  // if there are two or more game-starts, use the earliest one
                          86000;  // if there are two or more game start for a player, set game start to end of day and do not visualize this player data
+                         console.log("Unexpected data: Player " + players.indexOf(d.ID) + " started the game more than once. His data will not be visualized.");
                     }
                     
                 }

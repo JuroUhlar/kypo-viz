@@ -151,8 +151,27 @@
             if(firstLine == "ID,timestamp,logical_time,level,event"){  
                 processData(csv);
             } else {
-                alert("Unexpected data format. Your csv data should correspond to this header: \n\n 'ID,timestamp,logical_time,level,event' \n\n If your data is correct, just the header is missing, kindly add it (as a very first line) to your file using Notepad or something and try again. :)");
+                // alert("Unexpected data format. Your csv data should correspond to this header: \n\n 'ID,timestamp,logical_time,level,event' \n\n If your data is correct, just the header is missing, kindly add it (as a very first line) to your file using Notepad or something and try again. :)");
+                var response = confirm("Your data is missing the expected header: 'ID,timestamp,logical_time,level,event' \n\n If you believe your data is correct and just missing a header, press OK and we will add it manually. Otherwise press cancel to go back. ");
+                    if (response == true) {
+                        console.log("We will try to add header and visualize data.");
+                        csv = "ID,timestamp,logical_time,level,event\n".concat(csv);
+
+                        try {
+                            processData(csv);
+                        } 
+                        catch(err) {
+                            console.log("Data is invalid. Parsing and visualization failed.");
+                            alert("Data is invalid. Parsing and visualization failed. Please check your data.");
+                        }
+                        
+                    } else {
+                        console.log("You chose not to add header and programm stopped.");
+                    } 
+
+
             }
+
 
           
 

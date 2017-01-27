@@ -357,77 +357,91 @@ window.onload = function () {
                     })[0];
                     return xScale(levelStart.game_seconds);
                 })
-                .attr("stroke-width", "3")
+                .attr("stroke-width", "0")
                 .attr("class", "level-line")
                 .attr("stroke", function (d){
                     return color(d.level); // colour based on level
+                })
+                .transition()
+                .duration(500)
+                .attr("stroke-width", "3")
+                .delay(function (d,i) {
+                    return i * 5;
                 });
 
             //************************************************    
             // CIRCLES CORRESPONDING TO ALL GAME EVENTS
 
-                svg.selectAll("circle")
-                .data(dataset)
-                .enter()
-                .append("circle")
-                .attr("cx", function (d) {
-                    return xScale(d.game_seconds);
-                })
-                .attr("cy", function (d) {
-                    // return Math.random() * height;
-                    return yScale(players.indexOf(d.ID));
-                })
-                .attr("r", function (d) {
-                    if (d.event === "Correct flag submited" || 
-                        d.event === "Game finished" ||
-                        d.event === "Game exited prematurely") {
-                        return 7; 
-                    } else {
-                        return 5;
-                    }
-                })
-                .attr("fill", function  (d){
-                    if(d.event.indexOf("Wrong flag submited") != -1 ||
-                        d.event == "Game exited prematurely") {
-                        return "red";
-                    } else if (d.event === "Level cowardly skipped") {
-                        return "black";
-                    } else {
-                        return color(d.level);
-                    }                           
-                    // return (d.event.indexOf("Wrong flag submited") != -1) ? "red" : color(d.level);
-                    // return color(d.level);    
-                })
-                .attr("class", function (d){
-                    if (d.event === "Game exited prematurely") {
-                        return "premature-exit";
-                    } else if (d.event === "Level cowardly skipped") {
-                        return "level-skip";
-                    } else if (d.event === "Correct flag submited") {
-                        return "correct-flag";
-                    } else if (d.event === "Game finished") {
-                        return "game-finished";
-                    } else if (d.event === "Game started") {
-                        return "game-started";
-                    } else if (d.event.indexOf("Hint") != -1 ) {
-                        return "hint";
-                    } else if (d.event.indexOf("Wrong flag submited") != -1 ) {
-                        return "wrong-flag";
-                    }  else if (d.event.indexOf("Help level") != -1 || d.event.indexOf("help level") != -1) {
-                        return "help-level";
-                    }  else return ""; 
-                })
-                .attr("stroke-width", "1")
-                .attr("stroke", "grey")
-                // .attr("opacity", "0.5")
-                .append("title")
-                .text(function (d) {
-                    return  "Event: " + d.event + "\n" +
-                            "Player " + players.indexOf(d.ID) + " (" + d.ID + ") \n" + 
-                            "Level: " + d.level + "\n" +
-                            "Level time: " + d.logical_time + "\n" + 
-                            "Game time: " + (d.game_seconds+"").toHHMMSS();  
-                });
+                var circles =  svg.selectAll("circle")
+                                  .data(dataset)
+                                  .enter()
+                                  .append("circle");
+
+                circles.attr("cx", function (d) {
+                        return xScale(d.game_seconds);
+                    })
+                    .attr("cy", function (d) {
+                        // return Math.random() * height;
+                        return yScale(players.indexOf(d.ID));
+                    })
+                    .attr("fill", function  (d){
+                        if(d.event.indexOf("Wrong flag submited") != -1 ||
+                            d.event == "Game exited prematurely") {
+                            return "red";
+                        } else if (d.event === "Level cowardly skipped") {
+                            return "black";
+                        } else {
+                            return color(d.level);
+                        }                           
+                        // return (d.event.indexOf("Wrong flag submited") != -1) ? "red" : color(d.level);
+                        // return color(d.level);    
+                    })
+                    .attr("class", function (d){
+                        if (d.event === "Game exited prematurely") {
+                            return "premature-exit";
+                        } else if (d.event === "Level cowardly skipped") {
+                            return "level-skip";
+                        } else if (d.event === "Correct flag submited") {
+                            return "correct-flag";
+                        } else if (d.event === "Game finished") {
+                            return "game-finished";
+                        } else if (d.event === "Game started") {
+                            return "game-started";
+                        } else if (d.event.indexOf("Hint") != -1 ) {
+                            return "hint";
+                        } else if (d.event.indexOf("Wrong flag submited") != -1 ) {
+                            return "wrong-flag";
+                        }  else if (d.event.indexOf("Help level") != -1 || d.event.indexOf("help level") != -1) {
+                            return "help-level";
+                        }  else return ""; 
+                    })
+                    .attr("stroke-width", "1")
+                    .attr("stroke", "grey")
+                    // .attr("opacity", "0.5")
+                    .append("title")
+                    .text(function (d) {
+                        return  "Event: " + d.event + "\n" +
+                                "Player " + players.indexOf(d.ID) + " (" + d.ID + ") \n" + 
+                                "Level: " + d.level + "\n" +
+                                "Level time: " + d.logical_time + "\n" + 
+                                "Game time: " + (d.game_seconds+"").toHHMMSS();  
+                    });
+
+                    circles.attr("r", "0")
+                            .transition()
+                            .attr("r", function (d) {
+                                if (d.event === "Correct flag submited" || 
+                                    d.event === "Game finished" ||
+                                    d.event === "Game exited prematurely") {
+                                    return 7; 
+                                } else {
+                                    return 5;
+                                }
+                            })
+                            .duration(150)
+                            .delay(function (d,i) {
+                                return i * 2;
+                            });
 
 
                 //Generate X axis

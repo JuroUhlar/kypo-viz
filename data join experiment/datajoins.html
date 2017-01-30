@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Event log prototype</title>
+        <link rel="stylesheet" type="text/css" href="main.css">
+        <script type="text/javascript" src="d3/d3.js"></script>
+    </head>
+    <body>
+
+        <h1>KYPO game event log prototype</h1>
+
+        <!-- All D3 visualization stuff goes to this div -->
+        <div id="chart" width="100%"></div>
+        <!-- ********************************************-->
+        
+
+
+        <!-- HTML FOR CHECKBOXES AND BUTTONS -->
+        <form>
+            <div class="checkboxes">
+               <!--  <label>
+                    <input type="checkbox" class="event-toggle" onclick="toggleThings(lines)" checked/>
+                    <span style="color: black;">&#9644;</span> 
+                    Show level lines
+                </label>  -->
+                <label>
+                    <input type="checkbox" class="event-toggle" value="started, finished" checked/>
+                    <svg height="10" width="10"><circle cx="50%" cy="50%" r="46%" fill="white" stroke="black" /></svg>
+                    Game starts and finishes
+                </label> 
+                <label>
+                    <input type="checkbox" class="event-toggle" value="Correct flag" checked/> 
+                    <svg height="10" width="10"><circle cx="50%" cy="50%" r="46%" fill="white" stroke="black" /></svg>
+                    Correct flags
+                </label> 
+                <label>
+                    <input type="checkbox" class="event-toggle" value="Hint"  checked/>
+                    <svg height="10" width="10"><circle cx="50%" cy="50%" r="50%" fill="grey" /></svg>
+                    Hints
+                </label> 
+                <label>
+                    <input type="checkbox" class="event-toggle" value="Wrong flag" checked/>
+                    <svg height="10" width="10"><circle cx="50%" cy="50%" r="50%" fill="red" /></svg>
+                    Wrong flags
+                </label> 
+                
+                <label>
+                    <input type="checkbox" class="event-toggle" value="cowardly skipped" checked/>
+                     <svg height="10" width="10"><circle cx="50%" cy="50%" r="50%" fill="black" /></svg>
+                    Level skips
+                </label> 
+                <label>
+                    <input type="checkbox" class="event-toggle" value="exited prematurely" checked/>
+                     <svg height="10" width="10"><circle cx="50%" cy="50%" r="50%" fill="black" /></svg>
+                    Premature exits
+                </label> 
+                <label>
+                    <input type="checkbox" class="event-toggle" value="Help level" checked/>
+                    <svg height="10" width="10"><circle cx="50%" cy="50%" r="50%" fill="purple" /></svg>
+                    Help level events
+                </label> 
+            </div>
+          <!--   <div id="UIrow2">
+                <button type="button" onclick="showAll()"> Show all </button>
+                <button type="button" onclick="hideAll()"> Hide all </button>
+                 <label>
+                    <input type="checkbox" id="xAxisToggle" onclick="toggleThis(xAxis)" checked/>
+                    Show x axis (time)
+                </label> 
+                <label>
+                    <input type="checkbox" id="yAxisToggle" onclick="toggleThis(yAxis)" checked/>
+                    Show y axis (players)
+                </label> 
+           
+            </div> -->
+        
+               
+         
+        <form>
+ 
+
+        <!-- SUPER IMPORTANT REFERENCE TO MAIN JAVASCRIPT FILE -->
+        <script type="text/javascript" src="main.js"></script>
+
+        <script type="text/javascript">   
+          
+        // CODE DEPENDENT ON THE AVAILABILITY Of DATA   
+        d3.csv("all-events.csv", function (error, dataset) {
+
+                    originalDataset = dataset.map(function(event) { return event; });
+                    prepareData();
+                    generateScalesAndAxis();
+                    filteredDataset = dataset.map(function(event) { return event; });
+
+                    renderData(filteredDataset);  
+
+                    // filteredDataset = filteredDataset.filter(function (d) {
+                    //     return d.level === "1";
+                    // });
+
+                    // refreshData(filteredDataset);
+
+                    // filteredDataset = originalDataset.filter(function (d) {
+                    //    return d.event.indexOf("Wrong flag submited") != -1;
+                    // });
+
+                    // setTimeout(function () {
+                    //     refreshData(filteredDataset);
+                    // }, 1200);
+
+                    // filteredDataset = originalDataset.filter(function (d) {
+                    //     return d.event === "Wrong flag submitted";
+                    // });
+
+
+
+                    
+
+
+                    // generateScalesAndAxis();
+
+                    
+                     
+                    // generateLevelDropdownMenu(dataset);
+                                 
+                });  
+        
+        </script>
+
+
+    </body>
+</html>

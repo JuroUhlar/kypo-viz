@@ -195,9 +195,9 @@ window.onload = function () {
 //*************************************************************************
 //************************ MAIN RENDERING FUNCTION ************************
 
-    function renderData(dataset) {
-        refreshData(dataset);
-    }
+    // function renderData(dataset) {
+    //     refreshData(dataset);
+    // }
 
 
 
@@ -258,16 +258,16 @@ d3.selectAll(".event-toggle").on("change", function () {
 
         if (this.checked) { // adding data points 
             var newEvents = originalDataset.filter(function(d){
-               return d.event.indexOf(type) != -1;
+               return d.event.toLowerCase().indexOf(type) != -1;
             });
             filteredDataset = filteredDataset.concat(newEvents);
         } else {
             filteredDataset = filteredDataset.filter(function(d){ 
-                return d.event.indexOf(type) === -1;
+                return d.event.toLowerCase().indexOf(type) === -1;
             });
         }
 
-        refreshData(filteredDataset);
+        refreshEvents(filteredDataset);
     });
 
 
@@ -362,10 +362,8 @@ function generateScalesAndAxis() {
 
 }
 
-function refreshData(dataset) {
-
-    // console.log("Refresh started!");
-     //***********************************************
+function refreshLines(dataset) {
+    //***********************************************
             // LINES CERRESPONDING TO DURATION OF EACH LEVEL 
             var lines = svg.selectAll(".level-line")
                 .data(dataset.filter(function (d) { // get only events that mean end of level
@@ -420,6 +418,12 @@ function refreshData(dataset) {
                             .attr("stroke-width", "0")
                             .remove();
 
+}
+
+function refreshEvents(dataset) {
+
+    // console.log("Refresh started!");
+     
             //************************************************    
             // CIRCLES CORRESPONDING TO ALL GAME EVENTS
 
@@ -448,25 +452,25 @@ function refreshData(dataset) {
                         // return (d.event.indexOf("Wrong flag submited") != -1) ? "red" : color(d.level);
                         // return color(d.level);    
                     })
-                    .attr("class", function (d){
-                        if (d.event === "Game exited prematurely") {
-                            return "premature-exit";
-                        } else if (d.event === "Level cowardly skipped") {
-                            return "level-skip";
-                        } else if (d.event === "Correct flag submited") {
-                            return "correct-flag";
-                        } else if (d.event === "Game finished") {
-                            return "game-finished";
-                        } else if (d.event === "Game started") {
-                            return "game-started";
-                        } else if (d.event.indexOf("Hint") != -1 ) {
-                            return "hint";
-                        } else if (d.event.indexOf("Wrong flag submited") != -1 ) {
-                            return "wrong-flag";
-                        }  else if (d.event.indexOf("Help level") != -1 || d.event.indexOf("help level") != -1) {
-                            return "help-level";
-                        }  else return ""; 
-                    })
+                    // .attr("class", function (d){
+                    //     if (d.event === "Game exited prematurely") {
+                    //         return "premature-exit";
+                    //     } else if (d.event === "Level cowardly skipped") {
+                    //         return "level-skip";
+                    //     } else if (d.event === "Correct flag submited") {
+                    //         return "correct-flag";
+                    //     } else if (d.event === "Game finished") {
+                    //         return "game-finished";
+                    //     } else if (d.event === "Game started") {
+                    //         return "game-started";
+                    //     } else if (d.event.indexOf("Hint") != -1 ) {
+                    //         return "hint";
+                    //     } else if (d.event.indexOf("Wrong flag submited") != -1 ) {
+                    //         return "wrong-flag";
+                    //     }  else if (d.event.indexOf("Help level") != -1 || d.event.indexOf("help level") != -1) {
+                    //         return "help-level";
+                    //     }  else return ""; 
+                    // })
                     .attr("stroke-width", "1")
                     .attr("stroke", "grey")
                     // .attr("opacity", "0.5")
@@ -481,6 +485,7 @@ function refreshData(dataset) {
 
                     enteringCircles.attr("r", "0")
                             .transition()
+                            .duration(300)
                             .attr("r", function (d) {
                                 if (d.event === "Correct flag submited" || 
                                     d.event === "Game finished" ||
@@ -489,11 +494,10 @@ function refreshData(dataset) {
                                 } else {
                                     return 5;
                                 }
-                            })
-                            .duration(20)
-                            .delay(function (d,i) {
-                                return i;
                             });
+                            // .delay(function (d,i) {
+                            //     return i;
+                            // });
 
                     circles.exit().transition()
                                     .duration(300)

@@ -38,6 +38,9 @@ var svg = d3.select('#chart')
             .attr("height", height)
             .attr("width", width);
 
+svg.append("g").attr("id", "lines")
+svg.append("g").attr("id", "circles")
+
 
 // ****************************************************************
 // FUNCTIONS FOR FILTERING BASED ON SELECTED LEVEL 
@@ -45,82 +48,117 @@ var svg = d3.select('#chart')
 
 
 // show only events of this one level, 
-// specify "shift" as a boolean value: true - shift events to logical time, false or undefined - keep them where they are
-function showOnlyLevel(level, shift) {
-	//****clean up the selection before
-	hideAll();   // hide everything
-	shiftToGameTime(activeLevelElements); // shift previously selected level back to game time 
+// // specify "shift" as a boolean value: true - shift events to logical time, false or undefined - keep them where they are
+// function showOnlyLevel(level, shift) {
+// 	//****clean up the selection before
+// 	hideAll();   // hide everything
+// 	shiftToGameTime(activeLevelElements); // shift previously selected level back to game time 
 
-	activeLevels = level;  // event filtering now only effects this one level
-	activeLevelElements = [];
+// 	activeLevels = level;  // event filtering now only effects this one level
+// 	activeLevelElements = [];
 
-	for(var i = 0; i < allThings.length; i++){ // just the elements of the specified level into array
-                for(var j = 0; j < allThings[i].length; j++) {
-                    if (allThings[i][j].__data__.level == level) {   // use == comparison to first convert types, then compare
-                    	activeLevelElements.push(allThings[i][j]);		// add level elements to array
-                    	}
-                }      
-     }
+// 	for(var i = 0; i < allThings.length; i++){ // just the elements of the specified level into array
+//                 for(var j = 0; j < allThings[i].length; j++) {
+//                     if (allThings[i][j].__data__.level == level) {   // use == comparison to first convert types, then compare
+//                     	activeLevelElements.push(allThings[i][j]);		// add level elements to array
+//                     	}
+//                 }      
+//      }
 
-    toggleThings(activeLevelElements); // activate active level elements
+//     toggleThings(activeLevelElements); // activate active level elements
 
-    for (var i = 0; i < toggles.length; i++) {  // all toggles on, but they only effect this one level
-                toggles[i].checked = true;
-            }
+//     for (var i = 0; i < toggles.length; i++) {  // all toggles on, but they only effect this one level
+//                 toggles[i].checked = true;
+//             }
 
-    if(shift === true) {   // shift level to logical time if specified, if not, leave it or put it back into game time
-    	shiftToLogicalTime(activeLevelElements);
-    } else {
-    	shiftToGameTime(activeLevelElements);
-    }
-}
-
-
-// Shift all things in the giver array from their original position (game time), to position with level starting at 00:00 (logical/level time)
-function shiftToLogicalTime(things) {
-	var length = things.length;
-	for(var i = 0; i<length; i++) {
-		var logicalShift =  xScale(things[i].__data__.game_seconds) -
-                        	xScale(strTimeToSeconds(things[i].__data__.logical_time));
-    	logicalShift = Math.round(logicalShift);
-    	if (logicalShift < 0) { // when times don't make sense, print error and skip event
-    		console.log("Player " + players.indexOf(things[i].__data__.ID) + ": Enexpected logical time shift, underlying data probably does not make sense (several game starts, time event inconsistensies etc...)");
-    		continue;
-    	}
-        logicalShift = "translate(-" + logicalShift + ")";
-        things[i].setAttribute("transform", logicalShift);
-	}
-
-}
-
-// Shift all elements in a given array back to game time
-function shiftToGameTime(things) {
-	var length = things.length;
-	for(var i = 0; i<length; i++) {
-		things[i].setAttribute("transform", "");
-	}		
-}
+//     if(shift === true) {   // shift level to logical time if specified, if not, leave it or put it back into game time
+//     	shiftToLogicalTime(activeLevelElements);
+//     } else {
+//     	shiftToGameTime(activeLevelElements);
+//     }
+// }
 
 
-function showAllLevels() {
-    shiftToGameTime(activeLevelElements);
-    activeLevelElements = [];
-	activeLevels = "all";
-	showAll();
-}
+// // Shift all things in the giver array from their original position (game time), to position with level starting at 00:00 (logical/level time)
+// function shiftToLogicalTime(things) {
+// 	var length = things.length;
+// 	for(var i = 0; i<length; i++) {
+// 		var logicalShift =  xScale(things[i].__data__.game_seconds) -
+//                         	xScale(strTimeToSeconds(things[i].__data__.logical_time));
+//     	logicalShift = Math.round(logicalShift);
+//     	if (logicalShift < 0) { // when times don't make sense, print error and skip event
+//     		console.log("Player " + players.indexOf(things[i].__data__.ID) + ": Enexpected logical time shift, underlying data probably does not make sense (several game starts, time event inconsistensies etc...)");
+//     		continue;
+//     	}
+//         logicalShift = "translate(-" + logicalShift + ")";
+//         things[i].setAttribute("transform", logicalShift);
+// 	}
+
+// }
+
+// // Shift all elements in a given array back to game time
+// function shiftToGameTime(things) {
+// 	var length = things.length;
+// 	for(var i = 0; i<length; i++) {
+// 		things[i].setAttribute("transform", "");
+// 	}		
+// }
+
+
+// function showAllLevels() {
+//     shiftToGameTime(activeLevelElements);
+//     activeLevelElements = [];
+// 	activeLevels = "all";
+// 	showAll();
+// }
 
 // (GUI) DROPDOWN MENU CHANGE EVENT HANDLER
-function selectLevel(value){
-	if(value === "all") {
-		showAllLevels();
-	}  else {
-		var level = +value[0];
-		var shift = (value.indexOf("shift") != -1);
-		showOnlyLevel(level, shift);
-	}
+// function selectLevel(value){
+// 	if(value === "all") {
+// 		showAllLevels();
+// 	}  else {
+// 		var level = +value[0];
+// 		var shift = (value.indexOf("shift") != -1);
+// 		showOnlyLevel(level, shift);
+// 	}
+// }
+
+function selectLevel(value) {
+    var level = value;
+    console.log(level);
+    filteredDataset = filterInLevel(level);
+    d3.select(".lines-toggle").property("checked", true);
+    refreshLines(filteredDataset); // have to refresh lines BEFORE possiblyfiltering away level-ending events
+    filteredDataset = filterAwayThroughEventCheckboxes(filteredDataset);
+    refreshEvents(filteredDataset);
+    
+  
 }
 
+function filterAwayThroughEventCheckboxes(dataset) {
+    //expects complete dataset of one level, or all levels
+    var toggles = document.getElementsByClassName("event-toggle");
+    for(var i = 0; i<toggles.length; i++){
+        console.log(toggles[i].value);
+        console.log(toggles[i].checked);
+        if(toggles[i].checked === false) {
+            dataset = dataset.filter(function(d){ 
+                return d.event.toLowerCase().indexOf(toggles[i].value) === -1;
+            });
+        }
+    }
+    return dataset;
+}
 
+function filterInLevel(level) {
+    if (level === "all") {
+        return originalDataset;
+    } else {
+        return originalDataset.filter(function (d) {
+            return d.level == level;
+        });
+    }    
+}
 
 
 
@@ -168,25 +206,33 @@ String.prototype.toHHMMSS = function () {
 // PAGE LOAD RESET 
 // On page the load, all the event visual elements are drawn, so make all boxes CHECKED to make sure they are in sync with the visuals
 window.onload = function () { 
-    // // for (var i = 0; i < toggles.length; i++) {
-    // //     toggles[i].checked = true;
-    // // }
-
-
-    // var xAxis = document.getElementById("xAxis"); //Had to place this here, probably to make sure the axis is already created when i call it;
-    // var yAxis = document.getElementById("yAxis"); 
-
-    // var xAxisToggle = document.getElementById("xAxisToggle")  // Show x axis, hide y axis
-    //                 .checked = true;
-    // var yAxisToggle = document.getElementById("yAxisToggle")
-    //                 .checked = false;
-
-    var cb = d3.selectAll(".event-toggle");
-    console.log(cb);
-    cb.property("checked", true);
-
-
+    d3.selectAll(".event-toggle").property("checked", true);
+    d3.select(".lines-toggle").property("checked", true);
+    d3.selectAll(".axis-toggle").property("checked", true);
 }
+
+
+function showAllEvents(){
+    d3.selectAll(".event-toggle").property("checked", true);
+    filteredDataset = filterInLevel(d3.select('#selectLevelDropDown').property('value'));
+    refreshEvents(filteredDataset);
+}
+
+function hideAllEvents(){
+    d3.selectAll(".event-toggle").property("checked", false);
+    filteredDataset = [];
+    refreshEvents(filteredDataset);
+}
+
+function toggleThis(id) {
+    var thing = document.getElementById(id);
+    if (thing.style.display != "none") {
+        thing.style.display = "none";
+    } else {
+        thing.style.display = "block";
+    }
+}
+
 
 
 
@@ -215,7 +261,6 @@ function generateLevelDropdownMenu(dataset) {
 
 	//remove previously generated dropdown menu
 	d3.select("#selectLevelDropDown").remove();
-
 
 	d3.select("#UIrow2") //In the apprioarate div, create a select tag
 		.append("select")
@@ -248,27 +293,38 @@ function onLevelSelectChange() {
 	selectLevel(selectValue);
 }
 
+// on lines-toggle change
+d3.select(".lines-toggle").on("change", function () {
+        if(this.checked) {
+            refreshLines(filterInLevel(d3.select('#selectLevelDropDown').property('value')));
+        } else {
+            refreshLines([]);
+        }
+});
+
 // ***************
 // on filter change
-d3.selectAll(".event-toggle").on("change", function () { 
+d3.selectAll(".event-toggle").on("change", changeEventFilter);
 
-        var type = this.value; // Get value of checkbox to find out which checkbox was clicked
-        console.log(type);
-        console.log(this.checked);
+function changeEventFilter () {
+    console.log(this);
+    var type = this.value; // Get value of checkbox to find out which checkbox was clicked
+    // console.log(type);
+    // console.log(this.checked);
 
-        if (this.checked) { // adding data points 
-            var newEvents = originalDataset.filter(function(d){
-               return d.event.toLowerCase().indexOf(type) != -1;
-            });
-            filteredDataset = filteredDataset.concat(newEvents);
-        } else {
-            filteredDataset = filteredDataset.filter(function(d){ 
-                return d.event.toLowerCase().indexOf(type) === -1;
-            });
-        }
-
-        refreshEvents(filteredDataset);
-    });
+    if (this.checked) { // adding data points 
+        var newEvents = filterInLevel(d3.select('#selectLevelDropDown').property('value'));
+        newEvents = newEvents.filter(function(d){
+           return d.event.toLowerCase().indexOf(type) != -1;
+        });
+        filteredDataset = filteredDataset.concat(newEvents);
+    } else {
+        filteredDataset = filteredDataset.filter(function(d){ 
+            return d.event.toLowerCase().indexOf(type) === -1;
+        });
+    }
+    refreshEvents(filteredDataset);  
+}
 
 
 
@@ -276,14 +332,12 @@ d3.selectAll(".event-toggle").on("change", function () {
 function prepareData() {
     // initialize start time to -1 so you can check if start time has already been recorded
     for(var i=0; i<50; i++) { startTimes[i] = -1;}
-
     // Construct and array of all players, to later identify them with indexes
     originalDataset.forEach(function (d) {
         if(players.indexOf(d.ID) === -1){
             players.push(d.ID); 
         }
     });
-
     // Construct an array of start times per player, to later use to calculate game time for each event
     originalDataset.forEach(function (d){
         if(d.event === "Game started"){
@@ -299,15 +353,12 @@ function prepareData() {
             
         }
     });
-
-
     // Give each event object a new property - timestamp relative to the start of their game 
     // This proporty is used to calculate their X position in the diagram
     originalDataset.forEach(function (d) {
         d.game_seconds = getSeconds(d.timestamp) - startTimes[players.indexOf(d.ID)];
         // console.log(d.game_seconds);
     });
-
 }
 
 
@@ -365,7 +416,7 @@ function generateScalesAndAxis() {
 function refreshLines(dataset) {
     //***********************************************
             // LINES CERRESPONDING TO DURATION OF EACH LEVEL 
-            var lines = svg.selectAll(".level-line")
+            var lines = svg.select("#lines").selectAll(".level-line")
                 .data(dataset.filter(function (d) { // get only events that mean end of level
                    return d.event === "Correct flag submited" || d.event === "Game finished" || 
                           d.event === "Level cowardly skipped" || d.event === "Game exited prematurely"; 
@@ -452,25 +503,25 @@ function refreshEvents(dataset) {
                         // return (d.event.indexOf("Wrong flag submited") != -1) ? "red" : color(d.level);
                         // return color(d.level);    
                     })
-                    // .attr("class", function (d){
-                    //     if (d.event === "Game exited prematurely") {
-                    //         return "premature-exit";
-                    //     } else if (d.event === "Level cowardly skipped") {
-                    //         return "level-skip";
-                    //     } else if (d.event === "Correct flag submited") {
-                    //         return "correct-flag";
-                    //     } else if (d.event === "Game finished") {
-                    //         return "game-finished";
-                    //     } else if (d.event === "Game started") {
-                    //         return "game-started";
-                    //     } else if (d.event.indexOf("Hint") != -1 ) {
-                    //         return "hint";
-                    //     } else if (d.event.indexOf("Wrong flag submited") != -1 ) {
-                    //         return "wrong-flag";
-                    //     }  else if (d.event.indexOf("Help level") != -1 || d.event.indexOf("help level") != -1) {
-                    //         return "help-level";
-                    //     }  else return ""; 
-                    // })
+                    .attr("class", function (d){
+                        if (d.event === "Game exited prematurely") {
+                            return "premature-exit";
+                        } else if (d.event === "Level cowardly skipped") {
+                            return "level-skip";
+                        } else if (d.event === "Correct flag submited") {
+                            return "correct-flag";
+                        } else if (d.event === "Game finished") {
+                            return "game-finished";
+                        } else if (d.event === "Game started") {
+                            return "game-started";
+                        } else if (d.event.indexOf("Hint") != -1 ) {
+                            return "hint";
+                        } else if (d.event.indexOf("Wrong flag submited") != -1 ) {
+                            return "wrong-flag";
+                        }  else if (d.event.indexOf("Help level") != -1 || d.event.indexOf("help level") != -1) {
+                            return "help-level";
+                        }  else return ""; 
+                    })
                     .attr("stroke-width", "1")
                     .attr("stroke", "grey")
                     // .attr("opacity", "0.5")

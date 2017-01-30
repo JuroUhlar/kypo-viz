@@ -19,11 +19,11 @@
         <!-- HTML FOR CHECKBOXES AND BUTTONS -->
         <form>
             <div class="checkboxes">
-               <!--  <label>
-                    <input type="checkbox" class="event-toggle" onclick="toggleThings(lines)" checked/>
+                <label>
+                    <input type="checkbox" class="lines-toggle" checked/>
                     <span style="color: black;">&#9644;</span> 
-                    Show level lines
-                </label>  -->
+                    Level lines
+                </label> 
                 <label>
                     <input type="checkbox" class="event-toggle" value="started" checked/>
                     <svg height="10" width="10"><circle cx="50%" cy="50%" r="46%" fill="white" stroke="black" /></svg>
@@ -66,19 +66,19 @@
                     Help level events
                 </label> 
             </div>
-          <!--   <div id="UIrow2">
-                <button type="button" onclick="showAll()"> Show all </button>
-                <button type="button" onclick="hideAll()"> Hide all </button>
+            <div id="UIrow2">
+                <button type="button" onclick="showAllEvents()"> Show all </button>
+                <button type="button" onclick="hideAllEvents()"> Hide all </button>
                  <label>
-                    <input type="checkbox" id="xAxisToggle" onclick="toggleThis(xAxis)" checked/>
+                    <input type="checkbox" class="axis-toggle" onclick="toggleThis('xAxis')" checked/>
                     Show x axis (time)
                 </label> 
                 <label>
-                    <input type="checkbox" id="yAxisToggle" onclick="toggleThis(yAxis)" checked/>
+                    <input type="checkbox" class="axis-toggle" onclick="toggleThis('yAxis')" checked/>
                     Show y axis (players)
                 </label> 
            
-            </div> -->
+            </div>
         
                
          
@@ -96,39 +96,15 @@
                     originalDataset = dataset.map(function(event) { return event; });
                     prepareData();
                     generateScalesAndAxis();
+                    
                     filteredDataset = dataset.map(function(event) { return event; });
 
                     refreshLines(filteredDataset);
                     refreshEvents(filteredDataset);  
 
-                    // filteredDataset = filteredDataset.filter(function (d) {
-                    //     return d.level === "1";
-                    // });
+                    generateLevelDropdownMenu(dataset);
 
-                    // refreshData(filteredDataset);
-
-                    // filteredDataset = originalDataset.filter(function (d) {
-                    //    return d.event.indexOf("Wrong flag submited") != -1;
-                    // });
-
-                    // setTimeout(function () {
-                    //     refreshData(filteredDataset);
-                    // }, 1200);
-
-                    // filteredDataset = originalDataset.filter(function (d) {
-                    //     return d.event === "Wrong flag submitted";
-                    // });
-
-
-
-                    
-
-
-                    // generateScalesAndAxis();
-
-                    
-                     
-                    // generateLevelDropdownMenu(dataset);
+                   
                                  
                 });  
         

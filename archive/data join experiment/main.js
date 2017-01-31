@@ -1,6 +1,6 @@
 
 
-
+var useLogicalTime = false;
 var originalDataset = []
 var filteredDataset = []
 
@@ -24,14 +24,6 @@ var color = d3.scaleOrdinal(d3.schemeCategory20).domain(d3.range(1,21)); // Colo
 
 
 // ****************************************************************
-// VARIABLES FOR KEEPING TRACK OF CURRENTLY SELECTED LEVEL
-
-var activeLevels = "all";
-var activeLevelElements = []
-
-
-
-// ****************************************************************
 // CREATE SVG
 var svg = d3.select('#chart')
             .append("svg")
@@ -40,126 +32,6 @@ var svg = d3.select('#chart')
 
 svg.append("g").attr("id", "lines")
 svg.append("g").attr("id", "circles")
-
-
-// ****************************************************************
-// FUNCTIONS FOR FILTERING BASED ON SELECTED LEVEL 
-// ****************************************************************
-
-
-// show only events of this one level, 
-// // specify "shift" as a boolean value: true - shift events to logical time, false or undefined - keep them where they are
-// function showOnlyLevel(level, shift) {
-// 	//****clean up the selection before
-// 	hideAll();   // hide everything
-// 	shiftToGameTime(activeLevelElements); // shift previously selected level back to game time 
-
-// 	activeLevels = level;  // event filtering now only effects this one level
-// 	activeLevelElements = [];
-
-// 	for(var i = 0; i < allThings.length; i++){ // just the elements of the specified level into array
-//                 for(var j = 0; j < allThings[i].length; j++) {
-//                     if (allThings[i][j].__data__.level == level) {   // use == comparison to first convert types, then compare
-//                     	activeLevelElements.push(allThings[i][j]);		// add level elements to array
-//                     	}
-//                 }      
-//      }
-
-//     toggleThings(activeLevelElements); // activate active level elements
-
-//     for (var i = 0; i < toggles.length; i++) {  // all toggles on, but they only effect this one level
-//                 toggles[i].checked = true;
-//             }
-
-//     if(shift === true) {   // shift level to logical time if specified, if not, leave it or put it back into game time
-//     	shiftToLogicalTime(activeLevelElements);
-//     } else {
-//     	shiftToGameTime(activeLevelElements);
-//     }
-// }
-
-
-// // Shift all things in the giver array from their original position (game time), to position with level starting at 00:00 (logical/level time)
-// function shiftToLogicalTime(things) {
-// 	var length = things.length;
-// 	for(var i = 0; i<length; i++) {
-// 		var logicalShift =  xScale(things[i].__data__.game_seconds) -
-//                         	xScale(strTimeToSeconds(things[i].__data__.logical_time));
-//     	logicalShift = Math.round(logicalShift);
-//     	if (logicalShift < 0) { // when times don't make sense, print error and skip event
-//     		console.log("Player " + players.indexOf(things[i].__data__.ID) + ": Enexpected logical time shift, underlying data probably does not make sense (several game starts, time event inconsistensies etc...)");
-//     		continue;
-//     	}
-//         logicalShift = "translate(-" + logicalShift + ")";
-//         things[i].setAttribute("transform", logicalShift);
-// 	}
-
-// }
-
-// // Shift all elements in a given array back to game time
-// function shiftToGameTime(things) {
-// 	var length = things.length;
-// 	for(var i = 0; i<length; i++) {
-// 		things[i].setAttribute("transform", "");
-// 	}		
-// }
-
-
-// function showAllLevels() {
-//     shiftToGameTime(activeLevelElements);
-//     activeLevelElements = [];
-// 	activeLevels = "all";
-// 	showAll();
-// }
-
-// (GUI) DROPDOWN MENU CHANGE EVENT HANDLER
-// function selectLevel(value){
-// 	if(value === "all") {
-// 		showAllLevels();
-// 	}  else {
-// 		var level = +value[0];
-// 		var shift = (value.indexOf("shift") != -1);
-// 		showOnlyLevel(level, shift);
-// 	}
-// }
-
-function selectLevel(value) {
-    var level = value;
-    console.log(level);
-    filteredDataset = filterInLevel(level);
-    d3.select(".lines-toggle").property("checked", true);
-    refreshLines(filteredDataset); // have to refresh lines BEFORE possiblyfiltering away level-ending events
-    filteredDataset = filterAwayThroughEventCheckboxes(filteredDataset);
-    refreshEvents(filteredDataset);
-    
-  
-}
-
-function filterAwayThroughEventCheckboxes(dataset) {
-    //expects complete dataset of one level, or all levels
-    var toggles = document.getElementsByClassName("event-toggle");
-    for(var i = 0; i<toggles.length; i++){
-        console.log(toggles[i].value);
-        console.log(toggles[i].checked);
-        if(toggles[i].checked === false) {
-            dataset = dataset.filter(function(d){ 
-                return d.event.toLowerCase().indexOf(toggles[i].value) === -1;
-            });
-        }
-    }
-    return dataset;
-}
-
-function filterInLevel(level) {
-    if (level === "all") {
-        return originalDataset;
-    } else {
-        return originalDataset.filter(function (d) {
-            return d.level == level;
-        });
-    }    
-}
-
 
 
 //**************************************************
@@ -205,115 +77,105 @@ String.prototype.toHHMMSS = function () {
 // **********************************************************************
 // PAGE LOAD RESET 
 // On page the load, all the event visual elements are drawn, so make all boxes CHECKED to make sure they are in sync with the visuals
-window.onload = function () { 
+window.onload = resetGUI;
+
+function resetGUI() {
     d3.selectAll(".event-toggle").property("checked", true);
     d3.select(".lines-toggle").property("checked", true);
     d3.selectAll(".axis-toggle").property("checked", true);
 }
 
+function resetOnNewDocumentLoad() {
+    useLogicalTime = false;
+    originalDataset = []
+    filteredDataset = []
+    players = [];
+    startTimes = [];
 
-function showAllEvents(){
-    d3.selectAll(".event-toggle").property("checked", true);
-    filteredDataset = filterInLevel(d3.select('#selectLevelDropDown').property('value'));
-    refreshEvents(filteredDataset);
-}
-
-function hideAllEvents(){
-    d3.selectAll(".event-toggle").property("checked", false);
-    filteredDataset = [];
-    refreshEvents(filteredDataset);
-}
-
-function toggleThis(id) {
-    var thing = document.getElementById(id);
-    if (thing.style.display != "none") {
-        thing.style.display = "none";
-    } else {
-        thing.style.display = "block";
-    }
+    svg.selectAll("*").remove();
+    svg.append("g").attr("id", "lines")
+    svg.append("g").attr("id", "circles")
 }
 
 
-
-
-
-//*************************************************************************
-//*************************************************************************
-//************************ MAIN RENDERING FUNCTION ************************
-
-    // function renderData(dataset) {
-    //     refreshData(dataset);
-    // }
-
-
-
-//**********************************************
-// Function for programmatically generate dropdown menu for selecting levels
-// (The accommodate variable number of levels for each dataset)
-function generateLevelDropdownMenu(dataset) {
-	
-	var numberOfLevels = 0;
-	dataset.forEach(function (d) { // get the number of highest level ( = n of levels)
-		if(d.level > numberOfLevels) {
-			numberOfLevels = d.level;
-		}
-	});
-
-	//remove previously generated dropdown menu
-	d3.select("#selectLevelDropDown").remove();
-
-	d3.select("#UIrow2") //In the apprioarate div, create a select tag
-		.append("select")
-		.attr("id", "selectLevelDropDown")
-		.on("change", onLevelSelectChange);
-
-	var selectTag = d3.select("#selectLevelDropDown");
-
-	selectTag.append("option")  // add option for all levels
-				 .text("Show all levels")
-				 .attr("value", "all");
- 
-	for(var i = 0; i<numberOfLevels; i++) { //for each level add 2 options (in game and logical time)
-		selectTag.append("option")
-				 .text("Show level " + (i+1))
-				 .attr("value", i+1);
-
-		selectTag.append("option")
-				 .text("Show level " + (i+1) + " - logical time")
-				 .attr("value", (i+1) + ", shift");				 
-	}	
-
-	selectTag.value = "all";
-	return numberOfLevels;
-}
-
+//***********************************************************
+// FILTERING LEVELS
 
 function onLevelSelectChange() {
 	selectValue = d3.select('#selectLevelDropDown').property('value');
-	selectLevel(selectValue);
+    
+    if(selectValue.indexOf("shift") != -1) {
+        useLogicalTime = true;
+    } else {
+        useLogicalTime = false;
+    }
+    svg.selectAll("circle").remove();
+    svg.selectAll(".level-line").remove();
+	selectLevel(selectValue.split(",")[0]);
 }
 
+function selectLevel(value) {
+    var level = value;
+    filteredDataset = filterInLevel(level);
+    d3.select(".lines-toggle").property("checked", true);
+    refreshLines(filteredDataset); // have to refresh lines BEFORE possiblyfiltering away level-ending events
+    filteredDataset = filterAwayThroughEventCheckboxes(filteredDataset);
+    refreshEvents(filteredDataset);
+    
+  
+}
+
+function filterAwayThroughEventCheckboxes(dataset) {
+    //expects complete dataset of one level, or all levels
+    var toggles = document.getElementsByClassName("event-toggle");
+    for(var i = 0; i<toggles.length; i++){
+        // console.log(toggles[i].value);
+        // console.log(toggles[i].zchecked);
+        if(toggles[i].checked === false) {
+            dataset = dataset.filter(function(d){ 
+                return d.event.toLowerCase().indexOf(toggles[i].value) === -1;
+            });
+        }
+    }
+    return dataset;
+}
+
+function filterInLevel(level) {
+    if (level === "all") {
+        return originalDataset;
+    } else {
+        return originalDataset.filter(function (d) {
+            return d.level == level;
+        });
+    }    
+}
+
+
+//**********************************************************
+// FILTERING LINES in/out
 // on lines-toggle change
 d3.select(".lines-toggle").on("change", function () {
         if(this.checked) {
-            refreshLines(filterInLevel(d3.select('#selectLevelDropDown').property('value')));
+            refreshLines(filterInLevel(d3.select('#selectLevelDropDown').property('value').split(",")[0]));
         } else {
             refreshLines([]);
         }
 });
 
-// ***************
+
+// *******************************************************
+// FILTERING TYPES OF EVENTS
 // on filter change
 d3.selectAll(".event-toggle").on("change", changeEventFilter);
 
 function changeEventFilter () {
-    console.log(this);
     var type = this.value; // Get value of checkbox to find out which checkbox was clicked
     // console.log(type);
     // console.log(this.checked);
 
     if (this.checked) { // adding data points 
-        var newEvents = filterInLevel(d3.select('#selectLevelDropDown').property('value'));
+        // get value of level selector (cleared of shift flag with split()) and only display events from selected level
+        var newEvents = filterInLevel(d3.select('#selectLevelDropDown').property('value').split(",")[0]);
         newEvents = newEvents.filter(function(d){
            return d.event.toLowerCase().indexOf(type) != -1;
         });
@@ -326,7 +188,32 @@ function changeEventFilter () {
     refreshEvents(filteredDataset);  
 }
 
+function showAllEvents(){
+    d3.selectAll(".event-toggle").property("checked", true);
+    filteredDataset = filterInLevel(d3.select('#selectLevelDropDown').property('value').split(",")[0]);
+    refreshEvents(filteredDataset);
+}
 
+function hideAllEvents(){
+    d3.selectAll(".event-toggle").property("checked", false);
+    filteredDataset = [];
+    refreshEvents(filteredDataset);
+}
+
+// for toggling axis, based on their html ID
+function toggleThis(id) {
+    var thing = document.getElementById(id);
+    if (thing.style.display != "none") {
+        thing.style.display = "none";
+    } else {
+        thing.style.display = "block";
+    }
+}
+
+
+//*********************************************************
+//********************************************************
+// MAIN RENDERING FLOW
 
 
 function prepareData() {
@@ -434,7 +321,11 @@ function refreshLines(dataset) {
                     return yScale(players.indexOf(d.ID));
                 })
                 .attr("x2", function (d) { // X coordinate set by game time
-                    return xScale(d.game_seconds);
+                    if(useLogicalTime) {
+                            return xScale(strTimeToSeconds(d.logical_time));
+                        } else {
+                            return xScale(d.game_seconds);
+                        } 
                 })
                 .attr("x1", function (d,i) { // X coodinate of first point set by game time of previous end-of-level event
                     var currentLevel = d.level;
@@ -450,7 +341,12 @@ function refreshLines(dataset) {
                                 );
                     })[0];
                     // console.log(levelStart);
-                    return xScale(levelStart.game_seconds);
+                    // return xScale(levelStart.game_seconds);
+                    if(useLogicalTime) {
+                            return xScale(0);
+                        } else {
+                            return xScale(levelStart.game_seconds);
+                        } 
                 })
                 .attr("stroke-width", "0")
                 .attr("class", "level-line")
@@ -485,7 +381,11 @@ function refreshEvents(dataset) {
                                              .append("circle");
 
                 enteringCircles.attr("cx", function (d) {
-                        return xScale(d.game_seconds);
+                        if(useLogicalTime) {
+                            return xScale(strTimeToSeconds(d.logical_time));
+                        } else {
+                            return xScale(d.game_seconds);
+                        }           
                     })
                     .attr("cy", function (d) {
                         // return Math.random() * height;
@@ -557,4 +457,44 @@ function refreshEvents(dataset) {
 
                     // console.log("Refresh finished");
 
+}
+
+//**********************************************
+// Function for programmatically generate dropdown menu for selecting levels
+// (The accommodate variable number of levels for each dataset)
+function generateLevelDropdownMenu(dataset) {
+    
+    var numberOfLevels = 0;
+    dataset.forEach(function (d) { // get the number of highest level ( = n of levels)
+        if(d.level > numberOfLevels) {
+            numberOfLevels = d.level;
+        }
+    });
+
+    //remove previously generated dropdown menu
+    d3.select("#selectLevelDropDown").remove();
+
+    d3.select("#UIrow2") //In the apprioarate div, create a select tag
+        .append("select")
+        .attr("id", "selectLevelDropDown")
+        .on("change", onLevelSelectChange);
+
+    var selectTag = d3.select("#selectLevelDropDown");
+
+    selectTag.append("option")  // add option for all levels
+                 .text("Show all levels")
+                 .attr("value", "all");
+ 
+    for(var i = 0; i<numberOfLevels; i++) { //for each level add 2 options (in game and logical time)
+        selectTag.append("option")
+                 .text("Show level " + (i+1))
+                 .attr("value", i+1);
+
+        selectTag.append("option")
+                 .text("Show level " + (i+1) + " - logical time")
+                 .attr("value", (i+1) + ", shift");              
+    }   
+
+    selectTag.value = "all";
+    return numberOfLevels;
 }

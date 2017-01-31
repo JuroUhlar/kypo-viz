@@ -31,64 +31,75 @@
         <form>
             <div class="checkboxes">
                 <label>
-                    <input type="checkbox" class="lines-toggle" checked/>
+                    <input type="checkbox" class="event-toggle" onclick="toggleThings(lines)" checked/>
                     <span style="color: black;">&#9644;</span> 
-                    Level lines
+                    Show level lines
                 </label> 
                 <label>
-                    <input type="checkbox" class="event-toggle" value="started" checked/>
+                    <input type="checkbox" class="event-toggle" onclick="toggleThings(gameStarts),
+                                                                            toggleThings(gameFinishes)" checked/>
                     <svg height="10" width="10"><circle cx="50%" cy="50%" r="46%" fill="white" stroke="black" /></svg>
-                    Game starts
-                </label> 
-                 <label>
-                    <input type="checkbox" class="event-toggle" value="finished" checked/>
-                    <svg height="10" width="10"><circle cx="50%" cy="50%" r="46%" fill="white" stroke="black" /></svg>
-                    Game finishes
+                    Show game starts and finishes
                 </label> 
                 <label>
-                    <input type="checkbox" class="event-toggle" value="correct flag" checked/> 
+                    <input type="checkbox" class="event-toggle" onclick="toggleThings(correctFlags)" checked/> 
                     <svg height="10" width="10"><circle cx="50%" cy="50%" r="46%" fill="white" stroke="black" /></svg>
-                    Correct flags
+                    Show correct flags
                 </label> 
                 <label>
-                    <input type="checkbox" class="event-toggle" value="hint"  checked/>
+                    <input type="checkbox" class="event-toggle" onclick="toggleThings(hints)" checked/>
                     <svg height="10" width="10"><circle cx="50%" cy="50%" r="50%" fill="grey" /></svg>
-                    Hints
+                    Show hints
                 </label> 
                 <label>
-                    <input type="checkbox" class="event-toggle" value="wrong flag" checked/>
+                    <input type="checkbox" class="event-toggle" onclick="toggleThings(wrongFlags)" checked/>
                     <svg height="10" width="10"><circle cx="50%" cy="50%" r="50%" fill="red" /></svg>
-                    Wrong flags
+                    Show incorrent flags
                 </label> 
                 
                 <label>
-                    <input type="checkbox" class="event-toggle" value="cowardly skipped" checked/>
+                    <input type="checkbox" class="event-toggle" onclick="toggleThings(levelSkips)" checked/>
                      <svg height="10" width="10"><circle cx="50%" cy="50%" r="50%" fill="black" /></svg>
-                    Level skips
+                    Show level skips
                 </label> 
                 <label>
-                    <input type="checkbox" class="event-toggle" value="exited prematurely" checked/>
+                    <input type="checkbox" class="event-toggle" onclick="toggleThings(prematureExits)" checked/>
                      <svg height="10" width="10"><circle cx="50%" cy="50%" r="50%" fill="black" /></svg>
-                    Premature exits
+                    Show premature exits
                 </label> 
                 <label>
-                    <input type="checkbox" class="event-toggle" value="help level" checked/>
+                    <input type="checkbox" class="event-toggle" onclick="toggleThings(helpLevelEvents)" checked/>
                     <svg height="10" width="10"><circle cx="50%" cy="50%" r="50%" fill="purple" /></svg>
-                    Help level events
+                    Show help level events
                 </label> 
             </div>
             <div id="UIrow2">
-                <button type="button" onclick="showAllEvents()"> Show all </button>
-                <button type="button" onclick="hideAllEvents()"> Hide all </button>
+                <button type="button" onclick="showAll()"> Show all </button>
+                <button type="button" onclick="hideAll()"> Hide all </button>
                  <label>
-                    <input type="checkbox" class="axis-toggle" onclick="toggleThis('xAxis')" checked/>
+                    <input type="checkbox" id="xAxisToggle" onclick="toggleThis(xAxis)" checked/>
                     Show x axis (time)
                 </label> 
                 <label>
-                    <input type="checkbox" class="axis-toggle" onclick="toggleThis('yAxis')" checked/>
+                    <input type="checkbox" id="yAxisToggle" onclick="toggleThis(yAxis)" checked/>
                     Show y axis (players)
                 </label> 
-           
+               <!--   <select id="selectLevelDropDown" onchange="selectLevel(this.value)">
+                      <option value="all" selected>Show all levels</option>
+                      <option value="1">Show level 1</option>
+                      <option value="1, shift">Show level 1 - logical time</option>
+                      <option value="2">Show level 2 </option>
+                      <option value="2, shift">Show level 2 - logical time</option>
+                      <option value="3">Show level 3 </option>
+                      <option value="3, shift">Show level 3 - logical time</option>
+                      <option value="4">Show level 4 </option>
+                      <option value="4, shift">Show level 4 - logical time</option>
+                      <option value="5">Show level 5 </option>   
+                      <option value="5, shift">Show level 5 - logical time</option>
+                      <option value="6">Show level 6 </option>  
+                      <option value="6, shift">Show level 6 - logical time</option>
+                </select> -->
+                 <!-- This is now generated dynamically, based on actual number of levels in the data -->
             </div>
         <form>
  
@@ -126,7 +137,7 @@
         
         function errorHandler(evt) {
              if(evt.target.error.name == "NotReadableError") {
-                alert("Cannot read file !");
+                alert("Canno't read file !");
              }
         }
 
@@ -147,31 +158,25 @@
         function processData(csv) {
             var dataset = d3.csvParse(csv);
 
-            resetOnNewDocumentLoad();
-            
 
-            originalDataset = dataset.map(function(event) { return event; });
-            prepareData();
-            generateScalesAndAxis();
-            filteredDataset = dataset.map(function(event) { return event; });
+            // EXTRA THING JUST FOR CSV UPLOAD VERSION
+            // delete all from svg (posiibly elements generated by previous file)
+            svg.selectAll("*").remove();
 
-            refreshLines(filteredDataset);
-            refreshEvents(filteredDataset);  
-
+            renderData(dataset);
             generateLevelDropdownMenu(dataset);
-            resetGUI();
           
             
 
-            // // EXTRA THING JUST FOR CSV UPLOAD VERSION
-            // // Make sure all elements are shown, and all toggles are on and all levels selected in filter
-            // showAllLevels();
-            // showAll();                       
-            // document.getElementById("selectLevelDropDown").value = "all"
+            // EXTRA THING JUST FOR CSV UPLOAD VERSION
+            // Make sure all elements are shown, and all toggles are on and all levels selected in filter
+            showAllLevels();
+            showAll();                       
+            document.getElementById("selectLevelDropDown").value = "all"
 
-            // // Except player labels, they are usually pretty useless, so turn them off by default and make sure the toggle is also off
-            // yAxisToggle.checked = false;
-            // xAxisToggle.checked = true;
+            // Except player labels, they are usually pretty useless, so turn them off by default and make sure the toggle is also off
+            yAxisToggle.checked = false;
+            xAxisToggle.checked = true;
         } 
 
 

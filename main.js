@@ -17,7 +17,7 @@ var yScale;
 var width = window.innerWidth - 40; // Dynamically set width to make sure diagram always fits on page
 var height = window.innerHeight - 120; // Dynamically set height
 var padding_horizontal = 20;
-var extra_left_padding = 40;
+var extra_left_padding = 55;
 var padding_vertical = 20;
 
 var color = d3.scaleOrdinal(d3.schemeCategory20).domain(d3.range(1,21)); // Color palette generator, give it a number, it gives you a color 
@@ -289,7 +289,8 @@ function generateScalesAndAxis() {
     players.forEach(function (d,i) {
         playerLabels.append("text")
             .text(function () {
-                return "Player " + i;
+                return "#" + i + " " + "[" + d + "]";
+
             })
         .attr("y", function () {
             return yScale(i) + 4;

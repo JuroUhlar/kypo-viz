@@ -130,7 +130,7 @@ function filterAwayThroughEventCheckboxes(dataset) {
     var toggles = document.getElementsByClassName("event-toggle");
     for(var i = 0; i<toggles.length; i++){
         // console.log(toggles[i].value);
-        // console.log(toggles[i].zchecked);
+        // console.log(toggles[i].checked);
         if(toggles[i].checked === false) {
             dataset = dataset.filter(function(d){ 
                 return d.event.toLowerCase().indexOf(toggles[i].value) === -1;

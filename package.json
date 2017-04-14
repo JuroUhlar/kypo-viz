@@ -1,0 +1,19 @@
+{
+  "name": "bakalarka-viz-prototype-repo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JuroUhlar/kypo-viz.git"
+  },
+  "author": "JUraj Uhlar",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JuroUhlar/kypo-viz/issues"
+  },
+  "homepage": "https://github.com/JuroUhlar/kypo-viz#readme"
+}

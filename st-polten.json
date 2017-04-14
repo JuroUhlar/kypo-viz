@@ -1,0 +1,2802 @@
+[
+  {
+    "ID": 57287,
+    "timestamp": "2016-11-25 09:27:29",
+    "logical_time": "00:00:00",
+    "level": 1,
+    "event": "Game started"
+  },
+  {
+    "ID": 56965,
+    "timestamp": "2016-11-25 09:27:40",
+    "logical_time": "00:00:00",
+    "level": 1,
+    "event": "Game started"
+  },
+  {
+    "ID": 56965,
+    "timestamp": "2016-11-25 09:27:43",
+    "logical_time": "00:00:00",
+    "level": 1,
+    "event": "Game started"
+  },
+  {
+    "ID": 56919,
+    "timestamp": "2016-11-25 09:27:50",
+    "logical_time": "00:00:00",
+    "level": 1,
+    "event": "Game started"
+  },
+  {
+    "ID": 57057,
+    "timestamp": "2016-11-25 09:27:59",
+    "logical_time": "00:00:00",
+    "level": 1,
+    "event": "Game started"
+  },
+  {
+    "ID": 57103,
+    "timestamp": "2016-11-25 09:28:14",
+    "logical_time": "00:00:00",
+    "level": 1,
+    "event": "Game started"
+  },
+  {
+    "ID": 57011,
+    "timestamp": "2016-11-25 09:28:22",
+    "logical_time": "00:00:00",
+    "level": 1,
+    "event": "Game started"
+  },
+  {
+    "ID": 56988,
+    "timestamp": "2016-11-25 09:28:10",
+    "logical_time": "00:00:00",
+    "level": 1,
+    "event": "Game started"
+  },
+  {
+    "ID": 56942,
+    "timestamp": "2016-11-25 09:28:41",
+    "logical_time": "00:00:00",
+    "level": 1,
+    "event": "Game started"
+  },
+  {
+    "ID": 57218,
+    "timestamp": "2016-11-25 09:29:23",
+    "logical_time": "00:00:00",
+    "level": 1,
+    "event": "Game started"
+  },
+  {
+    "ID": 57195,
+    "timestamp": "2016-11-25 09:29:30",
+    "logical_time": "00:00:00",
+    "level": 1,
+    "event": "Game started"
+  },
+  {
+    "ID": 57241,
+    "timestamp": "2016-11-25 09:29:41",
+    "logical_time": "00:00:00",
+    "level": 1,
+    "event": "Game started"
+  },
+  {
+    "ID": 57172,
+    "timestamp": "2016-11-25 09:30:00",
+    "logical_time": "00:00:00",
+    "level": 1,
+    "event": "Game started"
+  },
+  {
+    "ID": 57149,
+    "timestamp": "2016-11-25 09:30:03",
+    "logical_time": "00:00:00",
+    "level": 1,
+    "event": "Game started"
+  },
+  {
+    "ID": 56896,
+    "timestamp": "2016-11-25 09:30:51",
+    "logical_time": "00:00:00",
+    "level": 1,
+    "event": "Game started"
+  },
+  {
+    "ID": 57126,
+    "timestamp": "2016-11-25 09:31:02",
+    "logical_time": "00:00:00",
+    "level": 1,
+    "event": "Game started"
+  },
+  {
+    "ID": 56385,
+    "timestamp": "2016-11-25 09:31:07",
+    "logical_time": "00:00:00",
+    "level": 1,
+    "event": "Game started"
+  },
+  {
+    "ID": 57241,
+    "timestamp": "2016-11-25 09:31:55",
+    "logical_time": "00:02:13",
+    "level": 1,
+    "event": "Hint 1 taken"
+  },
+  {
+    "ID": 57218,
+    "timestamp": "2016-11-25 09:32:04",
+    "logical_time": "00:02:41",
+    "level": 1,
+    "event": "Hint 2 taken"
+  },
+  {
+    "ID": 57080,
+    "timestamp": "2016-11-25 09:32:42",
+    "logical_time": "00:00:00",
+    "level": 1,
+    "event": "Game started"
+  },
+  {
+    "ID": 57287,
+    "timestamp": "2016-11-25 09:33:01",
+    "logical_time": "00:05:32",
+    "level": 1,
+    "event": "Wrong flag submited:d94076d1363996a077791dc96a43e9acaca76de2"
+  },
+  {
+    "ID": 57172,
+    "timestamp": "2016-11-25 09:33:12",
+    "logical_time": "00:03:11",
+    "level": 1,
+    "event": "Hint 1 taken"
+  },
+  {
+    "ID": 57149,
+    "timestamp": "2016-11-25 09:33:12",
+    "logical_time": "00:03:09",
+    "level": 1,
+    "event": "Hint 1 taken"
+  },
+  {
+    "ID": 57172,
+    "timestamp": "2016-11-25 09:33:20",
+    "logical_time": "00:03:19",
+    "level": 1,
+    "event": "Hint 2 taken"
+  },
+  {
+    "ID": 57149,
+    "timestamp": "2016-11-25 09:33:47",
+    "logical_time": "00:03:44",
+    "level": 1,
+    "event": "Hint 2 taken"
+  },
+  {
+    "ID": 57264,
+    "timestamp": "2016-11-25 09:34:20",
+    "logical_time": "00:00:00",
+    "level": 1,
+    "event": "Game started"
+  },
+  {
+    "ID": 56919,
+    "timestamp": "2016-11-25 09:34:31",
+    "logical_time": "00:06:40",
+    "level": 1,
+    "event": "Wrong flag submited:03e3"
+  },
+  {
+    "ID": 57057,
+    "timestamp": "2016-11-25 09:34:33",
+    "logical_time": "00:06:34",
+    "level": 1,
+    "event": "Wrong flag submited:d94076d1363996a077791dc96a43e9acaca76de2"
+  },
+  {
+    "ID": 57057,
+    "timestamp": "2016-11-25 09:34:46",
+    "logical_time": "00:06:47",
+    "level": 1,
+    "event": "Wrong flag submited:d94076d1363996a077791dc96a43e9acaca76de2"
+  },
+  {
+    "ID": 56919,
+    "timestamp": "2016-11-25 09:34:51",
+    "logical_time": "00:07:01",
+    "level": 1,
+    "event": "Wrong flag submited:c2df"
+  },
+  {
+    "ID": 56919,
+    "timestamp": "2016-11-25 09:35:05",
+    "logical_time": "00:07:14",
+    "level": 1,
+    "event": "Wrong flag submited:c2df"
+  },
+  {
+    "ID": 56919,
+    "timestamp": "2016-11-25 09:35:38",
+    "logical_time": "00:07:47",
+    "level": 1,
+    "event": "Hint 1 taken"
+  },
+  {
+    "ID": 56919,
+    "timestamp": "2016-11-25 09:35:39",
+    "logical_time": "00:07:48",
+    "level": 1,
+    "event": "Hint 2 taken"
+  },
+  {
+    "ID": 57057,
+    "timestamp": "2016-11-25 09:36:29",
+    "logical_time": "00:08:30",
+    "level": 1,
+    "event": "Wrong flag submited:ab0f735fd9be1c2a3c424252b857d2e2dd18451c"
+  },
+  {
+    "ID": 56919,
+    "timestamp": "2016-11-25 09:36:35",
+    "logical_time": "00:08:44",
+    "level": 1,
+    "event": "Correct flag submited"
+  },
+  {
+    "ID": 57057,
+    "timestamp": "2016-11-25 09:36:45",
+    "logical_time": "00:08:46",
+    "level": 1,
+    "event": "Wrong flag submited:ab0f735fd9be1c2a3c424252b857d2e2dd18451c  -"
+  },
+  {
+    "ID": 57287,
+    "timestamp": "2016-11-25 09:36:56",
+    "logical_time": "00:09:27",
+    "level": 1,
+    "event": "Wrong flag submited:ab0f"
+  },
+  {
+    "ID": 57057,
+    "timestamp": "2016-11-25 09:36:58",
+    "logical_time": "00:08:59",
+    "level": 1,
+    "event": "Wrong flag submited:ab0f"
+  },
+  {
+    "ID": 57057,
+    "timestamp": "2016-11-25 09:37:06",
+    "logical_time": "00:09:07",
+    "level": 1,
+    "event": "Wrong flag submited:d940"
+  },
+  {
+    "ID": 57057,
+    "timestamp": "2016-11-25 09:38:12",
+    "logical_time": "00:10:13",
+    "level": 1,
+    "event": "Wrong flag submited:6dae"
+  },
+  {
+    "ID": 57034,
+    "timestamp": "2016-11-25 09:38:13",
+    "logical_time": "00:00:00",
+    "level": 1,
+    "event": "Game started"
+  },
+  {
+    "ID": 56965,
+    "timestamp": "2016-11-25 09:39:39",
+    "logical_time": "00:11:55",
+    "level": 1,
+    "event": "Wrong flag submited:d940"
+  },
+  {
+    "ID": 56988,
+    "timestamp": "2016-11-25 09:40:16",
+    "logical_time": "00:12:06",
+    "level": 1,
+    "event": "Wrong flag submited:d940"
+  },
+  {
+    "ID": 56896,
+    "timestamp": "2016-11-25 09:41:01",
+    "logical_time": "00:10:09",
+    "level": 1,
+    "event": "Wrong flag submited:ba78"
+  },
+  {
+    "ID": 56919,
+    "timestamp": "2016-11-25 09:41:17",
+    "logical_time": "00:04:42",
+    "level": 2,
+    "event": "Hint 1 taken"
+  },
+  {
+    "ID": 56919,
+    "timestamp": "2016-11-25 09:41:25",
+    "logical_time": "00:04:49",
+    "level": 2,
+    "event": "Hint 2 taken"
+  },
+  {
+    "ID": 57195,
+    "timestamp": "2016-11-25 09:41:29",
+    "logical_time": "00:11:59",
+    "level": 1,
+    "event": "Wrong flag submited:c2df"
+  },
+  {
+    "ID": 56896,
+    "timestamp": "2016-11-25 09:41:27",
+    "logical_time": "00:10:35",
+    "level": 1,
+    "event": "Wrong flag submited:ba78"
+  },
+  {
+    "ID": 57126,
+    "timestamp": "2016-11-25 09:41:37",
+    "logical_time": "00:10:34",
+    "level": 1,
+    "event": "Wrong flag submited:74df12870026ffa278264c600c21e4ea3b242c52"
+  },
+  {
+    "ID": 57287,
+    "timestamp": "2016-11-25 09:41:39",
+    "logical_time": "00:14:10",
+    "level": 1,
+    "event": "Wrong flag submited:6875"
+  },
+  {
+    "ID": 57057,
+    "timestamp": "2016-11-25 09:41:55",
+    "logical_time": "00:13:56",
+    "level": 1,
+    "event": "Wrong flag submited:6875"
+  },
+  {
+    "ID": 57080,
+    "timestamp": "2016-11-25 09:42:08",
+    "logical_time": "00:09:26",
+    "level": 1,
+    "event": "Correct flag submited"
+  },
+  {
+    "ID": 57103,
+    "timestamp": "2016-11-25 09:42:33",
+    "logical_time": "00:14:19",
+    "level": 1,
+    "event": "Correct flag submited"
+  },
+  {
+    "ID": 56965,
+    "timestamp": "2016-11-25 09:43:28",
+    "logical_time": "00:15:44",
+    "level": 1,
+    "event": "Correct flag submited"
+  },
+  {
+    "ID": 56896,
+    "timestamp": "2016-11-25 09:43:34",
+    "logical_time": "00:12:43",
+    "level": 1,
+    "event": "Correct flag submited"
+  },
+  {
+    "ID": 56919,
+    "timestamp": "2016-11-25 09:44:21",
+    "logical_time": "00:07:46",
+    "level": 2,
+    "event": "Correct flag submited"
+  },
+  {
+    "ID": 57218,
+    "timestamp": "2016-11-25 09:44:41",
+    "logical_time": "00:15:17",
+    "level": 1,
+    "event": "Correct flag submited"
+  },
+  {
+    "ID": 56965,
+    "timestamp": "2016-11-25 09:44:42",
+    "logical_time": "00:17:02",
+    "level": 1,
+    "event": "Correct flag submited"
+  },
+  {
+    "ID": 57241,
+    "timestamp": "2016-11-25 09:44:42",
+    "logical_time": "00:15:00",
+    "level": 1,
+    "event": "Correct flag submited"
+  },
+  {
+    "ID": 57287,
+    "timestamp": "2016-11-25 09:44:49",
+    "logical_time": "00:17:20",
+    "level": 1,
+    "event": "Wrong flag submited:483a"
+  },
+  {
+    "ID": 57287,
+    "timestamp": "2016-11-25 09:44:54",
+    "logical_time": "00:17:25",
+    "level": 1,
+    "event": "Wrong flag submited:483a"
+  },
+  {
+    "ID": 57218,
+    "timestamp": "2016-11-25 09:45:15",
+    "logical_time": "00:00:34",
+    "level": 2,
+    "event": "Hint 2 taken"
+  },
+  {
+    "ID": 57241,
+    "timestamp": "2016-11-25 09:45:18",
+    "logical_time": "00:00:35",
+    "level": 2,
+    "event": "Hint 1 taken"
+  },
+  {
+    "ID": 57172,
+    "timestamp": "2016-11-25 09:45:22",
+    "logical_time": "00:15:21",
+    "level": 1,
+    "event": "Wrong flag submited:e9cf"
+  },
+  {
+    "ID": 56988,
+    "timestamp": "2016-11-25 09:45:11",
+    "logical_time": "00:17:01",
+    "level": 1,
+    "event": "Correct flag submited"
+  },
+  {
+    "ID": 57172,
+    "timestamp": "2016-11-25 09:45:40",
+    "logical_time": "00:15:39",
+    "level": 1,
+    "event": "Wrong flag submited:e9cf"
+  },
+  {
+    "ID": 56896,
+    "timestamp": "2016-11-25 09:45:44",
+    "logical_time": "00:02:09",
+    "level": 2,
+    "event": "Hint 1 taken"
+  },
+  {
+    "ID": 57195,
+    "timestamp": "2016-11-25 09:45:49",
+    "logical_time": "00:16:19",
+    "level": 1,
+    "event": "Correct flag submited"
+  },
+  {
+    "ID": 57172,
+    "timestamp": "2016-11-25 09:46:32",
+    "logical_time": "00:16:31",
+    "level": 1,
+    "event": "Wrong flag submited:ba78"
+  },
+  {
+    "ID": 57287,
+    "timestamp": "2016-11-25 09:46:51",
+    "logical_time": "00:19:22",
+    "level": 1,
+    "event": "Wrong flag submited:89f7"
+  },
+  {
+    "ID": 57172,
+    "timestamp": "2016-11-25 09:46:59",
+    "logical_time": "00:16:58",
+    "level": 1,
+    "event": "Wrong flag submited:f4b0"
+  },
+  {
+    "ID": 57126,
+    "timestamp": "2016-11-25 09:47:06",
+    "logical_time": "00:16:03",
+    "level": 1,
+    "event": "Correct flag submited"
+  },
+  {
+    "ID": 57287,
+    "timestamp": "2016-11-25 09:47:22",
+    "logical_time": "00:19:52",
+    "level": 1,
+    "event": "Wrong flag submited:4afa"
+  },
+  {
+    "ID": 56896,
+    "timestamp": "2016-11-25 09:47:28",
+    "logical_time": "00:03:53",
+    "level": 2,
+    "event": "Wrong flag submited:3cad"
+  },
+  {
+    "ID": 56942,
+    "timestamp": "2016-11-25 09:47:58",
+    "logical_time": "00:19:17",
+    "level": 1,
+    "event": "Wrong flag submited:74df12870026ffa278264c600c21e4ea3b242c52"
+  },
+  {
+    "ID": 56385,
+    "timestamp": "2016-11-25 09:48:35",
+    "logical_time": "00:17:28",
+    "level": 1,
+    "event": "Wrong flag submited:8ada"
+  },
+  {
+    "ID": 56942,
+    "timestamp": "2016-11-25 09:48:37",
+    "logical_time": "00:19:56",
+    "level": 1,
+    "event": "Correct flag submited"
+  },
+  {
+    "ID": 56896,
+    "timestamp": "2016-11-25 09:48:44",
+    "logical_time": "00:05:09",
+    "level": 2,
+    "event": "Wrong flag submited:5c54"
+  },
+  {
+    "ID": 57011,
+    "timestamp": "2016-11-25 09:48:47",
+    "logical_time": "00:20:25",
+    "level": 1,
+    "event": "Wrong flag submited:697b"
+  },
+  {
+    "ID": 56385,
+    "timestamp": "2016-11-25 09:48:52",
+    "logical_time": "00:17:45",
+    "level": 1,
+    "event": "Wrong flag submited:3f03"
+  },
+  {
+    "ID": 56896,
+    "timestamp": "2016-11-25 09:48:57",
+    "logical_time": "00:05:23",
+    "level": 2,
+    "event": "Wrong flag submited:5c54"
+  },
+  {
+    "ID": 57172,
+    "timestamp": "2016-11-25 09:49:10",
+    "logical_time": "00:19:09",
+    "level": 1,
+    "event": "Correct flag submited"
+  },
+  {
+    "ID": 57149,
+    "timestamp": "2016-11-25 09:49:12",
+    "logical_time": "00:19:09",
+    "level": 1,
+    "event": "Correct flag submited"
+  },
+  {
+    "ID": 56385,
+    "timestamp": "2016-11-25 09:49:51",
+    "logical_time": "00:18:44",
+    "level": 1,
+    "event": "Correct flag submited"
+  },
+  {
+    "ID": 57011,
+    "timestamp": "2016-11-25 09:49:58",
+    "logical_time": "00:21:35",
+    "level": 1,
+    "event": "Correct flag submited"
+  },
+  {
+    "ID": 57287,
+    "timestamp": "2016-11-25 09:50:00",
+    "logical_time": "00:22:31",
+    "level": 1,
+    "event": "Wrong flag submited:9ea1"
+  },
+  {
+    "ID": 56896,
+    "timestamp": "2016-11-25 09:50:37",
+    "logical_time": "00:07:02",
+    "level": 2,
+    "event": "Hint 2 taken"
+  },
+  {
+    "ID": 57172,
+    "timestamp": "2016-11-25 09:50:41",
+    "logical_time": "00:01:30",
+    "level": 2,
+    "event": "Hint 1 taken"
+  },
+  {
+    "ID": 57149,
+    "timestamp": "2016-11-25 09:50:42",
+    "logical_time": "00:01:29",
+    "level": 2,
+    "event": "Hint 1 taken"
+  },
+  {
+    "ID": 57172,
+    "timestamp": "2016-11-25 09:50:43",
+    "logical_time": "00:01:32",
+    "level": 2,
+    "event": "Hint 2 taken"
+  },
+  {
+    "ID": 57103,
+    "timestamp": "2016-11-25 09:50:45",
+    "logical_time": "00:08:12",
+    "level": 2,
+    "event": "Wrong flag submited:d664"
+  },
+  {
+    "ID": 57149,
+    "timestamp": "2016-11-25 09:50:46",
+    "logical_time": "00:01:34",
+    "level": 2,
+    "event": "Hint 2 taken"
+  },
+  {
+    "ID": 57103,
+    "timestamp": "2016-11-25 09:51:31",
+    "logical_time": "00:08:58",
+    "level": 2,
+    "event": "Wrong flag submited:e0f7"
+  },
+  {
+    "ID": 57103,
+    "timestamp": "2016-11-25 09:51:51",
+    "logical_time": "00:09:17",
+    "level": 2,
+    "event": "Wrong flag submited:f7b4"
+  },
+  {
+    "ID": 57126,
+    "timestamp": "2016-11-25 09:53:02",
+    "logical_time": "00:05:56",
+    "level": 2,
+    "event": "Correct flag submited"
+  },
+  {
+    "ID": 57195,
+    "timestamp": "2016-11-25 09:53:10",
+    "logical_time": "00:07:20",
+    "level": 2,
+    "event": "Correct flag submited"
+  },
+  {
+    "ID": 56873,
+    "timestamp": "2016-11-25 09:53:10",
+    "logical_time": "00:00:00",
+    "level": 1,
+    "event": "Game started"
+  },
+  {
+    "ID": 56942,
+    "timestamp": "2016-11-25 09:53:16",
+    "logical_time": "00:04:39",
+    "level": 2,
+    "event": "Wrong flag submited:3cad"
+  },
+  {
+    "ID": 57264,
+    "timestamp": "2016-11-25 09:53:18",
+    "logical_time": "00:18:57",
+    "level": 1,
+    "event": "Wrong flag submited:e9cfa2367e2a9b306df6517cccb53bee8494170d"
+  },
+  {
+    "ID": 57034,
+    "timestamp": "2016-11-25 09:53:34",
+    "logical_time": "00:15:20",
+    "level": 1,
+    "event": "Wrong flag submited:d940"
+  },
+  {
+    "ID": 57287,
+    "timestamp": "2016-11-25 09:53:59",
+    "logical_time": "00:26:30",
+    "level": 1,
+    "event": "Correct flag submited"
+  },
+  {
+    "ID": 57218,
+    "timestamp": "2016-11-25 09:54:02",
+    "logical_time": "00:09:21",
+    "level": 2,
+    "event": "Correct flag submited"
+  },
+  {
+    "ID": 57241,
+    "timestamp": "2016-11-25 09:54:14",
+    "logical_time": "00:09:31",
+    "level": 2,
+    "event": "Correct flag submited"
+  },
+  {
+    "ID": 57172,
+    "timestamp": "2016-11-25 09:54:24",
+    "logical_time": "00:05:13",
+    "level": 2,
+    "event": "Correct flag submited"
+  },
+  {
+    "ID": 57264,
+    "timestamp": "2016-11-25 09:54:28",
+    "logical_time": "00:20:07",
+    "level": 1,
+    "event": "Wrong flag submited:ba78d8319c9c43577312062c609cd14b998b0a3c"
+  },
+  {
+    "ID": 57149,
+    "timestamp": "2016-11-25 09:54:30",
+    "logical_time": "00:05:17",
+    "level": 2,
+    "event": "Correct flag submited"
+  },
+  {
+    "ID": 57103,
+    "timestamp": "2016-11-25 09:54:31",
+    "logical_time": "00:11:58",
+    "level": 2,
+    "event": "Wrong flag submited:afa7"
+  },
+  {
+    "ID": 57103,
+    "timestamp": "2016-11-25 09:54:50",
+    "logical_time": "00:12:17",
+    "level": 2,
+    "event": "Wrong flag submited:1a69"
+  },
+  {
+    "ID": 56896,
+    "timestamp": "2016-11-25 09:54:52",
+    "logical_time": "00:11:18",
+    "level": 2,
+    "event": "Wrong flag submited:3083"
+  },
+  {
+    "ID": 57011,
+    "timestamp": "2016-11-25 09:54:56",
+    "logical_time": "00:04:58",
+    "level": 2,
+    "event": "Correct flag submited"
+  },
+  {
+    "ID": 56896,
+    "timestamp": "2016-11-25 09:55:24",
+    "logical_time": "00:11:49",
+    "level": 2,
+    "event": "Wrong flag submited:af67"
+  },
+  {
+    "ID": 57080,
+    "timestamp": "2016-11-25 09:55:29",
+    "logical_time": "00:13:20",
+    "level": 2,
+    "event": "Wrong flag submited:d498"
+  },
+  {
+    "ID": 56942,
+    "timestamp": "2016-11-25 09:55:32",
+    "logical_time": "00:06:55",
+    "level": 2,
+    "event": "Wrong flag submited:7626"
+  },
+  {
+    "ID": 56965,
+    "timestamp": "2016-11-25 09:55:40",
+    "logical_time": "00:12:12",
+    "level": 2,
+    "event": "Wrong flag submited:25f0"
+  },
+  {
+    "ID": 57057,
+    "timestamp": "2016-11-25 09:55:43",
+    "logical_time": "00:27:44",
+    "level": 1,
+    "event": "Correct flag submited"
+  },
+  {
+    "ID": 56965,
+    "timestamp": "2016-11-25 09:56:01",
+    "logical_time": "00:12:33",
+    "level": 2,
+    "event": "Wrong flag submited:25f0"
+  },
+  {
+    "ID": 56896,
+    "timestamp": "2016-11-25 09:56:02",
+    "logical_time": "00:12:28",
+    "level": 2,
+    "event": "Wrong flag submited:4dfa"
+  },
+  {
+    "ID": 56896,
+    "timestamp": "2016-11-25 09:56:11",
+    "logical_time": "00:12:36",
+    "level": 2,
+    "event": "Wrong flag submited:4df1"
+  },
+  {
+    "ID": 57264,
+    "timestamp": "2016-11-25 09:56:12",
+    "logical_time": "00:21:52",
+    "level": 1,
+    "event": "Wrong flag submited:74df12870026ffa278264c600c21e4ea3b242c52"
+  },
+  {
+    "ID": 57103,
+    "timestamp": "2016-11-25 09:56:22",
+    "logical_time": "00:13:48",
+    "level": 2,
+    "event": "Hint 1 taken"
+  },
+  {
+    "ID": 57264,
+    "timestamp": "2016-11-25 09:56:29",
+    "logical_time": "00:22:09",
+    "level": 1,
+    "event": "Correct flag submited"
+  },
+  {
+    "ID": 57080,
+    "timestamp": "2016-11-25 09:56:39",
+    "logical_time": "00:14:31",
+    "level": 2,
+    "event": "Wrong flag submited:e6ff"
+  },
+  {
+    "ID": 57287,
+    "timestamp": "2016-11-25 09:56:44",
+    "logical_time": "00:02:44",
+    "level": 2,
+    "event": "Wrong flag submited:7626"
+  },
+  {
+    "ID": 56873,
+    "timestamp": "2016-11-25 09:56:55",
+    "logical_time": "00:03:44",
+    "level": 1,
+    "event": "Wrong flag submited:7c16c0ad9cd56861d689ed0fecd66917936dfd9e"
+  },
+  {
+    "ID": 56873,
+    "timestamp": "2016-11-25 09:57:35",
+    "logical_time": "00:04:25",
+    "level": 1,
+    "event": "Wrong flag submited:7c16"
+  },
+  {
+    "ID": 56942,
+    "timestamp": "2016-11-25 09:57:37",
+    "logical_time": "00:09:00",
+    "level": 2,
+    "event": "Wrong flag submited:7c32"
+  },
+  {
+    "ID": 56873,
+    "timestamp": "2016-11-25 09:58:09",
+    "logical_time": "00:04:59",
+    "level": 1,
+    "event": "Wrong flag submited:ba78"
+  },
+  {
+    "ID": 56942,
+    "timestamp": "2016-11-25 09:58:48",
+    "logical_time": "00:10:11",
+    "level": 2,
+    "event": "Wrong flag submited:b9e3"
+  },
+  {
+    "ID": 57034,
+    "timestamp": "2016-11-25 09:59:07",
+    "logical_time": "00:20:53",
+    "level": 1,
+    "event": "Wrong flag submited:da39"
+  },
+  {
+    "ID": 56385,
+    "timestamp": "2016-11-25 09:59:33",
+    "logical_time": "00:09:42",
+    "level": 2,
+    "event": "Correct flag submited"
+  },
+  {
+    "ID": 56873,
+    "timestamp": "2016-11-25 09:59:34",
+    "logical_time": "00:06:24",
+    "level": 1,
+    "event": "Correct flag submited"
+  },
+  {
+    "ID": 56896,
+    "timestamp": "2016-11-25 10:00:20",
+    "logical_time": "00:16:45",
+    "level": 2,
+    "event": "Correct flag submited"
+  },
+  {
+    "ID": 56965,
+    "timestamp": "2016-11-25 10:01:13",
+    "logical_time": "00:17:45",
+    "level": 2,
+    "event": "Correct flag submited"
+  },
+  {
+    "ID": 56965,
+    "timestamp": "2016-11-25 10:01:15",
+    "logical_time": "00:16:32",
+    "level": 2,
+    "event": "Correct flag submited"
+  },
+  {
+    "ID": 57218,
+    "timestamp": "2016-11-25 10:01:22",
+    "logical_time": "00:07:19",
+    "level": 3,
+    "event": "Wrong flag submited:8e29"
+  },
+  {
+    "ID": 56942,
+    "timestamp": "2016-11-25 10:02:12",
+    "logical_time": "00:13:35",
+    "level": 2,
+    "event": "Wrong flag submited:58e8"
+  },
+  {
+    "ID": 57218,
+    "timestamp": "2016-11-25 10:02:19",
+    "logical_time": "00:08:16",
+    "level": 3,
+    "event": "Wrong flag submited:a87c"
+  },
+  {
+    "ID": 57241,
+    "timestamp": "2016-11-25 10:02:37",
+    "logical_time": "00:08:23",
+    "level": 3,
+    "event": "Wrong flag submited:e0a6"
+  },
+  {
+    "ID": 56942,
+    "timestamp": "2016-11-25 10:02:43",
+    "logical_time": "00:14:05",
+    "level": 2,
+    "event": "Wrong flag submited:d90f"
+  },
+  {
+    "ID": 57218,
+    "timestamp": "2016-11-25 10:02:44",
+    "logical_time": "00:08:41",
+    "level": 3,
+    "event": "Wrong flag submited:c384"
+  },
+  {
+    "ID": 56988,
+    "timestamp": "2016-11-25 10:02:53",
+    "logical_time": "00:17:42",
+    "level": 2,
+    "event": "Correct flag submited"
+  },
+  {
+    "ID": 57034,
+    "timestamp": "2016-11-25 10:03:15",
+    "logical_time": "00:25:01",
+    "level": 1,
+    "event": "Correct flag submited"
+  },
+  {
+    "ID": 56942,
+    "timestamp": "2016-11-25 10:03:30",
+    "logical_time": "00:14:53",
+    "level": 2,
+    "event": "Wrong flag submited:3498"
+  },
+  {
+    "ID": 57287,
+    "timestamp": "2016-11-25 10:04:07",
+    "logical_time": "00:10:07",
+    "level": 2,
+    "event": "Wrong flag submited:3cad"
+  },
+  {
+    "ID": 56942,
+    "timestamp": "2016-11-25 10:04:20",
+    "logical_time": "00:15:42",
+    "level": 2,
+    "event": "Wrong flag submited:c39f"
+  },
+  {
+    "ID": 57172,
+    "timestamp": "2016-11-25 10:04:26",
+    "logical_time": "00:10:01",
+    "level": 3,
+    "event": "Wrong flag submited:8e29"
+  },
+  {
+    "ID": 56873,
+    "timestamp": "2016-11-25 10:04:47",
+    "logical_time": "00:05:13",
+    "level": 2,
+    "event": "Wrong flag submited:d664"
+  },
+  {
+    "ID": 56942,
+    "timestamp": "2016-11-25 10:04:51",
+    "logical_time": "00:16:14",
+    "level": 2,
+    "event": "Correct flag submited"
+  },
+  {
+    "ID": 56919,
+    "timestamp": "2016-11-25 10:04:57",
+    "logical_time": "00:20:36",
+    "level": 3,
+    "event": "Wrong flag submited:0902"
+  },
+  {
+    "ID": 57241,
+    "timestamp": "2016-11-25 10:05:00",
+    "logical_time": "00:10:46",
+    "level": 3,
+    "event": "Hint 2 taken"
+  },
+  {
+    "ID": 57218,
+    "timestamp": "2016-11-25 10:05:02",
+    "logical_time": "00:10:59",
+    "level": 3,
+    "event": "Hint 3 taken"
+  },
+  {
+    "ID": 56873,
+    "timestamp": "2016-11-25 10:05:06",
+    "logical_time": "00:05:32",
+    "level": 2,
+    "event": "Wrong flag submited:e0f7"
+  },
+  {
+    "ID": 57080,
+    "timestamp": "2016-11-25 10:05:23",
+    "logical_time": "00:23:15",
+    "level": 2,
+    "event": "Correct flag submited"
+  },
+  {
+    "ID": 56873,
+    "timestamp": "2016-11-25 10:05:27",
+    "logical_time": "00:05:53",
+    "level": 2,
+    "event": "Wrong flag submited:f7b4"
+  },
+  {
+    "ID": 57287,
+    "timestamp": "2016-11-25 10:05:31",
+    "logical_time": "00:11:32",
+    "level": 2,
+    "event": "Correct flag submited"
+  },
+  {
+    "ID": 56873,
+    "timestamp": "2016-11-25 10:06:56",
+    "logical_time": "00:07:21",
+    "level": 2,
+    "event": "Wrong flag submited:b897"
+  },
+  {
+    "ID": 57264,
+    "timestamp": "2016-11-25 10:06:59",
+    "logical_time": "00:10:29",
+    "level": 2,
+    "event": "Correct flag submited"
+  },
+  {
+    "ID": 57011,
+    "timestamp": "2016-11-25 10:07:01",
+    "logical_time": "00:12:05",
+    "level": 3,
+    "event": "Wrong flag submited:ls"
+  },
+  {
+    "ID": 56873,
+    "timestamp": "2016-11-25 10:07:21",
+    "logical_time": "00:07:46",
+    "level": 2,
+    "event": "Wrong flag submited:14f5"
+  },
+  {
+    "ID": 56873,
+    "timestamp": "2016-11-25 10:07:34",
+    "logical_time": "00:07:59",
+    "level": 2,
+    "event": "Wrong flag submited:afa7"
+  },
+  {
+    "ID": 56873,
+    "timestamp": "2016-11-25 10:08:03",
+    "logical_time": "00:08:29",
+    "level": 2,
+    "event": "Wrong flag submited:2d5f"
+  },
+  {
+    "ID": 57241,
+    "timestamp": "2016-11-25 10:08:38",
+    "logical_time": "00:14:24",
+    "level": 3,
+    "event": "Hint 1 taken"
+  },
+  {
+    "ID": 56873,
+    "timestamp": "2016-11-25 10:08:44",
+    "logical_time": "00:09:09",
+    "level": 2,
+    "event": "Wrong flag submited:d498"
+  },
+  {
+    "ID": 57126,
+    "timestamp": "2016-11-25 10:09:02",
+    "logical_time": "00:15:59",
+    "level": 3,
+    "event": "Wrong flag submited:da39"
+  },
+  {
+    "ID": 57195,
+    "timestamp": "2016-11-25 10:09:22",
+    "logical_time": "00:16:12",
+    "level": 3,
+    "event": "Correct flag submited"
+  },
+  {
+    "ID": 56873,
+    "timestamp": "2016-11-25 10:09:30",
+    "logical_time": "00:09:55",
+    "level": 2,
+    "event": "Wrong flag submited:29b3"
+  },
+  {
+    "ID": 56873,
+    "timestamp": "2016-11-25 10:10:20",
+    "logical_time": "00:10:45",
+    "level": 2,
+    "event": "Hint 2 taken"
+  },
+  {
+    "ID": 57011,
+    "timestamp": "2016-11-25 10:10:29",
+    "logical_time": "00:15:32",
+    "level": 3,
+    "event": "Correct flag submited"
+  },
+  {
+    "ID": 56919,
+    "timestamp": "2016-11-25 10:10:36",
+    "logical_time": "00:26:15",
+    "level": 3,
+    "event": "Wrong flag submited:9098"
+  },
+  {
+    "ID": 56873,
+    "timestamp": "2016-11-25 10:11:15",
+    "logical_time": "00:11:40",
+    "level": 2,
+    "event": "Hint 1 taken"
+  },
+  {
+    "ID": 56896,
+    "timestamp": "2016-11-25 10:11:37",
+    "logical_time": "00:11:16",
+    "level": 3,
+    "event": "Hint 1 taken"
+  },
+  {
+    "ID": 56919,
+    "timestamp": "2016-11-25 10:11:37",
+    "logical_time": "00:27:16",
+    "level": 3,
+    "event": "Wrong flag submited:dd24"
+  },
+  {
+    "ID": 57126,
+    "timestamp": "2016-11-25 10:11:40",
+    "logical_time": "00:18:37",
+    "level": 3,
+    "event": "Correct flag submited"
+  },
+  {
+    "ID": 57287,
+    "timestamp": "2016-11-25 10:11:59",
+    "logical_time": "00:06:27",
+    "level": 3,
+    "event": "Correct flag submited"
+  },
+  {
+    "ID": 56919,
+    "timestamp": "2016-11-25 10:12:07",
+    "logical_time": "00:27:45",
+    "level": 3,
+    "event": "Wrong flag submited:9098"
+  },
+  {
+    "ID": 57034,
+    "timestamp": "2016-11-25 10:12:30",
+    "logical_time": "00:09:15",
+    "level": 2,
+    "event": "Correct flag submited"
+  },
+  {
+    "ID": 56873,
+    "timestamp": "2016-11-25 10:13:19",
+    "logical_time": "00:13:44",
+    "level": 2,
+    "event": "Correct flag submited"
+  },
+  {
+    "ID": 56919,
+    "timestamp": "2016-11-25 10:13:26",
+    "logical_time": "00:29:04",
+    "level": 3,
+    "event": "Correct flag submited"
+  },
+  {
+    "ID": 57172,
+    "timestamp": "2016-11-25 10:13:43",
+    "logical_time": "00:19:19",
+    "level": 3,
+    "event": "Hint 2 taken"
+  },
+  {
+    "ID": 57149,
+    "timestamp": "2016-11-25 10:13:44",
+    "logical_time": "00:19:13",
+    "level": 3,
+    "event": "Hint 2 taken"
+  },
+  {
+    "ID": 56988,
+    "timestamp": "2016-11-25 10:15:04",
+    "logical_time": "00:12:11",
+    "level": 3,
+    "event": "Correct flag submited"
+  },
+  {
+    "ID": 57172,
+    "timestamp": "2016-11-25 10:15:20",
+    "logical_time": "00:20:55",
+    "level": 3,
+    "event": "Hint 1 taken"
+  },
+  {
+    "ID": 57172,
+    "timestamp": "2016-11-25 10:15:27",
+    "logical_time": "00:21:03",
+    "level": 3,
+    "event": "Hint 3 taken"
+  },
+  {
+    "ID": 57149,
+    "timestamp": "2016-11-25 10:15:50",
+    "logical_time": "00:21:19",
+    "level": 3,
+    "event": "Hint 3 taken"
+  },
+  {
+    "ID": 57011,
+    "timestamp": "2016-11-25 10:16:43",
+    "logical_time": "00:06:14",
+    "level": 4,
+    "event": "Wrong flag submited:693e"
+  },
+  {
+    "ID": 56965,
+    "timestamp": "2016-11-25 10:20:35",
+    "logical_time": "00:19:22",
+    "level": 3,
+    "event": "Correct flag submited"
+  },
+  {
+    "ID": 56965,
+    "timestamp": "2016-11-25 10:20:42",
+    "logical_time": "00:19:27",
+    "level": 3,
+    "event": "Correct flag submited"
+  },
+  {
+    "ID": 56896,
+    "timestamp": "2016-11-25 10:21:24",
+    "logical_time": "00:21:04",
+    "level": 3,
+    "event": "Hint 3 taken"
+  },
+  {
+    "ID": 56942,
+    "timestamp": "2016-11-25 10:24:20",
+    "logical_time": "00:19:28",
+    "level": 3,
+    "event": "Correct flag submited"
+  },
+  {
+    "ID": 56896,
+    "timestamp": "2016-11-25 10:24:42",
+    "logical_time": "00:24:21",
+    "level": 3,
+    "event": "Correct flag submited"
+  },
+  {
+    "ID": 56385,
+    "timestamp": "2016-11-25 10:25:14",
+    "logical_time": "00:25:40",
+    "level": 3,
+    "event": "Hint 1 taken"
+  },
+  {
+    "ID": 57218,
+    "timestamp": "2016-11-25 10:25:43",
+    "logical_time": "00:31:40",
+    "level": 3,
+    "event": "Wrong flag submited:9098"
+  },
+  {
+    "ID": 57241,
+    "timestamp": "2016-11-25 10:25:49",
+    "logical_time": "00:31:35",
+    "level": 3,
+    "event": "Wrong flag submited:9098"
+  },
+  {
+    "ID": 57218,
+    "timestamp": "2016-11-25 10:27:27",
+    "logical_time": "00:33:24",
+    "level": 3,
+    "event": "Correct flag submited"
+  },
+  {
+    "ID": 57264,
+    "timestamp": "2016-11-25 10:27:31",
+    "logical_time": "00:20:31",
+    "level": 3,
+    "event": "Correct flag submited"
+  },
+  {
+    "ID": 57057,
+    "timestamp": "2016-11-25 10:27:47",
+    "logical_time": "00:32:04",
+    "level": 2,
+    "event": "Wrong flag submited:03d1"
+  },
+  {
+    "ID": 57241,
+    "timestamp": "2016-11-25 10:27:58",
+    "logical_time": "00:33:44",
+    "level": 3,
+    "event": "Correct flag submited"
+  },
+  {
+    "ID": 57218,
+    "timestamp": "2016-11-25 10:28:24",
+    "logical_time": "00:00:57",
+    "level": 4,
+    "event": "Hint 2 taken"
+  },
+  {
+    "ID": 57241,
+    "timestamp": "2016-11-25 10:28:25",
+    "logical_time": "00:00:27",
+    "level": 4,
+    "event": "Hint 1 taken"
+  },
+  {
+    "ID": 57057,
+    "timestamp": "2016-11-25 10:28:26",
+    "logical_time": "00:32:43",
+    "level": 2,
+    "event": "Correct flag submited"
+  },
+  {
+    "ID": 56873,
+    "timestamp": "2016-11-25 10:28:33",
+    "logical_time": "00:15:13",
+    "level": 3,
+    "event": "Hint 1 taken"
+  },
+  {
+    "ID": 57034,
+    "timestamp": "2016-11-25 10:28:36",
+    "logical_time": "00:16:05",
+    "level": 3,
+    "event": "Correct flag submited"
+  },
+  {
+    "ID": 56873,
+    "timestamp": "2016-11-25 10:28:36",
+    "logical_time": "00:15:16",
+    "level": 3,
+    "event": "Hint 2 taken"
+  },
+  {
+    "ID": 56385,
+    "timestamp": "2016-11-25 10:29:14",
+    "logical_time": "00:29:40",
+    "level": 3,
+    "event": "Wrong flag submited:5121"
+  },
+  {
+    "ID": 57080,
+    "timestamp": "2016-11-25 10:29:28",
+    "logical_time": "00:24:05",
+    "level": 3,
+    "event": "Correct flag submited"
+  },
+  {
+    "ID": 56385,
+    "timestamp": "2016-11-25 10:30:26",
+    "logical_time": "00:30:52",
+    "level": 3,
+    "event": "Wrong flag submited:0902"
+  },
+  {
+    "ID": 56385,
+    "timestamp": "2016-11-25 10:30:40",
+    "logical_time": "00:31:06",
+    "level": 3,
+    "event": "Wrong flag submited:e8ff"
+  },
+  {
+    "ID": 56385,
+    "timestamp": "2016-11-25 10:31:27",
+    "logical_time": "00:31:53",
+    "level": 3,
+    "event": "Wrong flag submited:0902"
+  },
+  {
+    "ID": 56385,
+    "timestamp": "2016-11-25 10:31:36",
+    "logical_time": "00:32:02",
+    "level": 3,
+    "event": "Wrong flag submited:e8ff"
+  },
+  {
+    "ID": 57011,
+    "timestamp": "2016-11-25 10:31:55",
+    "logical_time": "00:21:26",
+    "level": 4,
+    "event": "Wrong flag submited:63e8"
+  },
+  {
+    "ID": 57011,
+    "timestamp": "2016-11-25 10:32:15",
+    "logical_time": "00:21:46",
+    "level": 4,
+    "event": "Wrong flag submited:23cb"
+  },
+  {
+    "ID": 56873,
+    "timestamp": "2016-11-25 10:32:47",
+    "logical_time": "00:19:27",
+    "level": 3,
+    "event": "Hint 3 taken"
+  },
+  {
+    "ID": 56385,
+    "timestamp": "2016-11-25 10:33:32",
+    "logical_time": "00:33:58",
+    "level": 3,
+    "event": "Correct flag submited"
+  },
+  {
+    "ID": 56896,
+    "timestamp": "2016-11-25 10:34:03",
+    "logical_time": "00:09:21",
+    "level": 4,
+    "event": "Hint 1 taken"
+  },
+  {
+    "ID": 56896,
+    "timestamp": "2016-11-25 10:34:10",
+    "logical_time": "00:09:28",
+    "level": 4,
+    "event": "Hint 2 taken"
+  },
+  {
+    "ID": 57172,
+    "timestamp": "2016-11-25 10:36:49",
+    "logical_time": "00:42:25",
+    "level": 3,
+    "event": "Correct flag submited"
+  },
+  {
+    "ID": 56896,
+    "timestamp": "2016-11-25 10:36:51",
+    "logical_time": "00:12:09",
+    "level": 4,
+    "event": "Wrong flag submited:693e"
+  },
+  {
+    "ID": 57149,
+    "timestamp": "2016-11-25 10:37:15",
+    "logical_time": "00:42:45",
+    "level": 3,
+    "event": "Correct flag submited"
+  },
+  {
+    "ID": 56942,
+    "timestamp": "2016-11-25 10:38:44",
+    "logical_time": "00:14:23",
+    "level": 4,
+    "event": "Hint 2 taken"
+  },
+  {
+    "ID": 56988,
+    "timestamp": "2016-11-25 10:38:50",
+    "logical_time": "00:23:45",
+    "level": 4,
+    "event": "Wrong flag submited:693e"
+  },
+  {
+    "ID": 56919,
+    "timestamp": "2016-11-25 10:39:41",
+    "logical_time": "00:26:15",
+    "level": 4,
+    "event": "Hint 1 taken"
+  },
+  {
+    "ID": 57172,
+    "timestamp": "2016-11-25 10:41:25",
+    "logical_time": "00:04:35",
+    "level": 4,
+    "event": "Hint 1 taken"
+  },
+  {
+    "ID": 57172,
+    "timestamp": "2016-11-25 10:41:26",
+    "logical_time": "00:04:36",
+    "level": 4,
+    "event": "Hint 2 taken"
+  },
+  {
+    "ID": 57149,
+    "timestamp": "2016-11-25 10:41:26",
+    "logical_time": "00:04:11",
+    "level": 4,
+    "event": "Hint 1 taken"
+  },
+  {
+    "ID": 57149,
+    "timestamp": "2016-11-25 10:41:27",
+    "logical_time": "00:04:12",
+    "level": 4,
+    "event": "Hint 2 taken"
+  },
+  {
+    "ID": 56988,
+    "timestamp": "2016-11-25 10:41:13",
+    "logical_time": "00:26:09",
+    "level": 4,
+    "event": "Wrong flag submited:703f"
+  },
+  {
+    "ID": 56988,
+    "timestamp": "2016-11-25 10:41:49",
+    "logical_time": "00:26:44",
+    "level": 4,
+    "event": "Wrong flag submited:2765"
+  },
+  {
+    "ID": 56873,
+    "timestamp": "2016-11-25 10:43:51",
+    "logical_time": "00:30:31",
+    "level": 3,
+    "event": "Level cowardly skipped"
+  },
+  {
+    "ID": 56873,
+    "timestamp": "2016-11-25 10:44:14",
+    "logical_time": "00:00:23",
+    "level": 4,
+    "event": "Hint 1 taken"
+  },
+  {
+    "ID": 56873,
+    "timestamp": "2016-11-25 10:45:53",
+    "logical_time": "00:02:02",
+    "level": 4,
+    "event": "Wrong flag submited:693e"
+  },
+  {
+    "ID": 57057,
+    "timestamp": "2016-11-25 10:48:55",
+    "logical_time": "00:20:29",
+    "level": 3,
+    "event": "Correct flag submited"
+  },
+  {
+    "ID": 57195,
+    "timestamp": "2016-11-25 10:50:33",
+    "logical_time": "00:41:10",
+    "level": 4,
+    "event": "Wrong flag submited:8f96"
+  },
+  {
+    "ID": 57195,
+    "timestamp": "2016-11-25 10:50:56",
+    "logical_time": "00:41:33",
+    "level": 4,
+    "event": "Wrong flag submited:63e8"
+  },
+  {
+    "ID": 57195,
+    "timestamp": "2016-11-25 10:52:24",
+    "logical_time": "00:43:01",
+    "level": 4,
+    "event": "Wrong flag submited:ded1"
+  },
+  {
+    "ID": 57195,
+    "timestamp": "2016-11-25 10:53:07",
+    "logical_time": "00:43:44",
+    "level": 4,
+    "event": "Wrong flag submited:7f7a"
+  },
+  {
+    "ID": 56873,
+    "timestamp": "2016-11-25 10:54:41",
+    "logical_time": "00:10:50",
+    "level": 4,
+    "event": "Level cowardly skipped"
+  },
+  {
+    "ID": 57195,
+    "timestamp": "2016-11-25 10:55:25",
+    "logical_time": "00:46:03",
+    "level": 4,
+    "event": "Hint 2 taken"
+  },
+  {
+    "ID": 56873,
+    "timestamp": "2016-11-25 10:57:24",
+    "logical_time": "00:02:42",
+    "level": 5,
+    "event": "Hint 1 taken"
+  },
+  {
+    "ID": 56873,
+    "timestamp": "2016-11-25 10:57:28",
+    "logical_time": "00:02:46",
+    "level": 5,
+    "event": "Hint 2 taken"
+  },
+  {
+    "ID": 57149,
+    "timestamp": "2016-11-25 10:57:43",
+    "logical_time": "00:20:28",
+    "level": 4,
+    "event": "Help level accessed"
+  },
+  {
+    "ID": 57172,
+    "timestamp": "2016-11-25 10:57:54",
+    "logical_time": "00:21:04",
+    "level": 4,
+    "event": "Help level accessed"
+  },
+  {
+    "ID": 56919,
+    "timestamp": "2016-11-25 11:00:36",
+    "logical_time": "00:47:09",
+    "level": 4,
+    "event": "Hint 2 taken"
+  },
+  {
+    "ID": 57011,
+    "timestamp": "2016-11-25 11:00:42",
+    "logical_time": "00:50:13",
+    "level": 4,
+    "event": "Wrong flag submited:0688"
+  },
+  {
+    "ID": 56988,
+    "timestamp": "2016-11-25 11:00:59",
+    "logical_time": "00:45:54",
+    "level": 4,
+    "event": "Wrong flag submited:5065"
+  },
+  {
+    "ID": 56988,
+    "timestamp": "2016-11-25 11:01:05",
+    "logical_time": "00:46:00",
+    "level": 4,
+    "event": "Wrong flag submited:5065"
+  },
+  {
+    "ID": 57011,
+    "timestamp": "2016-11-25 11:02:13",
+    "logical_time": "00:51:44",
+    "level": 4,
+    "event": "Wrong flag submited:03be"
+  },
+  {
+    "ID": 56385,
+    "timestamp": "2016-11-25 11:04:07",
+    "logical_time": "00:30:35",
+    "level": 4,
+    "event": "Hint 2 taken"
+  },
+  {
+    "ID": 56873,
+    "timestamp": "2016-11-25 11:08:40",
+    "logical_time": "00:13:58",
+    "level": 5,
+    "event": "Level cowardly skipped"
+  },
+  {
+    "ID": 56873,
+    "timestamp": "2016-11-25 11:10:34",
+    "logical_time": "00:01:54",
+    "level": 6,
+    "event": "Hint 1 taken"
+  },
+  {
+    "ID": 56873,
+    "timestamp": "2016-11-25 11:10:35",
+    "logical_time": "00:01:55",
+    "level": 6,
+    "event": "Hint 2 taken"
+  },
+  {
+    "ID": 56942,
+    "timestamp": "2016-11-25 11:12:37",
+    "logical_time": "00:48:17",
+    "level": 4,
+    "event": "Wrong flag submited:0303"
+  },
+  {
+    "ID": 56942,
+    "timestamp": "2016-11-25 11:13:24",
+    "logical_time": "00:49:04",
+    "level": 4,
+    "event": "Correct flag submited"
+  },
+  {
+    "ID": 57195,
+    "timestamp": "2016-11-25 11:14:12",
+    "logical_time": "01:04:49",
+    "level": 4,
+    "event": "Correct flag submited"
+  },
+  {
+    "ID": 57011,
+    "timestamp": "2016-11-25 11:14:38",
+    "logical_time": "01:04:09",
+    "level": 4,
+    "event": "Wrong flag submited:26e9"
+  },
+  {
+    "ID": 57264,
+    "timestamp": "2016-11-25 11:14:39",
+    "logical_time": "00:47:07",
+    "level": 4,
+    "event": "Wrong flag submited:0401"
+  },
+  {
+    "ID": 57287,
+    "timestamp": "2016-11-25 11:14:48",
+    "logical_time": "01:02:48",
+    "level": 4,
+    "event": "Correct flag submited"
+  },
+  {
+    "ID": 57264,
+    "timestamp": "2016-11-25 11:14:56",
+    "logical_time": "00:47:25",
+    "level": 4,
+    "event": "Wrong flag submited:03be"
+  },
+  {
+    "ID": 57011,
+    "timestamp": "2016-11-25 11:15:15",
+    "logical_time": "01:04:46",
+    "level": 4,
+    "event": "Correct flag submited"
+  },
+  {
+    "ID": 56919,
+    "timestamp": "2016-11-25 11:15:26",
+    "logical_time": "01:02:00",
+    "level": 4,
+    "event": "Correct flag submited"
+  },
+  {
+    "ID": 57264,
+    "timestamp": "2016-11-25 11:15:58",
+    "logical_time": "00:48:26",
+    "level": 4,
+    "event": "Correct flag submited"
+  },
+  {
+    "ID": 57034,
+    "timestamp": "2016-11-25 11:16:59",
+    "logical_time": "00:48:23",
+    "level": 4,
+    "event": "Correct flag submited"
+  },
+  {
+    "ID": 56896,
+    "timestamp": "2016-11-25 11:17:42",
+    "logical_time": "00:53:00",
+    "level": 4,
+    "event": "Correct flag submited"
+  },
+  {
+    "ID": 56385,
+    "timestamp": "2016-11-25 11:17:42",
+    "logical_time": "00:44:10",
+    "level": 4,
+    "event": "Correct flag submited"
+  },
+  {
+    "ID": 57080,
+    "timestamp": "2016-11-25 11:18:18",
+    "logical_time": "00:48:49",
+    "level": 4,
+    "event": "Correct flag submited"
+  },
+  {
+    "ID": 56965,
+    "timestamp": "2016-11-25 11:18:40",
+    "logical_time": "00:57:57",
+    "level": 4,
+    "event": "Correct flag submited"
+  },
+  {
+    "ID": 56965,
+    "timestamp": "2016-11-25 11:18:41",
+    "logical_time": "00:58:06",
+    "level": 4,
+    "event": "Correct flag submited"
+  },
+  {
+    "ID": 56988,
+    "timestamp": "2016-11-25 11:19:48",
+    "logical_time": "01:04:43",
+    "level": 4,
+    "event": "Correct flag submited"
+  },
+  {
+    "ID": 57011,
+    "timestamp": "2016-11-25 11:21:34",
+    "logical_time": "00:06:19",
+    "level": 5,
+    "event": "Hint 1 taken"
+  },
+  {
+    "ID": 56896,
+    "timestamp": "2016-11-25 11:22:47",
+    "logical_time": "00:05:05",
+    "level": 5,
+    "event": "Hint 2 taken"
+  },
+  {
+    "ID": 57241,
+    "timestamp": "2016-11-25 11:23:23",
+    "logical_time": "00:55:24",
+    "level": 4,
+    "event": "Wrong flag submited:3d23"
+  },
+  {
+    "ID": 57218,
+    "timestamp": "2016-11-25 11:23:34",
+    "logical_time": "00:56:07",
+    "level": 4,
+    "event": "Wrong flag submited:3d23"
+  },
+  {
+    "ID": 57126,
+    "timestamp": "2016-11-25 11:23:57",
+    "logical_time": "01:12:17",
+    "level": 4,
+    "event": "Correct flag submited"
+  },
+  {
+    "ID": 57241,
+    "timestamp": "2016-11-25 11:24:50",
+    "logical_time": "00:56:52",
+    "level": 4,
+    "event": "Correct flag submited"
+  },
+  {
+    "ID": 57034,
+    "timestamp": "2016-11-25 11:25:15",
+    "logical_time": "00:08:16",
+    "level": 5,
+    "event": "Hint 2 taken"
+  },
+  {
+    "ID": 57218,
+    "timestamp": "2016-11-25 11:25:22",
+    "logical_time": "00:57:55",
+    "level": 4,
+    "event": "Correct flag submited"
+  },
+  {
+    "ID": 57241,
+    "timestamp": "2016-11-25 11:26:49",
+    "logical_time": "00:01:58",
+    "level": 5,
+    "event": "Hint 1 taken"
+  },
+  {
+    "ID": 57218,
+    "timestamp": "2016-11-25 11:26:54",
+    "logical_time": "00:01:32",
+    "level": 5,
+    "event": "Hint 2 taken"
+  },
+  {
+    "ID": 56919,
+    "timestamp": "2016-11-25 11:27:28",
+    "logical_time": "00:12:01",
+    "level": 5,
+    "event": "Hint 1 taken"
+  },
+  {
+    "ID": 56919,
+    "timestamp": "2016-11-25 11:27:36",
+    "logical_time": "00:12:10",
+    "level": 5,
+    "event": "Hint 2 taken"
+  },
+  {
+    "ID": 57195,
+    "timestamp": "2016-11-25 11:30:05",
+    "logical_time": "00:15:52",
+    "level": 5,
+    "event": "Hint 2 taken"
+  },
+  {
+    "ID": 57195,
+    "timestamp": "2016-11-25 11:33:09",
+    "logical_time": "00:18:57",
+    "level": 5,
+    "event": "Correct flag submited"
+  },
+  {
+    "ID": 57126,
+    "timestamp": "2016-11-25 11:34:02",
+    "logical_time": "00:10:04",
+    "level": 5,
+    "event": "Hint 2 taken"
+  },
+  {
+    "ID": 57034,
+    "timestamp": "2016-11-25 11:34:30",
+    "logical_time": "00:17:30",
+    "level": 5,
+    "event": "Correct flag submited"
+  },
+  {
+    "ID": 57011,
+    "timestamp": "2016-11-25 11:34:57",
+    "logical_time": "00:19:42",
+    "level": 5,
+    "event": "Correct flag submited"
+  },
+  {
+    "ID": 57149,
+    "timestamp": "2016-11-25 11:35:17",
+    "logical_time": "00:58:01",
+    "level": 4,
+    "event": "Returned from help level"
+  },
+  {
+    "ID": 56988,
+    "timestamp": "2016-11-25 11:35:06",
+    "logical_time": "00:15:18",
+    "level": 5,
+    "event": "Correct flag submited"
+  },
+  {
+    "ID": 57172,
+    "timestamp": "2016-11-25 11:36:14",
+    "logical_time": "00:59:25",
+    "level": 4,
+    "event": "Returned from help level"
+  },
+  {
+    "ID": 57172,
+    "timestamp": "2016-11-25 11:36:21",
+    "logical_time": "00:59:32",
+    "level": 4,
+    "event": "Correct flag submited"
+  },
+  {
+    "ID": 57149,
+    "timestamp": "2016-11-25 11:36:22",
+    "logical_time": "00:59:07",
+    "level": 4,
+    "event": "Correct flag submited"
+  },
+  {
+    "ID": 57011,
+    "timestamp": "2016-11-25 11:36:41",
+    "logical_time": "00:01:43",
+    "level": 6,
+    "event": "Wrong flag submited:"
+  },
+  {
+    "ID": 56919,
+    "timestamp": "2016-11-25 11:37:13",
+    "logical_time": "00:21:46",
+    "level": 5,
+    "event": "Correct flag submited"
+  },
+  {
+    "ID": 56385,
+    "timestamp": "2016-11-25 11:38:02",
+    "logical_time": "00:20:20",
+    "level": 5,
+    "event": "Correct flag submited"
+  },
+  {
+    "ID": 57218,
+    "timestamp": "2016-11-25 11:38:06",
+    "logical_time": "00:12:43",
+    "level": 5,
+    "event": "Hint 1 taken"
+  },
+  {
+    "ID": 57218,
+    "timestamp": "2016-11-25 11:38:08",
+    "logical_time": "00:12:46",
+    "level": 5,
+    "event": "Help level accessed"
+  },
+  {
+    "ID": 56896,
+    "timestamp": "2016-11-25 11:38:18",
+    "logical_time": "00:20:35",
+    "level": 5,
+    "event": "Correct flag submited"
+  },
+  {
+    "ID": 57172,
+    "timestamp": "2016-11-25 11:38:39",
+    "logical_time": "00:02:17",
+    "level": 5,
+    "event": "Hint 1 taken"
+  },
+  {
+    "ID": 57149,
+    "timestamp": "2016-11-25 11:38:42",
+    "logical_time": "00:02:19",
+    "level": 5,
+    "event": "Hint 1 taken"
+  },
+  {
+    "ID": 57172,
+    "timestamp": "2016-11-25 11:38:43",
+    "logical_time": "00:02:21",
+    "level": 5,
+    "event": "Hint 2 taken"
+  },
+  {
+    "ID": 57149,
+    "timestamp": "2016-11-25 11:38:56",
+    "logical_time": "00:02:33",
+    "level": 5,
+    "event": "Hint 2 taken"
+  },
+  {
+    "ID": 57126,
+    "timestamp": "2016-11-25 11:39:22",
+    "logical_time": "00:15:24",
+    "level": 5,
+    "event": "Wrong flag submited:27ab"
+  },
+  {
+    "ID": 57126,
+    "timestamp": "2016-11-25 11:39:40",
+    "logical_time": "00:15:42",
+    "level": 5,
+    "event": "Wrong flag submited:27abcb3fd134bf4dbcbf240063da56e5fa9c2154"
+  },
+  {
+    "ID": 57149,
+    "timestamp": "2016-11-25 11:39:56",
+    "logical_time": "00:03:33",
+    "level": 5,
+    "event": "Help level accessed"
+  },
+  {
+    "ID": 57149,
+    "timestamp": "2016-11-25 11:40:00",
+    "logical_time": "00:03:37",
+    "level": 5,
+    "event": "Returned from help level"
+  },
+  {
+    "ID": 56942,
+    "timestamp": "2016-11-25 11:40:01",
+    "logical_time": "00:26:36",
+    "level": 5,
+    "event": "Correct flag submited"
+  },
+  {
+    "ID": 57126,
+    "timestamp": "2016-11-25 11:40:29",
+    "logical_time": "00:16:32",
+    "level": 5,
+    "event": "Correct flag submited"
+  },
+  {
+    "ID": 57218,
+    "timestamp": "2016-11-25 11:40:41",
+    "logical_time": "00:15:19",
+    "level": 5,
+    "event": "Returned from help level"
+  },
+  {
+    "ID": 57149,
+    "timestamp": "2016-11-25 11:40:41",
+    "logical_time": "00:04:19",
+    "level": 5,
+    "event": "Help level accessed"
+  },
+  {
+    "ID": 57218,
+    "timestamp": "2016-11-25 11:40:49",
+    "logical_time": "00:15:27",
+    "level": 5,
+    "event": "Correct flag submited"
+  },
+  {
+    "ID": 57241,
+    "timestamp": "2016-11-25 11:40:57",
+    "logical_time": "00:16:06",
+    "level": 5,
+    "event": "Correct flag submited"
+  },
+  {
+    "ID": 57149,
+    "timestamp": "2016-11-25 11:41:06",
+    "logical_time": "00:04:43",
+    "level": 5,
+    "event": "Returned from help level"
+  },
+  {
+    "ID": 57149,
+    "timestamp": "2016-11-25 11:41:27",
+    "logical_time": "00:05:04",
+    "level": 5,
+    "event": "Help level accessed"
+  },
+  {
+    "ID": 57149,
+    "timestamp": "2016-11-25 11:41:31",
+    "logical_time": "00:05:08",
+    "level": 5,
+    "event": "Returned from help level"
+  },
+  {
+    "ID": 57149,
+    "timestamp": "2016-11-25 11:42:13",
+    "logical_time": "00:05:50",
+    "level": 5,
+    "event": "Help level accessed"
+  },
+  {
+    "ID": 56896,
+    "timestamp": "2016-11-25 11:43:51",
+    "logical_time": "00:05:32",
+    "level": 6,
+    "event": "Hint 1 taken"
+  },
+  {
+    "ID": 56896,
+    "timestamp": "2016-11-25 11:43:53",
+    "logical_time": "00:05:35",
+    "level": 6,
+    "event": "Hint 2 taken"
+  },
+  {
+    "ID": 57172,
+    "timestamp": "2016-11-25 11:45:19",
+    "logical_time": "00:08:57",
+    "level": 5,
+    "event": "Help level accessed"
+  },
+  {
+    "ID": 57264,
+    "timestamp": "2016-11-25 11:46:11",
+    "logical_time": "00:30:12",
+    "level": 5,
+    "event": "Correct flag submited"
+  },
+  {
+    "ID": 57287,
+    "timestamp": "2016-11-25 11:46:48",
+    "logical_time": "00:31:59",
+    "level": 5,
+    "event": "Hint 2 taken"
+  },
+  {
+    "ID": 56919,
+    "timestamp": "2016-11-25 11:47:23",
+    "logical_time": "00:10:10",
+    "level": 6,
+    "event": "Hint 1 taken"
+  },
+  {
+    "ID": 56919,
+    "timestamp": "2016-11-25 11:47:36",
+    "logical_time": "00:10:22",
+    "level": 6,
+    "event": "Hint 2 taken"
+  },
+  {
+    "ID": 57172,
+    "timestamp": "2016-11-25 11:47:37",
+    "logical_time": "00:11:15",
+    "level": 5,
+    "event": "Returned from help level"
+  },
+  {
+    "ID": 56873,
+    "timestamp": "2016-11-25 11:48:11",
+    "logical_time": "00:39:31",
+    "level": 6,
+    "event": "Game exited prematurely"
+  },
+  {
+    "ID": 57241,
+    "timestamp": "2016-11-25 11:48:45",
+    "logical_time": "00:07:47",
+    "level": 6,
+    "event": "Hint 1 taken"
+  },
+  {
+    "ID": 57149,
+    "timestamp": "2016-11-25 11:48:50",
+    "logical_time": "00:12:27",
+    "level": 5,
+    "event": "Returned from help level"
+  },
+  {
+    "ID": 57057,
+    "timestamp": "2016-11-25 11:49:41",
+    "logical_time": "01:00:45",
+    "level": 4,
+    "event": "Wrong flag submited:king"
+  },
+  {
+    "ID": 57057,
+    "timestamp": "2016-11-25 11:50:19",
+    "logical_time": "01:01:23",
+    "level": 4,
+    "event": "Correct flag submited"
+  },
+  {
+    "ID": 57287,
+    "timestamp": "2016-11-25 11:50:43",
+    "logical_time": "00:35:54",
+    "level": 5,
+    "event": "Correct flag submited"
+  },
+  {
+    "ID": 57149,
+    "timestamp": "2016-11-25 11:50:45",
+    "logical_time": "00:14:23",
+    "level": 5,
+    "event": "Game exited prematurely"
+  },
+  {
+    "ID": 57172,
+    "timestamp": "2016-11-25 11:51:13",
+    "logical_time": "00:14:51",
+    "level": 5,
+    "event": "Game exited prematurely"
+  },
+  {
+    "ID": 56965,
+    "timestamp": "2016-11-25 11:52:28",
+    "logical_time": "00:33:48",
+    "level": 5,
+    "event": "Correct flag submited"
+  },
+  {
+    "ID": 56965,
+    "timestamp": "2016-11-25 11:52:43",
+    "logical_time": "00:34:01",
+    "level": 5,
+    "event": "Correct flag submited"
+  },
+  {
+    "ID": 57011,
+    "timestamp": "2016-11-25 11:56:27",
+    "logical_time": "00:21:29",
+    "level": 6,
+    "event": "Hint 2 taken"
+  },
+  {
+    "ID": 57011,
+    "timestamp": "2016-11-25 11:56:31",
+    "logical_time": "00:21:33",
+    "level": 6,
+    "event": "Hint 1 taken"
+  },
+  {
+    "ID": 56965,
+    "timestamp": "2016-11-25 12:50:26",
+    "logical_time": "00:00:00",
+    "level": 1,
+    "event": "Game started"
+  },
+  {
+    "ID": 15719,
+    "timestamp": "2016-11-25 12:51:16",
+    "logical_time": "16:14:55",
+    "level": 2,
+    "event": "Game exited prematurely"
+  },
+  {
+    "ID": 15719,
+    "timestamp": "2016-11-25 12:51:31",
+    "logical_time": "00:00:00",
+    "level": 1,
+    "event": "Game started"
+  },
+  {
+    "ID": 56965,
+    "timestamp": "2016-11-25 12:51:56",
+    "logical_time": "00:01:30",
+    "level": 1,
+    "event": "Game exited prematurely"
+  },
+  {
+    "ID": 56965,
+    "timestamp": "2016-11-25 12:52:10",
+    "logical_time": "00:00:00",
+    "level": 1,
+    "event": "Game started"
+  },
+  {
+    "ID": 56965,
+    "timestamp": "2016-11-25 12:52:10",
+    "logical_time": "00:00:00",
+    "level": 1,
+    "event": "Level cowardly skipped"
+  },
+  {
+    "ID": 56965,
+    "timestamp": "2016-11-25 12:52:10",
+    "logical_time": "00:00:00",
+    "level": 2,
+    "event": "Level cowardly skipped"
+  },
+  {
+    "ID": 56965,
+    "timestamp": "2016-11-25 12:52:10",
+    "logical_time": "00:00:00",
+    "level": 3,
+    "event": "Level cowardly skipped"
+  },
+  {
+    "ID": 56965,
+    "timestamp": "2016-11-25 12:52:10",
+    "logical_time": "00:00:00",
+    "level": 4,
+    "event": "Level cowardly skipped"
+  },
+  {
+    "ID": 56965,
+    "timestamp": "2016-11-25 12:52:10",
+    "logical_time": "00:00:00",
+    "level": 5,
+    "event": "Level cowardly skipped"
+  },
+  {
+    "ID": 15719,
+    "timestamp": "2016-11-25 12:52:15",
+    "logical_time": "00:00:43",
+    "level": 1,
+    "event": "Hint 2 taken"
+  },
+  {
+    "ID": 15719,
+    "timestamp": "2016-11-25 12:52:23",
+    "logical_time": "00:00:51",
+    "level": 1,
+    "event": "Hint 1 taken"
+  },
+  {
+    "ID": 15719,
+    "timestamp": "2016-11-25 12:52:24",
+    "logical_time": "00:00:53",
+    "level": 1,
+    "event": "Help level accessed"
+  },
+  {
+    "ID": 15719,
+    "timestamp": "2016-11-25 12:52:37",
+    "logical_time": "00:01:06",
+    "level": 1,
+    "event": "Level cowardly skipped"
+  },
+  {
+    "ID": 56965,
+    "timestamp": "2016-NaN-25 12:54:02",
+    "logical_time": "00:00:00",
+    "level": 1,
+    "event": "Level cowardly skipped"
+  },
+  {
+    "ID": 56965,
+    "timestamp": "2016-NaN-25 12:54:02",
+    "logical_time": "00:00:00",
+    "level": 1,
+    "event": "Game started"
+  },
+  {
+    "ID": 56965,
+    "timestamp": "2016-NaN-25 12:54:02",
+    "logical_time": "00:00:00",
+    "level": 3,
+    "event": "Level cowardly skipped"
+  },
+  {
+    "ID": 56965,
+    "timestamp": "2016-NaN-25 12:54:02",
+    "logical_time": "00:00:00",
+    "level": 2,
+    "event": "Level cowardly skipped"
+  },
+  {
+    "ID": 56965,
+    "timestamp": "2016-NaN-25 12:54:02",
+    "logical_time": "00:00:00",
+    "level": 4,
+    "event": "Level cowardly skipped"
+  },
+  {
+    "ID": 56965,
+    "timestamp": "2016-NaN-25 12:54:02",
+    "logical_time": "00:00:00",
+    "level": 5,
+    "event": "Level cowardly skipped"
+  },
+  {
+    "ID": 56965,
+    "timestamp": "2016-11-25 13:00:04",
+    "logical_time": "00:00:00",
+    "level": 1,
+    "event": "Level cowardly skipped"
+  },
+  {
+    "ID": 56965,
+    "timestamp": "2016-11-25 13:00:04",
+    "logical_time": "00:00:00",
+    "level": 2,
+    "event": "Level cowardly skipped"
+  },
+  {
+    "ID": 56965,
+    "timestamp": "2016-11-25 13:00:04",
+    "logical_time": "00:00:00",
+    "level": 1,
+    "event": "Game started"
+  },
+  {
+    "ID": 56965,
+    "timestamp": "2016-11-25 13:00:04",
+    "logical_time": "00:00:00",
+    "level": 3,
+    "event": "Level cowardly skipped"
+  },
+  {
+    "ID": 56965,
+    "timestamp": "2016-11-25 13:00:04",
+    "logical_time": "00:00:00",
+    "level": 4,
+    "event": "Level cowardly skipped"
+  },
+  {
+    "ID": 56965,
+    "timestamp": "2016-11-25 13:00:04",
+    "logical_time": "00:00:00",
+    "level": 5,
+    "event": "Level cowardly skipped"
+  },
+  {
+    "ID": 56965,
+    "timestamp": "2016-11-25 13:30:02",
+    "logical_time": "00:29:57",
+    "level": 6,
+    "event": "Hint 1 taken"
+  },
+  {
+    "ID": 56965,
+    "timestamp": "2016-11-25 13:31:57",
+    "logical_time": "00:39:46",
+    "level": 6,
+    "event": "Hint 1 taken"
+  },
+  {
+    "ID": 56965,
+    "timestamp": "2016-11-25 14:13:54",
+    "logical_time": "00:00:00",
+    "level": 1,
+    "event": "Game started"
+  },
+  {
+    "ID": 56965,
+    "timestamp": "2016-11-25 14:13:54",
+    "logical_time": "00:00:00",
+    "level": 1,
+    "event": "Level cowardly skipped"
+  },
+  {
+    "ID": 56965,
+    "timestamp": "2016-11-25 14:13:54",
+    "logical_time": "00:00:00",
+    "level": 2,
+    "event": "Level cowardly skipped"
+  },
+  {
+    "ID": 56965,
+    "timestamp": "2016-11-25 14:13:54",
+    "logical_time": "00:00:00",
+    "level": 3,
+    "event": "Level cowardly skipped"
+  },
+  {
+    "ID": 56965,
+    "timestamp": "2016-11-25 14:13:54",
+    "logical_time": "00:00:00",
+    "level": 4,
+    "event": "Level cowardly skipped"
+  },
+  {
+    "ID": 56965,
+    "timestamp": "2016-11-25 14:13:54",
+    "logical_time": "00:00:00",
+    "level": 5,
+    "event": "Level cowardly skipped"
+  },
+  {
+    "ID": 57057,
+    "timestamp": "2016-11-25 16:13:56",
+    "logical_time": "00:00:00",
+    "level": 1,
+    "event": "Game started"
+  },
+  {
+    "ID": 57057,
+    "timestamp": "2016-11-25 16:13:56",
+    "logical_time": "00:00:00",
+    "level": 1,
+    "event": "Level cowardly skipped"
+  },
+  {
+    "ID": 57057,
+    "timestamp": "2016-11-25 16:13:56",
+    "logical_time": "00:00:00",
+    "level": 2,
+    "event": "Level cowardly skipped"
+  },
+  {
+    "ID": 57057,
+    "timestamp": "2016-11-25 16:13:56",
+    "logical_time": "00:00:00",
+    "level": 3,
+    "event": "Level cowardly skipped"
+  },
+  {
+    "ID": 57057,
+    "timestamp": "2016-11-25 16:13:56",
+    "logical_time": "00:00:00",
+    "level": 4,
+    "event": "Level cowardly skipped"
+  },
+  {
+    "ID": 57080,
+    "timestamp": "2016-11-25 19:05:14",
+    "logical_time": "00:00:00",
+    "level": 1,
+    "event": "Game started"
+  },
+  {
+    "ID": 57080,
+    "timestamp": "2016-11-25 19:11:17",
+    "logical_time": "00:06:02",
+    "level": 1,
+    "event": "Correct flag submited"
+  },
+  {
+    "ID": 57080,
+    "timestamp": "2016-11-25 19:12:45",
+    "logical_time": "00:01:27",
+    "level": 2,
+    "event": "Correct flag submited"
+  },
+  {
+    "ID": 57057,
+    "timestamp": "2016-11-25 20:52:05",
+    "logical_time": "04:38:09",
+    "level": 5,
+    "event": "Correct flag submited"
+  },
+  {
+    "ID": 57080,
+    "timestamp": "2016-11-25 20:52:15",
+    "logical_time": "09:33:57",
+    "level": 5,
+    "event": "Correct flag submited"
+  },
+  {
+    "ID": 57080,
+    "timestamp": "2016-11-25 21:25:59",
+    "logical_time": "00:33:44",
+    "level": 6,
+    "event": "Hint 1 taken"
+  },
+  {
+    "ID": 53230,
+    "timestamp": "2016-11-28 10:03:47",
+    "logical_time": "00:00:00",
+    "level": 1,
+    "event": "Game started"
+  },
+  {
+    "ID": 53230,
+    "timestamp": "2016-11-28 10:03:50",
+    "logical_time": "00:00:03",
+    "level": 1,
+    "event": "Hint 1 taken"
+  },
+  {
+    "ID": 53230,
+    "timestamp": "2016-11-28 10:04:13",
+    "logical_time": "00:00:26",
+    "level": 1,
+    "event": "Level cowardly skipped"
+  },
+  {
+    "ID": 53230,
+    "timestamp": "2016-11-28 10:04:17",
+    "logical_time": "00:00:03",
+    "level": 2,
+    "event": "Help level accessed"
+  },
+  {
+    "ID": 53230,
+    "timestamp": "2016-11-28 10:04:20",
+    "logical_time": "00:00:06",
+    "level": 2,
+    "event": "Level cowardly skipped"
+  },
+  {
+    "ID": 53230,
+    "timestamp": "2016-11-28 10:04:26",
+    "logical_time": "00:00:05",
+    "level": 3,
+    "event": "Game exited prematurely"
+  },
+  {
+    "ID": 53230,
+    "timestamp": "2016-11-28 10:15:38",
+    "logical_time": "00:00:00",
+    "level": 1,
+    "event": "Game started"
+  },
+  {
+    "ID": 53230,
+    "timestamp": "2016-11-28 10:15:47",
+    "logical_time": "00:00:08",
+    "level": 1,
+    "event": "Hint 1 taken"
+  },
+  {
+    "ID": 53230,
+    "timestamp": "2016-11-28 10:16:01",
+    "logical_time": "00:00:22",
+    "level": 1,
+    "event": "Game exited prematurely"
+  },
+  {
+    "ID": 53230,
+    "timestamp": "2016-11-28 10:37:40",
+    "logical_time": "00:00:00",
+    "level": 1,
+    "event": "Game started"
+  },
+  {
+    "ID": 53230,
+    "timestamp": "2016-11-28 10:37:47",
+    "logical_time": "00:00:07",
+    "level": 1,
+    "event": "Hint 1 taken"
+  },
+  {
+    "ID": 53230,
+    "timestamp": "2016-11-28 10:37:49",
+    "logical_time": "00:00:09",
+    "level": 1,
+    "event": "Hint 2 taken"
+  },
+  {
+    "ID": 53230,
+    "timestamp": "2016-11-28 10:37:53",
+    "logical_time": "00:00:13",
+    "level": 1,
+    "event": "Level cowardly skipped"
+  },
+  {
+    "ID": 53230,
+    "timestamp": "2016-11-28 10:38:05",
+    "logical_time": "00:00:11",
+    "level": 2,
+    "event": "Level cowardly skipped"
+  },
+  {
+    "ID": 53230,
+    "timestamp": "2016-11-28 10:38:12",
+    "logical_time": "00:00:06",
+    "level": 3,
+    "event": "Level cowardly skipped"
+  },
+  {
+    "ID": 53230,
+    "timestamp": "2016-11-28 10:38:19",
+    "logical_time": "00:00:06",
+    "level": 4,
+    "event": "Level cowardly skipped"
+  },
+  {
+    "ID": 53230,
+    "timestamp": "2016-11-28 10:38:21",
+    "logical_time": "00:00:02",
+    "level": 5,
+    "event": "Level cowardly skipped"
+  },
+  {
+    "ID": 53230,
+    "timestamp": "2016-11-28 10:38:24",
+    "logical_time": "00:00:02",
+    "level": 6,
+    "event": "Game exited prematurely"
+  },
+  {
+    "ID": 53230,
+    "timestamp": "2016-11-28 10:38:25",
+    "logical_time": "00:00:00",
+    "level": 1,
+    "event": "Game started"
+  },
+  {
+    "ID": 53230,
+    "timestamp": "2016-11-28 10:38:28",
+    "logical_time": "00:00:03",
+    "level": 1,
+    "event": "Hint 1 taken"
+  },
+  {
+    "ID": 53230,
+    "timestamp": "2016-11-28 10:38:32",
+    "logical_time": "00:00:06",
+    "level": 1,
+    "event": "Level cowardly skipped"
+  },
+  {
+    "ID": 53230,
+    "timestamp": "2016-11-28 10:38:35",
+    "logical_time": "00:00:03",
+    "level": 2,
+    "event": "Game exited prematurely"
+  }
+]
